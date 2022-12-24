@@ -1,13 +1,13 @@
 {
-  "name": "com.org-name.package-name",
-  "version": "1.5.3",
-  "displayName": "Package Name",
-  "description": "This is an Template repo for Unity Packages (UPM)",
+  "name": "com.eyerunnman.gridsystem",
+  "version": "0.0.0",
+  "displayName": "Grid System Package",
+  "description": "A grid system unity package to be used for various grid based unity projects",
   "unity": "2019.1",
   "unityRelease": "6f1",
-  "documentationUrl": "https://github.com/EyeRunnMan-GameDev-Portfolio/unity-package-template#readme",
-  "changelogUrl": "https://github.com/EyeRunnMan-GameDev-Portfolio/unity-package-template/blob/main/CHANGELOG.md",
-  "licensesUrl": "https://github.com/EyeRunnMan-GameDev-Portfolio/unity-package-template/blob/main/LICENSE.md",
+  "documentationUrl": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem#readme",
+  "changelogUrl": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/blob/main/LICENSE.md",
   "samples": [
     {
       "displayName": "TestSample1",
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EyeRunnMan-GameDev-Portfolio/unity-package-template.git"
+    "url": "git+https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EyeRunnMan-GameDev-Portfolio/unity-package-template/issues"
+    "url": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/issues"
   },
-  "homepage": "https://github.com/EyeRunnMan-GameDev-Portfolio/unity-package-template",
+  "homepage": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem",
   "author": {
-    "name": "org-name"
+    "name": "eyerunnman"
   }
 }

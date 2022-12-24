@@ -1,7 +1,10 @@
 {
-    "name": "com.org-name.package-name.Editor",
+    "name": "com.eyerunnman.gridsystem.Editor",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:861b1791265b1bf46a38b701284f3507"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
