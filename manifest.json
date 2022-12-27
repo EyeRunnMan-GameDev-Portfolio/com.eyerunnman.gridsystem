@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "CHANGELOG.html",
-          "hash": "sKsILkhS9oLBg+dfrr6TBQ=="
+          "hash": "71ayi9oZ417yos7lll51Vg=="
         }
       },
       "is_incremental": false,
@@ -200,11 +200,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "source_relative_path": "articles/GettingStarted.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "F4fYmGDmlutT9a+F8WjSmA=="
+          "relative_path": "articles/GettingStarted.html",
+          "hash": "3vMS328kB6SlIb/NDI1d7A=="
         }
       },
       "is_incremental": false,
@@ -228,7 +228,18 @@
       "output": {
         ".html": {
           "relative_path": "fusion/toc.html",
-          "hash": "MiKcdhvnao6w16L/xl9f7A=="
+          "hash": "9EiEJ2i8s0fNtPN17UCAOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/GettingStarted.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/GettingStarted.png"
         }
       },
       "is_incremental": false,
@@ -247,10 +258,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/fav.ico.meta",
+      "output": {
+        "resource": {
+          "relative_path": "images/fav.ico.meta"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo.svg",
       "output": {
         "resource": {
           "relative_path": "images/logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg.meta",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg.meta"
         }
       },
       "is_incremental": false,
@@ -274,7 +307,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "dwe5vdufndZIBGwOuZHXiQ=="
+          "hash": "OlLcel5Wx4dyX4TgCfHvKg=="
         }
       },
       "is_incremental": false,
