@@ -1,6 +1,6 @@
 {
   "name": "com.eyerunnman.gridsystem",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "Grid System Package",
   "description": "A grid system unity package to be used for various grid based unity projects",
   "unity": "2019.1",
