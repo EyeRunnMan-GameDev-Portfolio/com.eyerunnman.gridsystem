@@ -1,6 +1,9 @@
 name: docs-on-release
 
-on: workflow_dispatch
+on:
+  push:
+    tags:
+      - v*
 
 jobs:
   build-docs:
