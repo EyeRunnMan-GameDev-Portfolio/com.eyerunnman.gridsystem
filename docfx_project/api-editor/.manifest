@@ -1,0 +1,9 @@
+{
+  "com.eyerunnman.gridsystem": "com.eyerunnman.gridsystem.yml",
+  "com.eyerunnman.gridsystem.EditorGridTile": "com.eyerunnman.gridsystem.EditorGridTile.yml",
+  "com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData": "com.eyerunnman.gridsystem.EditorGridTile.yml",
+  "com.eyerunnman.gridsystem.GridEditor": "com.eyerunnman.gridsystem.GridEditor.yml",
+  "com.eyerunnman.gridsystem.GridEditorConfigDataSO": "com.eyerunnman.gridsystem.GridEditorConfigDataSO.yml",
+  "com.eyerunnman.gridsystem.GridEditorConfigDataSO.DebugTileObject": "com.eyerunnman.gridsystem.GridEditorConfigDataSO.yml",
+  "com.eyerunnman.gridsystem.GridEditorConfigDataSO.TileHeightSnap": "com.eyerunnman.gridsystem.GridEditorConfigDataSO.yml"
+}

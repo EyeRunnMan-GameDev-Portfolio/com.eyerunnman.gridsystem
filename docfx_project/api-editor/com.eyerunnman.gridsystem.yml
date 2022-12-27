@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.eyerunnman.gridsystem
+  commentId: N:com.eyerunnman.gridsystem
+  id: com.eyerunnman.gridsystem
+  children:
+  - com.eyerunnman.gridsystem.EditorGridTile
+  - com.eyerunnman.gridsystem.GridEditor
+  - com.eyerunnman.gridsystem.GridEditorConfigDataSO
+  langs:
+  - csharp
+  - vb
+  name: com.eyerunnman.gridsystem
+  nameWithType: com.eyerunnman.gridsystem
+  fullName: com.eyerunnman.gridsystem
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: com.eyerunnman.gridsystem.EditorGridTile
+  commentId: T:com.eyerunnman.gridsystem.EditorGridTile
+  parent: com.eyerunnman.gridsystem
+  name: EditorGridTile
+  nameWithType: EditorGridTile
+  fullName: com.eyerunnman.gridsystem.EditorGridTile
+- uid: com.eyerunnman.gridsystem.GridEditor
+  commentId: T:com.eyerunnman.gridsystem.GridEditor
+  name: GridEditor
+  nameWithType: GridEditor
+  fullName: com.eyerunnman.gridsystem.GridEditor
+- uid: com.eyerunnman.gridsystem.GridEditorConfigDataSO
+  commentId: T:com.eyerunnman.gridsystem.GridEditorConfigDataSO
+  name: GridEditorConfigDataSO
+  nameWithType: GridEditorConfigDataSO
+  fullName: com.eyerunnman.gridsystem.GridEditorConfigDataSO
+- uid: com.eyerunnman.gridsystem
+  commentId: N:com.eyerunnman.gridsystem
+  name: com.eyerunnman.gridsystem
+  nameWithType: com.eyerunnman.gridsystem
+  fullName: com.eyerunnman.gridsystem

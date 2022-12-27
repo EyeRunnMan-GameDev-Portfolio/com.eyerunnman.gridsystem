@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.eyerunnman.gridsystem.EditorGridTile
+  commentId: T:com.eyerunnman.gridsystem.EditorGridTile
+  id: EditorGridTile
+  parent: com.eyerunnman.gridsystem
+  children:
+  - com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData
+  langs:
+  - csharp
+  - vb
+  name: EditorGridTile
+  nameWithType: EditorGridTile
+  fullName: com.eyerunnman.gridsystem.EditorGridTile
+  type: Class
+  source:
+    id: EditorGridTile
+    path: ''
+    startLine: 8
+  assemblies:
+  - cs.temp.dll
+  namespace: com.eyerunnman.gridsystem
+  syntax:
+    content: 'public class EditorGridTile : MonoBehaviour'
+    content.vb: >-
+      Public Class EditorGridTile
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData
+  commentId: M:com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData
+  id: UpdateDebugData
+  parent: com.eyerunnman.gridsystem.EditorGridTile
+  langs:
+  - csharp
+  - vb
+  name: UpdateDebugData()
+  nameWithType: EditorGridTile.UpdateDebugData()
+  fullName: com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData()
+  type: Method
+  source:
+    id: UpdateDebugData
+    path: ''
+    startLine: 25
+  assemblies:
+  - cs.temp.dll
+  namespace: com.eyerunnman.gridsystem
+  syntax:
+    content: public void UpdateDebugData()
+    content.vb: Public Sub UpdateDebugData
+  overload: com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: com.eyerunnman.gridsystem
+  commentId: N:com.eyerunnman.gridsystem
+  name: com.eyerunnman.gridsystem
+  nameWithType: com.eyerunnman.gridsystem
+  fullName: com.eyerunnman.gridsystem
+- uid: com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData*
+  commentId: Overload:com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData
+  name: UpdateDebugData
+  nameWithType: EditorGridTile.UpdateDebugData
+  fullName: com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData
