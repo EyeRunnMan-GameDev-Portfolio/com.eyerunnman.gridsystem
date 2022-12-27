@@ -52,9 +52,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api-editor/com.eyerunnman.gridsystem.yml",
       "output": {
@@ -175,6 +172,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.yml",
       "output": {
