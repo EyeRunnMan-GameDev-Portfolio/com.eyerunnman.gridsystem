@@ -5,8 +5,8 @@
   "description": "A grid system unity package to be used for various grid based unity projects",
   "unity": "2019.1",
   "unityRelease": "6f1",
-  "documentationUrl": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem#readme",
-  "changelogUrl": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/blob/main/CHANGELOG.md",
+  "documentationUrl": "https://eyerunnman-gamedev-portfolio.github.io/com.eyerunnman.gridsystem/articles/GettingStarted.html",
+  "changelogUrl": "https://eyerunnman-gamedev-portfolio.github.io/com.eyerunnman.gridsystem/CHANGELOG.html",
   "licensesUrl": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/blob/main/LICENSE.md",
   "samples": [
     {
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/issues"
   },
-  "homepage": "https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem",
+  "homepage": "https://eyerunnman-gamedev-portfolio.github.io/com.eyerunnman.gridsystem/",
   "author": {
     "name": "eyerunnman"
   }
