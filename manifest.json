@@ -1,0 +1,340 @@
+{
+  "homepages": [],
+  "source_base_path": "/github/workspace/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "CHANGELOG.html",
+          "hash": "sKsILkhS9oLBg+dfrr6TBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-editor/com.eyerunnman.gridsystem.EditorGridTile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-editor/com.eyerunnman.gridsystem.EditorGridTile.html",
+          "hash": "p6G0NMKeqX1eabB5pP9VOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-editor/com.eyerunnman.gridsystem.GridEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-editor/com.eyerunnman.gridsystem.GridEditor.html",
+          "hash": "3CQFrf012yB9RjaF+czqkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-editor/com.eyerunnman.gridsystem.GridEditorConfigDataSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-editor/com.eyerunnman.gridsystem.GridEditorConfigDataSO.html",
+          "hash": "rVYT5uvhpwVc7fLKryvqSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api-editor/com.eyerunnman.gridsystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-editor/com.eyerunnman.gridsystem.html",
+          "hash": "0CarA20TJ5fXOS0Ya/ZDCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.html",
+          "hash": "ug9gGUc2M0RedfhDzbuxDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridData.html",
+          "hash": "T11+XmR+9oup+W2ZruBkRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridDataSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridDataSO.html",
+          "hash": "pel3xvOyCXoM7l1Z/Ft1kQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridEnums.Direction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridEnums.Direction.html",
+          "hash": "/1VfKzKiDRXyrSmOsSb3Fg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridEnums.Tile.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridEnums.Tile.Type.html",
+          "hash": "RaOtqwKm7spzyybSh/oRPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridEnums.Tile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridEnums.Tile.html",
+          "hash": "u49p7DkLWyHi5kHnWtMPmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridEnums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridEnums.html",
+          "hash": "6iG0VZrEyDqaLlSQS+LrCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridTileData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridTileData.html",
+          "hash": "QPFzpXbxYt9IMTNd4nPtuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridTileObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridTileObject.html",
+          "hash": "hDSHQRMUUe6jouiEVSPR7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.html",
+          "hash": "rbFnbE30VssKGeWRp1CPwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api-runtime/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/index.html",
+          "hash": "NZ3hNaS7TlyHt07BpkBphA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "F4fYmGDmlutT9a+F8WjSmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "changelog.md",
+      "output": {
+        ".html": {
+          "relative_path": "changelog.html",
+          "hash": "x0MSHs/E1Zh5vPB5vqhGsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "fusion/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "fusion/toc.html",
+          "hash": "MiKcdhvnao6w16L/xl9f7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/fav.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/fav.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "S98/Om/I2GD3lwBpMXXwtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "dwe5vdufndZIBGwOuZHXiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 14,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
