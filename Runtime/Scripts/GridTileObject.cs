@@ -1,28 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
-
 
 namespace com.eyerunnman.gridsystem
 {
-    public class GridTileObject : MonoBehaviour
+    /// <summary>
+    /// Abstract class for grid tile object
+    /// </summary>
+    public abstract class GridTileObject : MonoBehaviour
     {
-        public GridTileData Data { get { return data; } }
+        /// <summary>
+        /// Getter for Getting out the tile data Data from tile object
+        /// </summary>
+        public GridTileData Data => data;
+
         private GridTileData data;
 
-        public void SetUpTile(GridTileData tileData)
+        /// <summary>
+        /// Function to set up Grid Tile Object with passed tile data
+        /// </summary>
+        /// <param name="tileData"></param>
+        public virtual void SetUpTile(GridTileData tileData)
         {
             data = tileData;
-
-            transform.localPosition = tileData.Center;
-
-            transform.up = tileData.UpVector;
-
-            gameObject.name = "Grid Tile Object : " + tileData.TileId;
         }
-
     }
-
 }
 

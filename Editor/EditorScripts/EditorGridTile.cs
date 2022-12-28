@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace com.eyerunnman.gridsystem
+namespace com.eyerunnman.gridsystem.Editor
 {
     [ExecuteInEditMode]
     public class EditorGridTile : MonoBehaviour

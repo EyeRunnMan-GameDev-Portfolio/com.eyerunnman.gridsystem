@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using com.eyerunnman.gridsystem;
 
-namespace com.eyerunnman.gridsystem
+namespace com.eyerunnman.gridsystem.Editor
 {
     [CreateAssetMenu(fileName = "GridDebugData", menuName = "GridSystem/GridDebugData", order = 1)]
     public class GridEditorConfigDataSO : ScriptableObject

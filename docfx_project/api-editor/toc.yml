@@ -1,10 +1,10 @@
 ### YamlMime:TableOfContent
-- uid: com.eyerunnman.gridsystem
-  name: com.eyerunnman.gridsystem
+- uid: com.eyerunnman.gridsystem.Editor
+  name: com.eyerunnman.gridsystem.Editor
   items:
-  - uid: com.eyerunnman.gridsystem.EditorGridTile
+  - uid: com.eyerunnman.gridsystem.Editor.EditorGridTile
     name: EditorGridTile
-  - uid: com.eyerunnman.gridsystem.GridEditor
+  - uid: com.eyerunnman.gridsystem.Editor.GridEditor
     name: GridEditor
-  - uid: com.eyerunnman.gridsystem.GridEditorConfigDataSO
+  - uid: com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO
     name: GridEditorConfigDataSO

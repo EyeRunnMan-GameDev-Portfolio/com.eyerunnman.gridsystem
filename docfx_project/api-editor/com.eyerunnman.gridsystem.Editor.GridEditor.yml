@@ -1,24 +1,24 @@
 ### YamlMime:ManagedReference
 items:
-- uid: com.eyerunnman.gridsystem.GridEditor
-  commentId: T:com.eyerunnman.gridsystem.GridEditor
+- uid: com.eyerunnman.gridsystem.Editor.GridEditor
+  commentId: T:com.eyerunnman.gridsystem.Editor.GridEditor
   id: GridEditor
-  parent: com.eyerunnman.gridsystem
+  parent: com.eyerunnman.gridsystem.Editor
   children: []
   langs:
   - csharp
   - vb
   name: GridEditor
   nameWithType: GridEditor
-  fullName: com.eyerunnman.gridsystem.GridEditor
+  fullName: com.eyerunnman.gridsystem.Editor.GridEditor
   type: Class
   source:
     id: GridEditor
     path: ''
-    startLine: 94
+    startLine: 92
   assemblies:
   - cs.temp.dll
-  namespace: com.eyerunnman.gridsystem
+  namespace: com.eyerunnman.gridsystem.Editor
   syntax:
     content: 'public class GridEditor : EditorWindow'
     content.vb: >-
@@ -33,8 +33,8 @@ items:
   - Public
   - Class
 references:
-- uid: com.eyerunnman.gridsystem
-  commentId: N:com.eyerunnman.gridsystem
-  name: com.eyerunnman.gridsystem
-  nameWithType: com.eyerunnman.gridsystem
-  fullName: com.eyerunnman.gridsystem
+- uid: com.eyerunnman.gridsystem.Editor
+  commentId: N:com.eyerunnman.gridsystem.Editor
+  name: com.eyerunnman.gridsystem.Editor
+  nameWithType: com.eyerunnman.gridsystem.Editor
+  fullName: com.eyerunnman.gridsystem.Editor

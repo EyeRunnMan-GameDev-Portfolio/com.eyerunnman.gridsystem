@@ -1,9 +1,9 @@
 {
-  "com.eyerunnman.gridsystem": "com.eyerunnman.gridsystem.yml",
-  "com.eyerunnman.gridsystem.EditorGridTile": "com.eyerunnman.gridsystem.EditorGridTile.yml",
-  "com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData": "com.eyerunnman.gridsystem.EditorGridTile.yml",
-  "com.eyerunnman.gridsystem.GridEditor": "com.eyerunnman.gridsystem.GridEditor.yml",
-  "com.eyerunnman.gridsystem.GridEditorConfigDataSO": "com.eyerunnman.gridsystem.GridEditorConfigDataSO.yml",
-  "com.eyerunnman.gridsystem.GridEditorConfigDataSO.DebugTileObject": "com.eyerunnman.gridsystem.GridEditorConfigDataSO.yml",
-  "com.eyerunnman.gridsystem.GridEditorConfigDataSO.TileHeightSnap": "com.eyerunnman.gridsystem.GridEditorConfigDataSO.yml"
+  "com.eyerunnman.gridsystem.Editor": "com.eyerunnman.gridsystem.Editor.yml",
+  "com.eyerunnman.gridsystem.Editor.EditorGridTile": "com.eyerunnman.gridsystem.Editor.EditorGridTile.yml",
+  "com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData": "com.eyerunnman.gridsystem.Editor.EditorGridTile.yml",
+  "com.eyerunnman.gridsystem.Editor.GridEditor": "com.eyerunnman.gridsystem.Editor.GridEditor.yml",
+  "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO": "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.yml",
+  "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.DebugTileObject": "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.yml",
+  "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.TileHeightSnap": "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.yml"
 }

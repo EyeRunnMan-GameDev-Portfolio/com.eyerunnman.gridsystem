@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System;
+using com.eyerunnman.enums;
 
 namespace com.eyerunnman.gridsystem
 {
+    /// <summary>
+    /// Grid Data which contatins dimension and stores data for each tile
+    /// </summary>
     [Serializable]
-    public struct GridData
+    public class GridData
     {
         [SerializeField]
         private UnityEngine.Vector2Int gridDimension;
@@ -13,7 +17,13 @@ namespace com.eyerunnman.gridsystem
         [SerializeField]
         private List<GridTileData> GridTilesData;
 
-        public UnityEngine.Vector2Int GridDimension { get => gridDimension; }
+        /// <summary>
+        /// Grid dimension for `GridData`
+        /// </summary>
+        public Vector2Int GridDimension { get => gridDimension; }
+        /// <summary>
+        /// Dictionary from tile id to its respective Grid Tile Data 
+        /// </summary>
         public Dictionary<int, GridTileData> GridTilesDataDictionary
         {
             get
@@ -58,52 +68,62 @@ namespace com.eyerunnman.gridsystem
             }
         }
 
+        /// <summary>
+        /// Number of Columns in `GridData`
+        /// </summary>
         public int Cols => GridDimension.x;
+        /// <summary>
+        /// Number of Rows in `GridData`
+        /// </summary>
         public int Rows => GridDimension.y;
 
+        /// <summary>
+        /// Constructor takes in dimenstions and data of all tiles
+        /// </summary>
+        /// <param name="dimension">dimension of grid</param>
+        /// <param name="gridTilesData">data for all tiles</param>
         public GridData(UnityEngine.Vector2Int dimension, List<GridTileData> gridTilesData)
         {
             gridDimension = dimension;
             GridTilesData = gridTilesData;
         }
+
+        /// <summary>
+        /// Constructor takes in dimension of grid and resets the tile data for all tiles to default
+        /// </summary>
+        /// <param name="dimension">dimension of grid</param>
         public GridData(UnityEngine.Vector2Int dimension)
         {
             gridDimension = dimension;
             GridTilesData = new();
         }
 
-        private GridTileData GetTileByTileId(int tileId)
-        {
-            if (GridTilesDataDictionary.ContainsKey(tileId))
-            {
-                return GridTilesDataDictionary[tileId];
-            }
-            else
-            {
-                return GridTileData.Default;
-            }
-        }
-
-        public GridTileData GetTileInDirection(int tileId, GridEnums.Direction direction)
+        /// <summary>
+        /// Get tile in given direction from a refrence tile
+        /// </summary>
+        /// <param name="tileId">tile id of ref tile</param>
+        /// <param name="direction">direction with respect to ref tile id</param>
+        /// <returns></returns>
+        public GridTileData GetTileDataInDirection(int tileId, Direction direction)
         {
 
             Vector2Int resultTileCoordinates;
             GridTileData refrenceTileData = GetTileByTileId(tileId);
 
-            if (refrenceTileData.IsDefault) return refrenceTileData;
+            if (refrenceTileData.IsDefault) return GridTileData.Default;
 
             switch (direction)
             {
-                case GridEnums.Direction.North:
+                case Direction.North:
                     resultTileCoordinates = refrenceTileData.Coordinates + Vector2Int.up;
                     break;
-                case GridEnums.Direction.South:
+                case Direction.South:
                     resultTileCoordinates = refrenceTileData.Coordinates + Vector2Int.down;
                     break;
-                case GridEnums.Direction.East:
+                case Direction.East:
                     resultTileCoordinates = refrenceTileData.Coordinates + Vector2Int.right;
                     break;
-                case GridEnums.Direction.West:
+                case Direction.West:
                     resultTileCoordinates = refrenceTileData.Coordinates + Vector2Int.left;
                     break;
                 default:
@@ -122,6 +142,18 @@ namespace com.eyerunnman.gridsystem
             return resultTileData;
         }
 
+
+        private GridTileData GetTileByTileId(int tileId)
+        {
+            if (GridTilesDataDictionary.ContainsKey(tileId))
+            {
+                return GridTilesDataDictionary[tileId];
+            }
+            else
+            {
+                return GridTileData.Default;
+            }
+        }
     }
 
 

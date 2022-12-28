@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using com.eyerunnman.gridsystem;
-using UnityEngine.UIElements;
 using UnityEditor.SceneManagement;
 using System;
+using com.eyerunnman.enums;
 
-namespace com.eyerunnman.gridsystem
+namespace com.eyerunnman.gridsystem.Editor
 {
     public class GridEditor : EditorWindow
     {
@@ -140,13 +138,13 @@ namespace com.eyerunnman.gridsystem
 
             foreach (GridTileObject gridTileObject in tileObjects)
             {
-                GridTileData tileObjectData = new(gridTileObject.Data,debugGridTileData);
+                GridTileData tileObjectData = new(debugGridTileData);
 
                 if (tileObjects.Count == 1)
                 {
-                    foreach (GridEnums.Direction direction in Enum.GetValues(typeof(GridEnums.Direction)))
+                    foreach (Direction direction in Enum.GetValues(typeof(Direction)))
                     {
-                        GridTileData adjecentTileData = debugGrid.GetTileInDirection(tileObjectData.TileId, direction);
+                        GridTileData adjecentTileData = debugGrid.GetTileDataInDirection(tileObjectData.TileId, direction);
 
                         float heightAmount = debugGridTileData.Height - adjecentTileData.Height;
 
@@ -157,23 +155,24 @@ namespace com.eyerunnman.gridsystem
 
                         switch (direction)
                         {
-                            case GridEnums.Direction.North:
+                            case Direction.North:
                                 if (!updateNorthTile) continue;
-                                adjecentTileData = new(adjecentTileData, heightAmount, GridEnums.Direction.South);
+                                adjecentTileData.SetLeadingEdgeHeight(heightAmount, Direction.South);
                                 break;
-                            case GridEnums.Direction.South:
+                            case Direction.South:
                                 if (!updateSouthTile) continue;
-                                adjecentTileData = new(adjecentTileData, heightAmount, GridEnums.Direction.North);
+                                adjecentTileData.SetLeadingEdgeHeight(heightAmount, Direction.North);
                                 break;
-                            case GridEnums.Direction.East:
+                            case Direction.East:
                                 if (!updateEastTile) continue;
-                                adjecentTileData = new(adjecentTileData, heightAmount, GridEnums.Direction.West);
+                                adjecentTileData.SetLeadingEdgeHeight(heightAmount, Direction.West);
                                 break;
-                            case GridEnums.Direction.West:
+                            case Direction.West:
                                 if (!updateWestTile) continue;
-                                adjecentTileData = new(adjecentTileData, heightAmount, GridEnums.Direction.East);
+                                adjecentTileData.SetLeadingEdgeHeight(heightAmount, Direction.East);
+
                                 break;
-                            case GridEnums.Direction.Undefined:
+                            case Direction.Undefined:
                                 break;
                         }
 
@@ -274,10 +273,10 @@ namespace com.eyerunnman.gridsystem
             int tileNumber=tileData.TileId;
             Vector2Int coordinates = tileData.Coordinates;
             float height = tileData.Height;
-            GridEnums.Direction slantDirection=tileData.SlantDirection;
+            Direction slantDirection=tileData.SlantDirection;
             float slantAngle = tileData.SlantAngle;
             float leadingEdgeHeight = tileData.LeadingEdgeHeight;
-            GridEnums.Tile.Type type = tileData.Type;
+            TileType type = tileData.Type;
 
 
             EditorGUILayout.BeginVertical();
@@ -310,7 +309,7 @@ namespace com.eyerunnman.gridsystem
 
             SetupHorizontalLayout(GUIElementCallback: () =>
             {
-                slantDirection = (GridEnums.Direction)EditorGUILayout.EnumPopup("Slant Direction", inTileData.SlantDirection);
+                slantDirection = (Direction)EditorGUILayout.EnumPopup("Slant Direction", inTileData.SlantDirection);
             });
 
             EditorGUILayout.Separator();
@@ -324,12 +323,14 @@ namespace com.eyerunnman.gridsystem
 
             SetupHorizontalLayout(GUIElementCallback: () =>
             {
-                type = (GridEnums.Tile.Type)EditorGUILayout.EnumPopup("Tile Type", inTileData.Type);
+                type = (TileType)EditorGUILayout.EnumPopup("Tile Type", inTileData.Type);
             });
 
             EditorGUILayout.EndVertical();
 
-            return new(new (tileNumber, coordinates, height, slantDirection, slantAngle, type),leadingEdgeHeight,slantDirection);
+            GridTileData resultTileData = new (tileNumber, coordinates, height, slantDirection, slantAngle, type);
+            resultTileData.SetLeadingEdgeHeight(leadingEdgeHeight, slantDirection);
+            return resultTileData;
         }
 
         private void ResetGridSO()
@@ -354,7 +355,7 @@ namespace com.eyerunnman.gridsystem
             GridTileObject debugTileObject = gridTileObjectPrefab.GetComponent<GridTileObject>();
 
 
-            debugGrid.GenerateGrid(SourceGridDataSO.GridData, debugTileObject);
+            debugGrid.GenerateGameGrid(SourceGridDataSO.GridData, debugTileObject);
             DestroyImmediate(gridTileObjectPrefab);
         }
 

@@ -7,14 +7,23 @@ using UnityEditor;
 
 namespace com.eyerunnman.gridsystem
 {
-
+    /// <summary>
+    /// Grid Data Scriptable object which is used to store grid data
+    /// </summary>
     [CreateAssetMenu(fileName = "GridData", menuName = "EyeRunnMan/GridSystem/GridData", order = 100)]
     public class GridDataSO : ScriptableObject
     {
-        public GridData GridData=new();
+        /// <summary>
+        /// Grid Data stored by `GridDataSO`
+        /// </summary>
+        public GridData GridData;
+
+        #region For UNITY_EDITOR
+
+#if UNITY_EDITOR
         public Mesh GridMesh;
 
-        public void EditorSetTileData(GameGrid editorGrid , GridTileData data)
+        public void EditorSetTileData(GameGrid editorGrid, GridTileData data)
         {
             editorGrid.SetupTile(data);
 
@@ -34,7 +43,7 @@ namespace com.eyerunnman.gridsystem
         public Mesh EditorGenerateMesh()
         {
             List<GridTileData> gridTilesData = new(GridData.GridTilesDataDictionary.Values);
-            
+
             Mesh mesh = new();
 
             List<Vector3> vertices = new();
@@ -73,8 +82,9 @@ namespace com.eyerunnman.gridsystem
                 return TopLeftCounter;
             }
         }
+#endif
+        #endregion
 
-        
     }
 }
 
