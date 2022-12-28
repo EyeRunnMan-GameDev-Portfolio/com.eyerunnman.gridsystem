@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct GridData
+    <title>Class GridData
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct GridData
+    <meta name="title" content="Class GridData
    ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -71,37 +71,46 @@
             <article class="content wrap" id="_content" data-uid="com.eyerunnman.gridsystem.GridData">
   
   
-  <h1 id="com_eyerunnman_gridsystem_GridData" data-uid="com.eyerunnman.gridsystem.GridData" class="text-break">Struct GridData
+  <h1 id="com_eyerunnman_gridsystem_GridData" data-uid="com.eyerunnman.gridsystem.GridData" class="text-break">Class GridData
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Grid Data which contatins dimension and stores data for each tile</p>
+</div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GridData</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.ValueType.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.ValueType.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.ValueType.ToString()</span>
+      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
       <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
     </div>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="../api-editor/com.eyerunnman.gridsystem.html">com.eyerunnman.gridsystem</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="com.eyerunnman.gridsystem.html">com.eyerunnman.gridsystem</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="com_eyerunnman_gridsystem_GridData_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public struct GridData</code></pre>
+public class GridData</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -109,11 +118,12 @@ public struct GridData</code></pre>
   
   <a id="com_eyerunnman_gridsystem_GridData_GridDimension_" data-uid="com.eyerunnman.gridsystem.GridData.GridDimension*"></a>
   <h4 id="com_eyerunnman_gridsystem_GridData_GridDimension" data-uid="com.eyerunnman.gridsystem.GridData.GridDimension">GridDimension</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Grid dimension for <code>GridData</code></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEngine.Vector2Int GridDimension { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2Int GridDimension { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +135,7 @@ public struct GridData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEngine.Vector2Int</span></td>
+        <td><span class="xref">Vector2Int</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -134,7 +144,8 @@ public struct GridData</code></pre>
   
   <a id="com_eyerunnman_gridsystem_GridData_GridTilesDataDictionary_" data-uid="com.eyerunnman.gridsystem.GridData.GridTilesDataDictionary*"></a>
   <h4 id="com_eyerunnman_gridsystem_GridData_GridTilesDataDictionary" data-uid="com.eyerunnman.gridsystem.GridData.GridTilesDataDictionary">GridTilesDataDictionary</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Dictionary from tile id to its respective Grid Tile Data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

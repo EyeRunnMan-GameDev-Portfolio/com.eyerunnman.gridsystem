@@ -3,61 +3,97 @@ sorted: true
 references:
 - uid: com.eyerunnman.gridsystem
   name: com.eyerunnman.gridsystem
-  href: api-editor/com.eyerunnman.gridsystem.html
+  href: api-runtime/com.eyerunnman.gridsystem.html
   commentId: N:com.eyerunnman.gridsystem
   fullName: com.eyerunnman.gridsystem
   nameWithType: com.eyerunnman.gridsystem
-- uid: com.eyerunnman.gridsystem.EditorGridTile
+- uid: com.eyerunnman.gridsystem.Editor
+  name: com.eyerunnman.gridsystem.Editor
+  href: api-editor/com.eyerunnman.gridsystem.Editor.html
+  commentId: N:com.eyerunnman.gridsystem.Editor
+  fullName: com.eyerunnman.gridsystem.Editor
+  nameWithType: com.eyerunnman.gridsystem.Editor
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile
   name: EditorGridTile
-  href: api-editor/com.eyerunnman.gridsystem.EditorGridTile.html
-  commentId: T:com.eyerunnman.gridsystem.EditorGridTile
-  fullName: com.eyerunnman.gridsystem.EditorGridTile
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html
+  commentId: T:com.eyerunnman.gridsystem.Editor.EditorGridTile
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile
   nameWithType: EditorGridTile
-- uid: com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData
   name: UpdateDebugData()
-  href: api-editor/com.eyerunnman.gridsystem.EditorGridTile.html#com_eyerunnman_gridsystem_EditorGridTile_UpdateDebugData
-  commentId: M:com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData
-  fullName: com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData()
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_UpdateDebugData
+  commentId: M:com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData()
   nameWithType: EditorGridTile.UpdateDebugData()
-- uid: com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData*
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData*
   name: UpdateDebugData
-  href: api-editor/com.eyerunnman.gridsystem.EditorGridTile.html#com_eyerunnman_gridsystem_EditorGridTile_UpdateDebugData_
-  commentId: Overload:com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_UpdateDebugData_
+  commentId: Overload:com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.EditorGridTile.UpdateDebugData
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData
   nameWithType: EditorGridTile.UpdateDebugData
+- uid: com.eyerunnman.gridsystem.Editor.GridEditor
+  name: GridEditor
+  href: api-editor/com.eyerunnman.gridsystem.Editor.GridEditor.html
+  commentId: T:com.eyerunnman.gridsystem.Editor.GridEditor
+  fullName: com.eyerunnman.gridsystem.Editor.GridEditor
+  nameWithType: GridEditor
+- uid: com.eyerunnman.gridsystem.Editor.GridEditor2
+  name: GridEditor2
+  href: api-editor/com.eyerunnman.gridsystem.Editor.GridEditor2.html
+  commentId: T:com.eyerunnman.gridsystem.Editor.GridEditor2
+  fullName: com.eyerunnman.gridsystem.Editor.GridEditor2
+  nameWithType: GridEditor2
+- uid: com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO
+  name: GridEditorConfigDataSO
+  href: api-editor/com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.html
+  commentId: T:com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO
+  fullName: com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO
+  nameWithType: GridEditorConfigDataSO
+- uid: com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.DebugTileObject
+  name: DebugTileObject
+  href: api-editor/com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.html#com_eyerunnman_gridsystem_Editor_GridEditorConfigDataSO_DebugTileObject
+  commentId: F:com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.DebugTileObject
+  fullName: com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.DebugTileObject
+  nameWithType: GridEditorConfigDataSO.DebugTileObject
+- uid: com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.TileHeightSnap
+  name: TileHeightSnap
+  href: api-editor/com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.html#com_eyerunnman_gridsystem_Editor_GridEditorConfigDataSO_TileHeightSnap
+  commentId: F:com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.TileHeightSnap
+  fullName: com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.TileHeightSnap
+  nameWithType: GridEditorConfigDataSO.TileHeightSnap
 - uid: com.eyerunnman.gridsystem.GameGrid
   name: GameGrid
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html
   commentId: T:com.eyerunnman.gridsystem.GameGrid
   fullName: com.eyerunnman.gridsystem.GameGrid
   nameWithType: GameGrid
-- uid: com.eyerunnman.gridsystem.GameGrid.GenerateGrid(com.eyerunnman.gridsystem.GridData,com.eyerunnman.gridsystem.GridTileObject)
-  name: GenerateGrid(GridData, GridTileObject)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GenerateGrid_com_eyerunnman_gridsystem_GridData_com_eyerunnman_gridsystem_GridTileObject_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GenerateGrid(com.eyerunnman.gridsystem.GridData,com.eyerunnman.gridsystem.GridTileObject)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GenerateGrid(com.eyerunnman.gridsystem.GridData, com.eyerunnman.gridsystem.GridTileObject)
-  nameWithType: GameGrid.GenerateGrid(GridData, GridTileObject)
-- uid: com.eyerunnman.gridsystem.GameGrid.GenerateGrid*
-  name: GenerateGrid
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GenerateGrid_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GenerateGrid
+- uid: com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid(com.eyerunnman.gridsystem.GridData,com.eyerunnman.gridsystem.GridTileObject)
+  name: GenerateGameGrid(GridData, GridTileObject)
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GenerateGameGrid_com_eyerunnman_gridsystem_GridData_com_eyerunnman_gridsystem_GridTileObject_
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid(com.eyerunnman.gridsystem.GridData,com.eyerunnman.gridsystem.GridTileObject)
+  fullName: com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid(com.eyerunnman.gridsystem.GridData, com.eyerunnman.gridsystem.GridTileObject)
+  nameWithType: GameGrid.GenerateGameGrid(GridData, GridTileObject)
+- uid: com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid*
+  name: GenerateGameGrid
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GenerateGameGrid_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GenerateGrid
-  nameWithType: GameGrid.GenerateGrid
-- uid: com.eyerunnman.gridsystem.GameGrid.GetTileInDirection(System.Int32,com.eyerunnman.gridsystem.GridEnums.Direction)
-  name: GetTileInDirection(Int32, GridEnums.Direction)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GetTileInDirection_System_Int32_com_eyerunnman_gridsystem_GridEnums_Direction_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GetTileInDirection(System.Int32,com.eyerunnman.gridsystem.GridEnums.Direction)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GetTileInDirection(System.Int32, com.eyerunnman.gridsystem.GridEnums.Direction)
-  nameWithType: GameGrid.GetTileInDirection(Int32, GridEnums.Direction)
-- uid: com.eyerunnman.gridsystem.GameGrid.GetTileInDirection*
-  name: GetTileInDirection
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GetTileInDirection_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GetTileInDirection
+  fullName: com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid
+  nameWithType: GameGrid.GenerateGameGrid
+- uid: com.eyerunnman.gridsystem.GameGrid.GetTileDataInDirection(System.Int32,Direction)
+  name: GetTileDataInDirection(Int32, Direction)
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GetTileDataInDirection_System_Int32_Direction_
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.GetTileDataInDirection(System.Int32,Direction)
+  fullName: com.eyerunnman.gridsystem.GameGrid.GetTileDataInDirection(System.Int32, Direction)
+  nameWithType: GameGrid.GetTileDataInDirection(Int32, Direction)
+- uid: com.eyerunnman.gridsystem.GameGrid.GetTileDataInDirection*
+  name: GetTileDataInDirection
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GetTileDataInDirection_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GetTileDataInDirection
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GetTileInDirection
-  nameWithType: GameGrid.GetTileInDirection
+  fullName: com.eyerunnman.gridsystem.GameGrid.GetTileDataInDirection
+  nameWithType: GameGrid.GetTileDataInDirection
 - uid: com.eyerunnman.gridsystem.GameGrid.GridDimension
   name: GridDimension
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GridDimension
@@ -71,19 +107,19 @@ references:
   isSpec: "True"
   fullName: com.eyerunnman.gridsystem.GameGrid.GridDimension
   nameWithType: GameGrid.GridDimension
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTilesData
-  name: GridTilesData
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GridTilesData
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridTilesData
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTilesData
-  nameWithType: GameGrid.GridTilesData
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTilesData*
-  name: GridTilesData
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GridTilesData_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTilesData
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileDataList
+  name: GridTileDataList
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GridTileDataList
+  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridTileDataList
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileDataList
+  nameWithType: GameGrid.GridTileDataList
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileDataList*
+  name: GridTileDataList
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GridTileDataList_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileDataList
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTilesData
-  nameWithType: GameGrid.GridTilesData
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileDataList
+  nameWithType: GameGrid.GridTileDataList
 - uid: com.eyerunnman.gridsystem.GameGrid.SetupTile(com.eyerunnman.gridsystem.GridTileData)
   name: SetupTile(GridTileData)
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_SetupTile_com_eyerunnman_gridsystem_GridTileData_
@@ -135,171 +171,30 @@ references:
   commentId: T:com.eyerunnman.gridsystem.GridDataSO
   fullName: com.eyerunnman.gridsystem.GridDataSO
   nameWithType: GridDataSO
-- uid: com.eyerunnman.gridsystem.GridDataSO.EditorGenerateMesh
-  name: EditorGenerateMesh()
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_EditorGenerateMesh
-  commentId: M:com.eyerunnman.gridsystem.GridDataSO.EditorGenerateMesh
-  fullName: com.eyerunnman.gridsystem.GridDataSO.EditorGenerateMesh()
-  nameWithType: GridDataSO.EditorGenerateMesh()
-- uid: com.eyerunnman.gridsystem.GridDataSO.EditorGenerateMesh*
-  name: EditorGenerateMesh
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_EditorGenerateMesh_
-  commentId: Overload:com.eyerunnman.gridsystem.GridDataSO.EditorGenerateMesh
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GridDataSO.EditorGenerateMesh
-  nameWithType: GridDataSO.EditorGenerateMesh
-- uid: com.eyerunnman.gridsystem.GridDataSO.EditorGetTileData(System.Int32)
-  name: EditorGetTileData(Int32)
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_EditorGetTileData_System_Int32_
-  commentId: M:com.eyerunnman.gridsystem.GridDataSO.EditorGetTileData(System.Int32)
-  fullName: com.eyerunnman.gridsystem.GridDataSO.EditorGetTileData(System.Int32)
-  nameWithType: GridDataSO.EditorGetTileData(Int32)
-- uid: com.eyerunnman.gridsystem.GridDataSO.EditorGetTileData*
-  name: EditorGetTileData
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_EditorGetTileData_
-  commentId: Overload:com.eyerunnman.gridsystem.GridDataSO.EditorGetTileData
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GridDataSO.EditorGetTileData
-  nameWithType: GridDataSO.EditorGetTileData
-- uid: com.eyerunnman.gridsystem.GridDataSO.EditorSetTileData(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GridTileData)
-  name: EditorSetTileData(GameGrid, GridTileData)
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_EditorSetTileData_com_eyerunnman_gridsystem_GameGrid_com_eyerunnman_gridsystem_GridTileData_
-  commentId: M:com.eyerunnman.gridsystem.GridDataSO.EditorSetTileData(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GridTileData)
-  fullName: com.eyerunnman.gridsystem.GridDataSO.EditorSetTileData(com.eyerunnman.gridsystem.GameGrid, com.eyerunnman.gridsystem.GridTileData)
-  nameWithType: GridDataSO.EditorSetTileData(GameGrid, GridTileData)
-- uid: com.eyerunnman.gridsystem.GridDataSO.EditorSetTileData*
-  name: EditorSetTileData
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_EditorSetTileData_
-  commentId: Overload:com.eyerunnman.gridsystem.GridDataSO.EditorSetTileData
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GridDataSO.EditorSetTileData
-  nameWithType: GridDataSO.EditorSetTileData
 - uid: com.eyerunnman.gridsystem.GridDataSO.GridData
   name: GridData
   href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_GridData
   commentId: F:com.eyerunnman.gridsystem.GridDataSO.GridData
   fullName: com.eyerunnman.gridsystem.GridDataSO.GridData
   nameWithType: GridDataSO.GridData
-- uid: com.eyerunnman.gridsystem.GridDataSO.GridMesh
-  name: GridMesh
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_GridMesh
-  commentId: F:com.eyerunnman.gridsystem.GridDataSO.GridMesh
-  fullName: com.eyerunnman.gridsystem.GridDataSO.GridMesh
-  nameWithType: GridDataSO.GridMesh
-- uid: com.eyerunnman.gridsystem.GridEditor
-  name: GridEditor
-  href: api-editor/com.eyerunnman.gridsystem.GridEditor.html
-  commentId: T:com.eyerunnman.gridsystem.GridEditor
-  fullName: com.eyerunnman.gridsystem.GridEditor
-  nameWithType: GridEditor
-- uid: com.eyerunnman.gridsystem.GridEditorConfigDataSO
-  name: GridEditorConfigDataSO
-  href: api-editor/com.eyerunnman.gridsystem.GridEditorConfigDataSO.html
-  commentId: T:com.eyerunnman.gridsystem.GridEditorConfigDataSO
-  fullName: com.eyerunnman.gridsystem.GridEditorConfigDataSO
-  nameWithType: GridEditorConfigDataSO
-- uid: com.eyerunnman.gridsystem.GridEditorConfigDataSO.DebugTileObject
-  name: DebugTileObject
-  href: api-editor/com.eyerunnman.gridsystem.GridEditorConfigDataSO.html#com_eyerunnman_gridsystem_GridEditorConfigDataSO_DebugTileObject
-  commentId: F:com.eyerunnman.gridsystem.GridEditorConfigDataSO.DebugTileObject
-  fullName: com.eyerunnman.gridsystem.GridEditorConfigDataSO.DebugTileObject
-  nameWithType: GridEditorConfigDataSO.DebugTileObject
-- uid: com.eyerunnman.gridsystem.GridEditorConfigDataSO.TileHeightSnap
-  name: TileHeightSnap
-  href: api-editor/com.eyerunnman.gridsystem.GridEditorConfigDataSO.html#com_eyerunnman_gridsystem_GridEditorConfigDataSO_TileHeightSnap
-  commentId: F:com.eyerunnman.gridsystem.GridEditorConfigDataSO.TileHeightSnap
-  fullName: com.eyerunnman.gridsystem.GridEditorConfigDataSO.TileHeightSnap
-  nameWithType: GridEditorConfigDataSO.TileHeightSnap
-- uid: com.eyerunnman.gridsystem.GridEnums
-  name: GridEnums
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.html
-  commentId: T:com.eyerunnman.gridsystem.GridEnums
-  fullName: com.eyerunnman.gridsystem.GridEnums
-  nameWithType: GridEnums
-- uid: com.eyerunnman.gridsystem.GridEnums.Direction
-  name: GridEnums.Direction
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Direction.html
-  commentId: T:com.eyerunnman.gridsystem.GridEnums.Direction
-  fullName: com.eyerunnman.gridsystem.GridEnums.Direction
-  nameWithType: GridEnums.Direction
-- uid: com.eyerunnman.gridsystem.GridEnums.Direction.East
-  name: East
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Direction.html#com_eyerunnman_gridsystem_GridEnums_Direction_East
-  commentId: F:com.eyerunnman.gridsystem.GridEnums.Direction.East
-  fullName: com.eyerunnman.gridsystem.GridEnums.Direction.East
-  nameWithType: GridEnums.Direction.East
-- uid: com.eyerunnman.gridsystem.GridEnums.Direction.North
-  name: North
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Direction.html#com_eyerunnman_gridsystem_GridEnums_Direction_North
-  commentId: F:com.eyerunnman.gridsystem.GridEnums.Direction.North
-  fullName: com.eyerunnman.gridsystem.GridEnums.Direction.North
-  nameWithType: GridEnums.Direction.North
-- uid: com.eyerunnman.gridsystem.GridEnums.Direction.South
-  name: South
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Direction.html#com_eyerunnman_gridsystem_GridEnums_Direction_South
-  commentId: F:com.eyerunnman.gridsystem.GridEnums.Direction.South
-  fullName: com.eyerunnman.gridsystem.GridEnums.Direction.South
-  nameWithType: GridEnums.Direction.South
-- uid: com.eyerunnman.gridsystem.GridEnums.Direction.Undefined
-  name: Undefined
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Direction.html#com_eyerunnman_gridsystem_GridEnums_Direction_Undefined
-  commentId: F:com.eyerunnman.gridsystem.GridEnums.Direction.Undefined
-  fullName: com.eyerunnman.gridsystem.GridEnums.Direction.Undefined
-  nameWithType: GridEnums.Direction.Undefined
-- uid: com.eyerunnman.gridsystem.GridEnums.Direction.West
-  name: West
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Direction.html#com_eyerunnman_gridsystem_GridEnums_Direction_West
-  commentId: F:com.eyerunnman.gridsystem.GridEnums.Direction.West
-  fullName: com.eyerunnman.gridsystem.GridEnums.Direction.West
-  nameWithType: GridEnums.Direction.West
-- uid: com.eyerunnman.gridsystem.GridEnums.Tile
-  name: GridEnums.Tile
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Tile.html
-  commentId: T:com.eyerunnman.gridsystem.GridEnums.Tile
-  fullName: com.eyerunnman.gridsystem.GridEnums.Tile
-  nameWithType: GridEnums.Tile
-- uid: com.eyerunnman.gridsystem.GridEnums.Tile.Type
-  name: GridEnums.Tile.Type
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Tile.Type.html
-  commentId: T:com.eyerunnman.gridsystem.GridEnums.Tile.Type
-  fullName: com.eyerunnman.gridsystem.GridEnums.Tile.Type
-  nameWithType: GridEnums.Tile.Type
-- uid: com.eyerunnman.gridsystem.GridEnums.Tile.Type.Stone
-  name: Stone
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Tile.Type.html#com_eyerunnman_gridsystem_GridEnums_Tile_Type_Stone
-  commentId: F:com.eyerunnman.gridsystem.GridEnums.Tile.Type.Stone
-  fullName: com.eyerunnman.gridsystem.GridEnums.Tile.Type.Stone
-  nameWithType: GridEnums.Tile.Type.Stone
-- uid: com.eyerunnman.gridsystem.GridEnums.Tile.Type.Undefined
-  name: Undefined
-  href: api-runtime/com.eyerunnman.gridsystem.GridEnums.Tile.Type.html#com_eyerunnman_gridsystem_GridEnums_Tile_Type_Undefined
-  commentId: F:com.eyerunnman.gridsystem.GridEnums.Tile.Type.Undefined
-  fullName: com.eyerunnman.gridsystem.GridEnums.Tile.Type.Undefined
-  nameWithType: GridEnums.Tile.Type.Undefined
 - uid: com.eyerunnman.gridsystem.GridTileData
   name: GridTileData
   href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html
   commentId: T:com.eyerunnman.gridsystem.GridTileData
   fullName: com.eyerunnman.gridsystem.GridTileData
   nameWithType: GridTileData
-- uid: com.eyerunnman.gridsystem.GridTileData.#ctor(com.eyerunnman.gridsystem.GridTileData,com.eyerunnman.gridsystem.GridTileData)
-  name: GridTileData(GridTileData, GridTileData)
-  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData__ctor_com_eyerunnman_gridsystem_GridTileData_com_eyerunnman_gridsystem_GridTileData_
-  commentId: M:com.eyerunnman.gridsystem.GridTileData.#ctor(com.eyerunnman.gridsystem.GridTileData,com.eyerunnman.gridsystem.GridTileData)
-  fullName: com.eyerunnman.gridsystem.GridTileData.GridTileData(com.eyerunnman.gridsystem.GridTileData, com.eyerunnman.gridsystem.GridTileData)
-  nameWithType: GridTileData.GridTileData(GridTileData, GridTileData)
-- uid: com.eyerunnman.gridsystem.GridTileData.#ctor(com.eyerunnman.gridsystem.GridTileData,System.Single,com.eyerunnman.gridsystem.GridEnums.Direction)
-  name: GridTileData(GridTileData, Single, GridEnums.Direction)
-  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData__ctor_com_eyerunnman_gridsystem_GridTileData_System_Single_com_eyerunnman_gridsystem_GridEnums_Direction_
-  commentId: M:com.eyerunnman.gridsystem.GridTileData.#ctor(com.eyerunnman.gridsystem.GridTileData,System.Single,com.eyerunnman.gridsystem.GridEnums.Direction)
-  fullName: com.eyerunnman.gridsystem.GridTileData.GridTileData(com.eyerunnman.gridsystem.GridTileData, System.Single, com.eyerunnman.gridsystem.GridEnums.Direction)
-  nameWithType: GridTileData.GridTileData(GridTileData, Single, GridEnums.Direction)
-- uid: com.eyerunnman.gridsystem.GridTileData.#ctor(System.Int32,Vector2Int,System.Single,com.eyerunnman.gridsystem.GridEnums.Direction,System.Single,com.eyerunnman.gridsystem.GridEnums.Tile.Type)
-  name: GridTileData(Int32, Vector2Int, Single, GridEnums.Direction, Single, GridEnums.Tile.Type)
-  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData__ctor_System_Int32_Vector2Int_System_Single_com_eyerunnman_gridsystem_GridEnums_Direction_System_Single_com_eyerunnman_gridsystem_GridEnums_Tile_Type_
-  commentId: M:com.eyerunnman.gridsystem.GridTileData.#ctor(System.Int32,Vector2Int,System.Single,com.eyerunnman.gridsystem.GridEnums.Direction,System.Single,com.eyerunnman.gridsystem.GridEnums.Tile.Type)
-  fullName: com.eyerunnman.gridsystem.GridTileData.GridTileData(System.Int32, Vector2Int, System.Single, com.eyerunnman.gridsystem.GridEnums.Direction, System.Single, com.eyerunnman.gridsystem.GridEnums.Tile.Type)
-  nameWithType: GridTileData.GridTileData(Int32, Vector2Int, Single, GridEnums.Direction, Single, GridEnums.Tile.Type)
+- uid: com.eyerunnman.gridsystem.GridTileData.#ctor(com.eyerunnman.gridsystem.GridTileData)
+  name: GridTileData(GridTileData)
+  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData__ctor_com_eyerunnman_gridsystem_GridTileData_
+  commentId: M:com.eyerunnman.gridsystem.GridTileData.#ctor(com.eyerunnman.gridsystem.GridTileData)
+  fullName: com.eyerunnman.gridsystem.GridTileData.GridTileData(com.eyerunnman.gridsystem.GridTileData)
+  nameWithType: GridTileData.GridTileData(GridTileData)
+- uid: com.eyerunnman.gridsystem.GridTileData.#ctor(System.Int32,Vector2Int,System.Single,Direction,System.Single,com.eyerunnman.gridsystem.TileType)
+  name: GridTileData(Int32, Vector2Int, Single, Direction, Single, TileType)
+  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData__ctor_System_Int32_Vector2Int_System_Single_Direction_System_Single_com_eyerunnman_gridsystem_TileType_
+  commentId: M:com.eyerunnman.gridsystem.GridTileData.#ctor(System.Int32,Vector2Int,System.Single,Direction,System.Single,com.eyerunnman.gridsystem.TileType)
+  fullName: com.eyerunnman.gridsystem.GridTileData.GridTileData(System.Int32, Vector2Int, System.Single, Direction, System.Single, com.eyerunnman.gridsystem.TileType)
+  nameWithType: GridTileData.GridTileData(Int32, Vector2Int, Single, Direction, Single, TileType)
 - uid: com.eyerunnman.gridsystem.GridTileData.#ctor*
   name: GridTileData
   href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData__ctor_
@@ -521,19 +416,32 @@ references:
   isSpec: "True"
   fullName: com.eyerunnman.gridsystem.GridTileData.Inequality
   nameWithType: GridTileData.Inequality
-- uid: com.eyerunnman.gridsystem.GridTileData.RighVector
-  name: RighVector
-  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData_RighVector
-  commentId: P:com.eyerunnman.gridsystem.GridTileData.RighVector
-  fullName: com.eyerunnman.gridsystem.GridTileData.RighVector
-  nameWithType: GridTileData.RighVector
-- uid: com.eyerunnman.gridsystem.GridTileData.RighVector*
-  name: RighVector
-  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData_RighVector_
-  commentId: Overload:com.eyerunnman.gridsystem.GridTileData.RighVector
+- uid: com.eyerunnman.gridsystem.GridTileData.RightVector
+  name: RightVector
+  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData_RightVector
+  commentId: P:com.eyerunnman.gridsystem.GridTileData.RightVector
+  fullName: com.eyerunnman.gridsystem.GridTileData.RightVector
+  nameWithType: GridTileData.RightVector
+- uid: com.eyerunnman.gridsystem.GridTileData.RightVector*
+  name: RightVector
+  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData_RightVector_
+  commentId: Overload:com.eyerunnman.gridsystem.GridTileData.RightVector
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GridTileData.RighVector
-  nameWithType: GridTileData.RighVector
+  fullName: com.eyerunnman.gridsystem.GridTileData.RightVector
+  nameWithType: GridTileData.RightVector
+- uid: com.eyerunnman.gridsystem.GridTileData.SetLeadingEdgeHeight(System.Single,Direction)
+  name: SetLeadingEdgeHeight(Single, Direction)
+  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData_SetLeadingEdgeHeight_System_Single_Direction_
+  commentId: M:com.eyerunnman.gridsystem.GridTileData.SetLeadingEdgeHeight(System.Single,Direction)
+  fullName: com.eyerunnman.gridsystem.GridTileData.SetLeadingEdgeHeight(System.Single, Direction)
+  nameWithType: GridTileData.SetLeadingEdgeHeight(Single, Direction)
+- uid: com.eyerunnman.gridsystem.GridTileData.SetLeadingEdgeHeight*
+  name: SetLeadingEdgeHeight
+  href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData_SetLeadingEdgeHeight_
+  commentId: Overload:com.eyerunnman.gridsystem.GridTileData.SetLeadingEdgeHeight
+  isSpec: "True"
+  fullName: com.eyerunnman.gridsystem.GridTileData.SetLeadingEdgeHeight
+  nameWithType: GridTileData.SetLeadingEdgeHeight
 - uid: com.eyerunnman.gridsystem.GridTileData.SlantAngle
   name: SlantAngle
   href: api-runtime/com.eyerunnman.gridsystem.GridTileData.html#com_eyerunnman_gridsystem_GridTileData_SlantAngle
@@ -657,3 +565,75 @@ references:
   isSpec: "True"
   fullName: com.eyerunnman.gridsystem.GridTileObject.SetUpTile
   nameWithType: GridTileObject.SetUpTile
+- uid: com.eyerunnman.gridsystem.TileType
+  name: TileType
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html
+  commentId: T:com.eyerunnman.gridsystem.TileType
+  fullName: com.eyerunnman.gridsystem.TileType
+  nameWithType: TileType
+- uid: com.eyerunnman.gridsystem.TileType.Type0
+  name: Type0
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type0
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type0
+  fullName: com.eyerunnman.gridsystem.TileType.Type0
+  nameWithType: TileType.Type0
+- uid: com.eyerunnman.gridsystem.TileType.Type1
+  name: Type1
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type1
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type1
+  fullName: com.eyerunnman.gridsystem.TileType.Type1
+  nameWithType: TileType.Type1
+- uid: com.eyerunnman.gridsystem.TileType.Type2
+  name: Type2
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type2
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type2
+  fullName: com.eyerunnman.gridsystem.TileType.Type2
+  nameWithType: TileType.Type2
+- uid: com.eyerunnman.gridsystem.TileType.Type3
+  name: Type3
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type3
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type3
+  fullName: com.eyerunnman.gridsystem.TileType.Type3
+  nameWithType: TileType.Type3
+- uid: com.eyerunnman.gridsystem.TileType.Type4
+  name: Type4
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type4
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type4
+  fullName: com.eyerunnman.gridsystem.TileType.Type4
+  nameWithType: TileType.Type4
+- uid: com.eyerunnman.gridsystem.TileType.Type5
+  name: Type5
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type5
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type5
+  fullName: com.eyerunnman.gridsystem.TileType.Type5
+  nameWithType: TileType.Type5
+- uid: com.eyerunnman.gridsystem.TileType.Type6
+  name: Type6
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type6
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type6
+  fullName: com.eyerunnman.gridsystem.TileType.Type6
+  nameWithType: TileType.Type6
+- uid: com.eyerunnman.gridsystem.TileType.Type7
+  name: Type7
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type7
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type7
+  fullName: com.eyerunnman.gridsystem.TileType.Type7
+  nameWithType: TileType.Type7
+- uid: com.eyerunnman.gridsystem.TileType.Type8
+  name: Type8
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type8
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type8
+  fullName: com.eyerunnman.gridsystem.TileType.Type8
+  nameWithType: TileType.Type8
+- uid: com.eyerunnman.gridsystem.TileType.Type9
+  name: Type9
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Type9
+  commentId: F:com.eyerunnman.gridsystem.TileType.Type9
+  fullName: com.eyerunnman.gridsystem.TileType.Type9
+  nameWithType: TileType.Type9
+- uid: com.eyerunnman.gridsystem.TileType.Undefined
+  name: Undefined
+  href: api-runtime/com.eyerunnman.gridsystem.TileType.html#com_eyerunnman_gridsystem_TileType_Undefined
+  commentId: F:com.eyerunnman.gridsystem.TileType.Undefined
+  fullName: com.eyerunnman.gridsystem.TileType.Undefined
+  nameWithType: TileType.Undefined
