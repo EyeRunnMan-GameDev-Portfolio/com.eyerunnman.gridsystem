@@ -112,8 +112,100 @@
     <pre><code class="lang-csharp hljs">[Serializable]
 public class GridData</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData__ctor_" data-uid="com.eyerunnman.gridsystem.GridData.#ctor*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData__ctor_UnityEngine_Vector2Int_" data-uid="com.eyerunnman.gridsystem.GridData.#ctor(UnityEngine.Vector2Int)">GridData(UnityEngine.Vector2Int)</h4>
+  <div class="markdown level1 summary"><p>Constructor takes in dimension of grid and resets the tile data for all tiles to default</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridData(UnityEngine.Vector2Int dimension)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2Int</span></td>
+        <td><span class="parametername">dimension</span></td>
+        <td><p>dimension of grid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData__ctor_" data-uid="com.eyerunnman.gridsystem.GridData.#ctor*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData__ctor_UnityEngine_Vector2Int_List_com_eyerunnman_gridsystem_GridTileData__" data-uid="com.eyerunnman.gridsystem.GridData.#ctor(UnityEngine.Vector2Int,List{com.eyerunnman.gridsystem.GridTileData})">GridData(UnityEngine.Vector2Int, List&lt;GridTileData&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructor takes in dimenstions and data of all tiles</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridData(UnityEngine.Vector2Int dimension, List&lt;GridTileData&gt; gridTilesData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector2Int</span></td>
+        <td><span class="parametername">dimension</span></td>
+        <td><p>dimension of grid</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a>&gt;</td>
+        <td><span class="parametername">gridTilesData</span></td>
+        <td><p>data for all tiles</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData_Cols_" data-uid="com.eyerunnman.gridsystem.GridData.Cols*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData_Cols" data-uid="com.eyerunnman.gridsystem.GridData.Cols">Cols</h4>
+  <div class="markdown level1 summary"><p>Number of Columns in <code>GridData</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Cols { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="com_eyerunnman_gridsystem_GridData_GridDimension_" data-uid="com.eyerunnman.gridsystem.GridData.GridDimension*"></a>
@@ -142,14 +234,14 @@ public class GridData</code></pre>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_GridTilesDataDictionary_" data-uid="com.eyerunnman.gridsystem.GridData.GridTilesDataDictionary*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_GridTilesDataDictionary" data-uid="com.eyerunnman.gridsystem.GridData.GridTilesDataDictionary">GridTilesDataDictionary</h4>
-  <div class="markdown level1 summary"><p>Dictionary from tile id to its respective Grid Tile Data</p>
+  <a id="com_eyerunnman_gridsystem_GridData_NumberOfTiles_" data-uid="com.eyerunnman.gridsystem.GridData.NumberOfTiles*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData_NumberOfTiles" data-uid="com.eyerunnman.gridsystem.GridData.NumberOfTiles">NumberOfTiles</h4>
+  <div class="markdown level1 summary"><p>Total Number of tiles in GridData;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;int, GridTileData&gt; GridTilesDataDictionary { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int NumberOfTiles { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,8 +253,297 @@ public class GridData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData_Rows_" data-uid="com.eyerunnman.gridsystem.GridData.Rows*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData_Rows" data-uid="com.eyerunnman.gridsystem.GridData.Rows">Rows</h4>
+  <div class="markdown level1 summary"><p>Number of Rows in <code>GridData</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Rows { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData_GetCoordinateInDirection_" data-uid="com.eyerunnman.gridsystem.GridData.GetCoordinateInDirection*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData_GetCoordinateInDirection_Vector2Int_Direction_" data-uid="com.eyerunnman.gridsystem.GridData.GetCoordinateInDirection(Vector2Int,Direction)">GetCoordinateInDirection(Vector2Int, Direction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2Int GetCoordinateInDirection(Vector2Int refrenceCoordinates, Direction direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2Int</span></td>
+        <td><span class="parametername">refrenceCoordinates</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Direction</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2Int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData_GetTileDataFromCoordinates_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileDataFromCoordinates*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData_GetTileDataFromCoordinates_Vector2Int_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileDataFromCoordinates(Vector2Int)">GetTileDataFromCoordinates(Vector2Int)</h4>
+  <div class="markdown level1 summary"><p>GetTileData from coordinates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGridTileData GetTileDataFromCoordinates(Vector2Int coordinates)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2Int</span></td>
+        <td><span class="parametername">coordinates</span></td>
+        <td><p>coordinates of tile</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData_GetTileDataInDirection_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileDataInDirection*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData_GetTileDataInDirection_System_Int32_Direction_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileDataInDirection(System.Int32,Direction)">GetTileDataInDirection(Int32, Direction)</h4>
+  <div class="markdown level1 summary"><p>Get tile in given direction from a refrence tile</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGridTileData GetTileDataInDirection(int tileNumber, Direction direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">tileNumber</span></td>
+        <td><p>tile id of ref tile</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Direction</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>direction with respect to ref tile id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData_GetTileFromNumber_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileFromNumber*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData_GetTileFromNumber_System_Int32_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileFromNumber(System.Int32)">GetTileFromNumber(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get Tild Data for a given index if the number is invalid will return undefined tile</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGridTileData GetTileFromNumber(int tileNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">tileNumber</span></td>
+        <td><p>the number of tile</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData_GetTileNumberInDirection_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileNumberInDirection*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData_GetTileNumberInDirection_System_Int32_Direction_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileNumberInDirection(System.Int32,Direction)">GetTileNumberInDirection(Int32, Direction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetTileNumberInDirection(int tileNumber, Direction direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">tileNumber</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Direction</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridData_SetTileData_" data-uid="com.eyerunnman.gridsystem.GridData.SetTileData*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridData_SetTileData_com_eyerunnman_gridsystem_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GridData.SetTileData(com.eyerunnman.gridsystem.IGridTileData)">SetTileData(IGridTileData)</h4>
+  <div class="markdown level1 summary"><p>To Set data for a given grid tile data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTileData(IGridTileData data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>data to setup</p>
+</td>
       </tr>
     </tbody>
   </table>

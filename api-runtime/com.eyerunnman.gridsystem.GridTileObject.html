@@ -93,12 +93,13 @@
   
   <a id="com_eyerunnman_gridsystem_GridTileObject_Data_" data-uid="com.eyerunnman.gridsystem.GridTileObject.Data*"></a>
   <h4 id="com_eyerunnman_gridsystem_GridTileObject_Data" data-uid="com.eyerunnman.gridsystem.GridTileObject.Data">Data</h4>
-  <div class="markdown level1 summary"><p>Getter for Getting out the tile data Data from tile object</p>
+  <div class="markdown level1 summary"><p>Getter for Getting out the tile data Data from tile object
+Data can also be set given it has the validated tilenumber and coordinates</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GridTileData Data { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IGridTileData Data { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -110,7 +111,33 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridTileObject_ParentGrid_" data-uid="com.eyerunnman.gridsystem.GridTileObject.ParentGrid*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileObject_ParentGrid" data-uid="com.eyerunnman.gridsystem.GridTileObject.ParentGrid">ParentGrid</h4>
+  <div class="markdown level1 summary"><p>Get the refrence To Parent Grid of grid tile object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameGrid ParentGrid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.html">GameGrid</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -119,14 +146,14 @@
   </h3>
   
   
-  <a id="com_eyerunnman_gridsystem_GridTileObject_SetUpTile_" data-uid="com.eyerunnman.gridsystem.GridTileObject.SetUpTile*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridTileObject_SetUpTile_com_eyerunnman_gridsystem_GridTileData_" data-uid="com.eyerunnman.gridsystem.GridTileObject.SetUpTile(com.eyerunnman.gridsystem.GridTileData)">SetUpTile(GridTileData)</h4>
-  <div class="markdown level1 summary"><p>Function to set up Grid Tile Object with passed tile data</p>
+  <a id="com_eyerunnman_gridsystem_GridTileObject_GetTileObjectInDirectionFromParent_" data-uid="com.eyerunnman.gridsystem.GridTileObject.GetTileObjectInDirectionFromParent*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileObject_GetTileObjectInDirectionFromParent_Direction_" data-uid="com.eyerunnman.gridsystem.GridTileObject.GetTileObjectInDirectionFromParent(Direction)">GetTileObjectInDirectionFromParent(Direction)</h4>
+  <div class="markdown level1 summary"><p>Get tile Data in Direction</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void SetUpTile(GridTileData tileData)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual IGridTileData GetTileObjectInDirectionFromParent(Direction direction)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -139,12 +166,102 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a></td>
+        <td><span class="xref">Direction</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>direction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td><p>the tile data in direction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridTileObject_Initialize_" data-uid="com.eyerunnman.gridsystem.GridTileObject.Initialize*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileObject_Initialize_com_eyerunnman_gridsystem_GameGrid_com_eyerunnman_gridsystem_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GridTileObject.Initialize(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.IGridTileData)">Initialize(GameGrid, IGridTileData)</h4>
+  <div class="markdown level1 summary"><p>Initialize GridTile with parentGrid Refrence</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize(GameGrid parentGrid, IGridTileData tileData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.html">GameGrid</a></td>
+        <td><span class="parametername">parentGrid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
         <td><span class="parametername">tileData</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridTileObject_UpdateGridTileObjectInParent_" data-uid="com.eyerunnman.gridsystem.GridTileObject.UpdateGridTileObjectInParent*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileObject_UpdateGridTileObjectInParent_com_eyerunnman_gridsystem_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GridTileObject.UpdateGridTileObjectInParent(com.eyerunnman.gridsystem.IGridTileData)">UpdateGridTileObjectInParent(IGridTileData)</h4>
+  <div class="markdown level1 summary"><p>Update Gird Tile Data with given data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UpdateGridTileObjectInParent(IGridTileData gridTileData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td><span class="parametername">gridTileData</span></td>
+        <td><p>data to be Upated in the parent Grid</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridTileObject_UpdateTile_" data-uid="com.eyerunnman.gridsystem.GridTileObject.UpdateTile*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileObject_UpdateTile" data-uid="com.eyerunnman.gridsystem.GridTileObject.UpdateTile">UpdateTile()</h4>
+  <div class="markdown level1 summary"><p>Function to set up Grid Tile Object with from the grid</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UpdateTile()</code></pre>
+  </div>
 </article>
           </div>
           

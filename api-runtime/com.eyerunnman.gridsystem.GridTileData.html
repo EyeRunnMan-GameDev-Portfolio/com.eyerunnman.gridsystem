@@ -78,6 +78,7 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -100,20 +101,20 @@
   <h5 id="com_eyerunnman_gridsystem_GridTileData_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
+public struct GridTileData : IGridTileData, IEquatable&lt;GridTileData&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="com_eyerunnman_gridsystem_GridTileData__ctor_" data-uid="com.eyerunnman.gridsystem.GridTileData.#ctor*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridTileData__ctor_com_eyerunnman_gridsystem_GridTileData_" data-uid="com.eyerunnman.gridsystem.GridTileData.#ctor(com.eyerunnman.gridsystem.GridTileData)">GridTileData(GridTileData)</h4>
+  <h4 id="com_eyerunnman_gridsystem_GridTileData__ctor_com_eyerunnman_gridsystem_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GridTileData.#ctor(com.eyerunnman.gridsystem.IGridTileData)">GridTileData(IGridTileData)</h4>
   <div class="markdown level1 summary"><p>Constructor to Generate a new tile data based on refrence tile data</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GridTileData(GridTileData refrenceData)</code></pre>
+    <pre><code class="lang-csharp hljs">public GridTileData(IGridTileData data)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,8 +127,8 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a></td>
-        <td><span class="parametername">refrenceData</span></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td><span class="parametername">data</span></td>
         <td><p>refrence tile data</p>
 </td>
       </tr>
@@ -142,7 +143,7 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GridTileData(int tileId, Vector2Int coordinates, float height = 0F, Direction slantDirection = null, float slantAngle = 0F, TileType type = TileType.Undefined)</code></pre>
+    <pre><code class="lang-csharp hljs">public GridTileData(int tileNumber, Vector2Int coordinates, float height = 0F, Direction slantDirection = null, float slantAngle = 0F, TileType type = TileType.Undefined)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,7 +157,7 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">tileId</span></td>
+        <td><span class="parametername">tileNumber</span></td>
         <td><p>tile id</p>
 </td>
       </tr>
@@ -328,32 +329,6 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridTileData_Default_" data-uid="com.eyerunnman.gridsystem.GridTileData.Default*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridTileData_Default" data-uid="com.eyerunnman.gridsystem.GridTileData.Default">Default</h4>
-  <div class="markdown level1 summary"><p>The default Grid Tile Data</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static GridTileData Default { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="com_eyerunnman_gridsystem_GridTileData_DownVector_" data-uid="com.eyerunnman.gridsystem.GridTileData.DownVector*"></a>
   <h4 id="com_eyerunnman_gridsystem_GridTileData_DownVector" data-uid="com.eyerunnman.gridsystem.GridTileData.DownVector">DownVector</h4>
   <div class="markdown level1 summary"><p>Negative vector of up vector</p>
@@ -414,7 +389,7 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Height { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float Height { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -433,14 +408,14 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridTileData_IsDefault_" data-uid="com.eyerunnman.gridsystem.GridTileData.IsDefault*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridTileData_IsDefault" data-uid="com.eyerunnman.gridsystem.GridTileData.IsDefault">IsDefault</h4>
+  <a id="com_eyerunnman_gridsystem_GridTileData_IsUndefined_" data-uid="com.eyerunnman.gridsystem.GridTileData.IsUndefined*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileData_IsUndefined" data-uid="com.eyerunnman.gridsystem.GridTileData.IsUndefined">IsUndefined</h4>
   <div class="markdown level1 summary"><p>Check weather a tile is Default or not</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDefault { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsUndefined { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -466,7 +441,7 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float LeadingEdgeHeight { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float LeadingEdgeHeight { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -545,7 +520,7 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float SlantAngle { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float SlantAngle { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -571,7 +546,7 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Direction SlantDirection { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Direction SlantDirection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -590,14 +565,14 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridTileData_TileId_" data-uid="com.eyerunnman.gridsystem.GridTileData.TileId*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridTileData_TileId" data-uid="com.eyerunnman.gridsystem.GridTileData.TileId">TileId</h4>
+  <a id="com_eyerunnman_gridsystem_GridTileData_TileNumber_" data-uid="com.eyerunnman.gridsystem.GridTileData.TileNumber*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileData_TileNumber" data-uid="com.eyerunnman.gridsystem.GridTileData.TileNumber">TileNumber</h4>
   <div class="markdown level1 summary"><p>TileId for tile data</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int TileId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int TileNumber { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -677,7 +652,7 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TileType Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TileType Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -690,6 +665,32 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="com.eyerunnman.gridsystem.TileType.html">TileType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridTileData_Undefined_" data-uid="com.eyerunnman.gridsystem.GridTileData.Undefined*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileData_Undefined" data-uid="com.eyerunnman.gridsystem.GridTileData.Undefined">Undefined</h4>
+  <div class="markdown level1 summary"><p>The default Grid Tile Data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GridTileData Undefined { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -722,6 +723,61 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridTileData_CloneData_" data-uid="com.eyerunnman.gridsystem.GridTileData.CloneData*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileData_CloneData_com_eyerunnman_gridsystem_GridTileData_" data-uid="com.eyerunnman.gridsystem.GridTileData.CloneData(com.eyerunnman.gridsystem.GridTileData)">CloneData(GridTileData)</h4>
+  <div class="markdown level1 summary"><p>To Update tile orientation except tile id and coordinates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CloneData(GridTileData refrenceData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a></td>
+        <td><span class="parametername">refrenceData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GridTileData_CloneData_" data-uid="com.eyerunnman.gridsystem.GridTileData.CloneData*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GridTileData_CloneData_com_eyerunnman_gridsystem_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GridTileData.CloneData(com.eyerunnman.gridsystem.IGridTileData)">CloneData(IGridTileData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CloneData(IGridTileData data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="com_eyerunnman_gridsystem_GridTileData_Equals_" data-uid="com.eyerunnman.gridsystem.GridTileData.Equals*"></a>
@@ -835,41 +891,6 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.ValueType.GetHashCode()</span></div>
-  
-  
-  <a id="com_eyerunnman_gridsystem_GridTileData_SetLeadingEdgeHeight_" data-uid="com.eyerunnman.gridsystem.GridTileData.SetLeadingEdgeHeight*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridTileData_SetLeadingEdgeHeight_System_Single_Direction_" data-uid="com.eyerunnman.gridsystem.GridTileData.SetLeadingEdgeHeight(System.Single,Direction)">SetLeadingEdgeHeight(Single, Direction)</h4>
-  <div class="markdown level1 summary"><p>Set the leading edge height in given slant direction</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetLeadingEdgeHeight(float leadingEdgeHeight, Direction slantDirection)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">leadingEdgeHeight</span></td>
-        <td><p>height of leading edge</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Direction</span></td>
-        <td><span class="parametername">slantDirection</span></td>
-        <td><p>slant direction</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="operators">Operators
   </h3>
   
@@ -967,6 +988,9 @@ public struct GridTileData : IEquatable&lt;GridTileData&gt;</code></pre>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a>
+  </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>

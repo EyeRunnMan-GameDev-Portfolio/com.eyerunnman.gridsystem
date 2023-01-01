@@ -1,0 +1,647 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IGridTileData
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IGridTileData
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href=".././images/fav.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../fusion/toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="com.eyerunnman.gridsystem.IGridTileData">
+  
+  
+  <h1 id="com_eyerunnman_gridsystem_IGridTileData" data-uid="com.eyerunnman.gridsystem.IGridTileData" class="text-break">Interface IGridTileData
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="com.eyerunnman.gridsystem.html">com.eyerunnman.gridsystem</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="com_eyerunnman_gridsystem_IGridTileData_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IGridTileData</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_BackVector_" data-uid="com.eyerunnman.gridsystem.IGridTileData.BackVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_BackVector" data-uid="com.eyerunnman.gridsystem.IGridTileData.BackVector">BackVector</h4>
+  <div class="markdown level1 summary"><p>Negative vector of Forward vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 BackVector { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_BottomLeftVertex_" data-uid="com.eyerunnman.gridsystem.IGridTileData.BottomLeftVertex*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_BottomLeftVertex" data-uid="com.eyerunnman.gridsystem.IGridTileData.BottomLeftVertex">BottomLeftVertex</h4>
+  <div class="markdown level1 summary"><p>The Vector3 position of the top left Corner based on slang angle and direction
+<em>NOTE:</em> this is calculated considering the tile is at 0,0,0 and only angle and direction are considered</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 BottomLeftVertex { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_BottomRightVertex_" data-uid="com.eyerunnman.gridsystem.IGridTileData.BottomRightVertex*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_BottomRightVertex" data-uid="com.eyerunnman.gridsystem.IGridTileData.BottomRightVertex">BottomRightVertex</h4>
+  <div class="markdown level1 summary"><p>The Vector3 position of the top left Corner based on slang angle and direction
+<em>NOTE:</em> this is calculated considering the tile is at 0,0,0 and only angle and direction are considered</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 BottomRightVertex { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_Center_" data-uid="com.eyerunnman.gridsystem.IGridTileData.Center*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_Center" data-uid="com.eyerunnman.gridsystem.IGridTileData.Center">Center</h4>
+  <div class="markdown level1 summary"><p>The Center of Tile Data based on slant angle</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 Center { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_Coordinates_" data-uid="com.eyerunnman.gridsystem.IGridTileData.Coordinates*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_Coordinates" data-uid="com.eyerunnman.gridsystem.IGridTileData.Coordinates">Coordinates</h4>
+  <div class="markdown level1 summary"><p>Coordinates of tile data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector2Int Coordinates { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2Int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_DownVector_" data-uid="com.eyerunnman.gridsystem.IGridTileData.DownVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_DownVector" data-uid="com.eyerunnman.gridsystem.IGridTileData.DownVector">DownVector</h4>
+  <div class="markdown level1 summary"><p>Negative vector of up vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 DownVector { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_ForwardVector_" data-uid="com.eyerunnman.gridsystem.IGridTileData.ForwardVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_ForwardVector" data-uid="com.eyerunnman.gridsystem.IGridTileData.ForwardVector">ForwardVector</h4>
+  <div class="markdown level1 summary"><p>The forward vector of tile based on slant angle and direction
+<em>Note:</em> this will always have a foraward component and will not change based on direction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 ForwardVector { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_Height_" data-uid="com.eyerunnman.gridsystem.IGridTileData.Height*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_Height" data-uid="com.eyerunnman.gridsystem.IGridTileData.Height">Height</h4>
+  <div class="markdown level1 summary"><p>vertical height of tile</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Height { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_IsUndefined_" data-uid="com.eyerunnman.gridsystem.IGridTileData.IsUndefined*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_IsUndefined" data-uid="com.eyerunnman.gridsystem.IGridTileData.IsUndefined">IsUndefined</h4>
+  <div class="markdown level1 summary"><p>Flag if the tile data is defined or undefined</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsUndefined { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_LeadingEdgeHeight_" data-uid="com.eyerunnman.gridsystem.IGridTileData.LeadingEdgeHeight*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_LeadingEdgeHeight" data-uid="com.eyerunnman.gridsystem.IGridTileData.LeadingEdgeHeight">LeadingEdgeHeight</h4>
+  <div class="markdown level1 summary"><p>The Height of Leading Edge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float LeadingEdgeHeight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_LeftVector_" data-uid="com.eyerunnman.gridsystem.IGridTileData.LeftVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_LeftVector" data-uid="com.eyerunnman.gridsystem.IGridTileData.LeftVector">LeftVector</h4>
+  <div class="markdown level1 summary"><p>Negative vector of Right vector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 LeftVector { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_RightVector_" data-uid="com.eyerunnman.gridsystem.IGridTileData.RightVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_RightVector" data-uid="com.eyerunnman.gridsystem.IGridTileData.RightVector">RightVector</h4>
+  <div class="markdown level1 summary"><p>The right vector of tile based on slant angle and direction
+<em>Note:</em> this will always have a right component and will not change based on direction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 RightVector { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_SlantAngle_" data-uid="com.eyerunnman.gridsystem.IGridTileData.SlantAngle*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_SlantAngle" data-uid="com.eyerunnman.gridsystem.IGridTileData.SlantAngle">SlantAngle</h4>
+  <div class="markdown level1 summary"><p>slant angle of tile data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float SlantAngle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_SlantDirection_" data-uid="com.eyerunnman.gridsystem.IGridTileData.SlantDirection*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_SlantDirection" data-uid="com.eyerunnman.gridsystem.IGridTileData.SlantDirection">SlantDirection</h4>
+  <div class="markdown level1 summary"><p>slant direction of tile data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Direction SlantDirection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_TileNumber_" data-uid="com.eyerunnman.gridsystem.IGridTileData.TileNumber*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_TileNumber" data-uid="com.eyerunnman.gridsystem.IGridTileData.TileNumber">TileNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int TileNumber { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_TopLeftVertex_" data-uid="com.eyerunnman.gridsystem.IGridTileData.TopLeftVertex*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_TopLeftVertex" data-uid="com.eyerunnman.gridsystem.IGridTileData.TopLeftVertex">TopLeftVertex</h4>
+  <div class="markdown level1 summary"><p>The Vector3 position of the top left Corner based on slant angle and direction
+<em>NOTE:</em> this is calculated considering the tile is at 0,0,0 and only angle and direction are considered</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 TopLeftVertex { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_TopRightVertex_" data-uid="com.eyerunnman.gridsystem.IGridTileData.TopRightVertex*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_TopRightVertex" data-uid="com.eyerunnman.gridsystem.IGridTileData.TopRightVertex">TopRightVertex</h4>
+  <div class="markdown level1 summary"><p>The Vector3 position of the top right Corner based on slant angle and direction
+<em>NOTE:</em> this is calculated considering the tile is at 0,0,0 and only angle and direction are considered</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 TopRightVertex { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_Type_" data-uid="com.eyerunnman.gridsystem.IGridTileData.Type*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_Type" data-uid="com.eyerunnman.gridsystem.IGridTileData.Type">Type</h4>
+  <div class="markdown level1 summary"><p>type of tile data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TileType Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.TileType.html">TileType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_Undefined_" data-uid="com.eyerunnman.gridsystem.IGridTileData.Undefined*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_Undefined" data-uid="com.eyerunnman.gridsystem.IGridTileData.Undefined">Undefined</h4>
+  <div class="markdown level1 summary"><p>Static method which returns an undefined IGridTileData</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">static IGridTileData Undefined { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_IGridTileData_UpVector_" data-uid="com.eyerunnman.gridsystem.IGridTileData.UpVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_IGridTileData_UpVector" data-uid="com.eyerunnman.gridsystem.IGridTileData.UpVector">UpVector</h4>
+  <div class="markdown level1 summary"><p>The resultant up vector of tile based on slant angle and direction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector3 UpVector { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

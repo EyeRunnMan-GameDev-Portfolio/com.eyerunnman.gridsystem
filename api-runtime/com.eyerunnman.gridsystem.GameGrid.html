@@ -91,6 +91,32 @@
   </h3>
   
   
+  <a id="com_eyerunnman_gridsystem_GameGrid_Cols_" data-uid="com.eyerunnman.gridsystem.GameGrid.Cols*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_Cols" data-uid="com.eyerunnman.gridsystem.GameGrid.Cols">Cols</h4>
+  <div class="markdown level1 summary"><p>Number of columns in <code>GameGrid</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Cols { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="com_eyerunnman_gridsystem_GameGrid_GridDimension_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridDimension*"></a>
   <h4 id="com_eyerunnman_gridsystem_GameGrid_GridDimension" data-uid="com.eyerunnman.gridsystem.GameGrid.GridDimension">GridDimension</h4>
   <div class="markdown level1 summary"><p>Dimension of the <code>GameGrid</code></p>
@@ -117,14 +143,14 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileDataList_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileDataList*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileDataList" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileDataList">GridTileDataList</h4>
-  <div class="markdown level1 summary"><p>List of all the tiles in the <code>GameGrid</code></p>
+  <a id="com_eyerunnman_gridsystem_GameGrid_Rows_" data-uid="com.eyerunnman.gridsystem.GameGrid.Rows*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_Rows" data-uid="com.eyerunnman.gridsystem.GameGrid.Rows">Rows</h4>
+  <div class="markdown level1 summary"><p>Number of Rows in <code>GameGrid</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;GridTileData&gt; GridTileDataList { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Rows { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,7 +162,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -146,13 +172,13 @@
   
   
   <a id="com_eyerunnman_gridsystem_GameGrid_GenerateGameGrid_" data-uid="com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GameGrid_GenerateGameGrid_com_eyerunnman_gridsystem_GridData_com_eyerunnman_gridsystem_GridTileObject_" data-uid="com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid(com.eyerunnman.gridsystem.GridData,com.eyerunnman.gridsystem.GridTileObject)">GenerateGameGrid(GridData, GridTileObject)</h4>
-  <div class="markdown level1 summary"><p>Generate <code>GameGrid</code> based on data and a prefab Grid Tile Object</p>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GenerateGameGrid_com_eyerunnman_gridsystem_GridData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid(com.eyerunnman.gridsystem.GridData)">GenerateGameGrid(GridData)</h4>
+  <div class="markdown level1 summary"><p>Set Data for <code>GameGrid</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GenerateGameGrid(GridData data, GridTileObject gridTileObjectPrefab)</code></pre>
+    <pre><code class="lang-csharp hljs">public void GenerateGameGrid(GridData gridData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,15 +192,129 @@
     <tbody>
       <tr>
         <td><a class="xref" href="com.eyerunnman.gridsystem.GridData.html">GridData</a></td>
-        <td><span class="parametername">data</span></td>
+        <td><span class="parametername">gridData</span></td>
+        <td><p>the actual grid data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GenerateGameGrid_" data-uid="com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GenerateGameGrid_com_eyerunnman_gridsystem_GridData_com_eyerunnman_gridsystem_GridTileObject_" data-uid="com.eyerunnman.gridsystem.GameGrid.GenerateGameGrid(com.eyerunnman.gridsystem.GridData,com.eyerunnman.gridsystem.GridTileObject)">GenerateGameGrid(GridData, GridTileObject)</h4>
+  <div class="markdown level1 summary"><p>Generate <code>GameGrid</code> based on data and a prefab Grid Tile Object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GenerateGameGrid(GridData gridData, GridTileObject tileObjectPrefab)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GridData.html">GridData</a></td>
+        <td><span class="parametername">gridData</span></td>
         <td><p>grid data</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="com.eyerunnman.gridsystem.GridTileObject.html">GridTileObject</a></td>
-        <td><span class="parametername">gridTileObjectPrefab</span></td>
-        <td><p>prefab object</p>
-</td>
+        <td><span class="parametername">tileObjectPrefab</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GetGridTileDataFromCoordinates_" data-uid="com.eyerunnman.gridsystem.GameGrid.GetGridTileDataFromCoordinates*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GetGridTileDataFromCoordinates_Vector2Int_" data-uid="com.eyerunnman.gridsystem.GameGrid.GetGridTileDataFromCoordinates(Vector2Int)">GetGridTileDataFromCoordinates(Vector2Int)</h4>
+  <div class="markdown level1 summary"><p>Get GridTileData From Coordinates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGridTileData GetGridTileDataFromCoordinates(Vector2Int coordinates)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2Int</span></td>
+        <td><span class="parametername">coordinates</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GetGridTileDataFromNumber_" data-uid="com.eyerunnman.gridsystem.GameGrid.GetGridTileDataFromNumber*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GetGridTileDataFromNumber_System_Int32_" data-uid="com.eyerunnman.gridsystem.GameGrid.GetGridTileDataFromNumber(System.Int32)">GetGridTileDataFromNumber(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get GridTileData From Coordinates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IGridTileData GetGridTileDataFromNumber(int tileNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">tileNumber</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -187,7 +327,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GridTileData GetTileDataInDirection(int tileId, Direction direction)</code></pre>
+    <pre><code class="lang-csharp hljs">public IGridTileData GetTileDataInDirection(int tileId, Direction direction)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,7 +363,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
         <td><p>data of tile based on input params</p>
 </td>
       </tr>
@@ -231,16 +371,14 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GameGrid_SetupTile_" data-uid="com.eyerunnman.gridsystem.GameGrid.SetupTile*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GameGrid_SetupTile_com_eyerunnman_gridsystem_GridTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.SetupTile(com.eyerunnman.gridsystem.GridTileData)">SetupTile(GridTileData)</h4>
-  <div class="markdown level1 summary"><p>Updated data of a given tile data.
-<strong>NOTE:</strong> it takes the index of tile to be updated from <code>data.TileId</code> .
-Will only update if <code>data.TileId</code> is present in <code>GameGrid</code></p>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GetTileNumberInDirection_" data-uid="com.eyerunnman.gridsystem.GameGrid.GetTileNumberInDirection*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GetTileNumberInDirection_System_Int32_Direction_" data-uid="com.eyerunnman.gridsystem.GameGrid.GetTileNumberInDirection(System.Int32,Direction)">GetTileNumberInDirection(Int32, Direction)</h4>
+  <div class="markdown level1 summary"><p>Get TileIndex In a given direction</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetupTile(GridTileData data)</code></pre>
+    <pre><code class="lang-csharp hljs">public int GetTileNumberInDirection(int tileNumber, Direction direction)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,7 +391,59 @@ Will only update if <code>data.TileId</code> is present in <code>GameGrid</code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">tileNumber</span></td>
+        <td><p>refrence tile index</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Direction</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>direction</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_UpdateTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.UpdateTileData*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_UpdateTileData_com_eyerunnman_gridsystem_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.UpdateTileData(com.eyerunnman.gridsystem.IGridTileData)">UpdateTileData(IGridTileData)</h4>
+  <div class="markdown level1 summary"><p>Updated data of a given tile data.
+<strong>NOTE:</strong> it takes the index of tile to be updated from <code>data.TileId</code> .
+Will only update if <code>data.TileId</code> is present in <code>GameGrid</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateTileData(IGridTileData data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
         <td><span class="parametername">data</span></td>
         <td><p>data of tile to be updated</p>
 </td>
