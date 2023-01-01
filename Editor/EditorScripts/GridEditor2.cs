@@ -12,7 +12,7 @@ namespace com.eyerunnman.gridsystem.Editor
         [MenuItem("EyeRunnMan/GridSystem/GridEditor2")]
         static void OpenWindow()
         {
-            GridEditor window = (GridEditor)EditorWindow.GetWindow(typeof(GridEditor));
+            GridEditor2 window = (GridEditor2)EditorWindow.GetWindow(typeof(GridEditor2));
             window.Show();
         }
 
@@ -36,29 +36,44 @@ namespace com.eyerunnman.gridsystem.Editor
         }
 
         GameGrid debugGameGrid;
-        GridTileObject currentSelectedTileObject;
-        GridTileData currentSelectedTileData;
+        List<GridTileData> currentSelectedTileDataList;
+        GridTileData editorTileData;
 
         private void OnGUI()
         {
-            currentSelectedTileData = GetCurrentSelectedTileData();
+            //currentSelectedTileDataList = GetCurrentSelectedTilesData();
 
+            GenerateGrid(new(Vector2Int.up,null), null);
 
-
-            debugGameGrid.SetupTile(currentSelectedTileData);
+            //UpdateGrid(editorTileData, currentSelectedTileDataList);
         }
 
 
 
 
-        private GridTileObject GetCurrentSelectedTileObject()
+        private List<GridTileData> GetCurrentSelectedTilesData()
         {
             return null;
         }
 
-        private GridTileData GetCurrentSelectedTileData()
+        private void UpdateGrid(GridTileData editorTileData,List<GridTileData> tileDataList)
         {
-            return GridTileData.Default;
+            foreach (GridTileData tileData in tileDataList)
+            {
+                tileData.CloneData(editorTileData);
+                debugGameGrid.UpdateTileData(tileData);
+            }
+        }
+
+
+        private GameGrid GenerateGrid(GridData data,GridTileObject gridTileObjectPrefab)
+        {
+            GameObject gameObject = new("--Editor_Grid--");
+            gameObject.AddComponent(typeof(GridTileObject));
+            GridTileObject gameGrid = gameObject.GetComponent<GridTileObject>();
+
+            return null;
+
         }
 
     }

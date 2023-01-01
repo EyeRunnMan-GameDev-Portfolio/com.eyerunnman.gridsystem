@@ -1,5 +1,6 @@
 using com.eyerunnman.enums;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -12,18 +13,8 @@ namespace com.eyerunnman.gridsystem
     /// </summary>
     public class GameGrid : MonoBehaviour
     {
-
         private GridData gridData;
         private Dictionary<int, GridTileObject> tileObjectDictionary = new();
-
-
-        /// <summary>
-        /// List of all the tiles in the `GameGrid` 
-        /// </summary>
-        public List<GridTileData> GridTileDataList
-        {
-            get => new(gridData.GridTilesDataDictionary.Values);
-        }
 
         /// <summary>
         /// Dimension of the `GameGrid`
@@ -33,34 +24,33 @@ namespace com.eyerunnman.gridsystem
         /// <summary>
         /// Number of columns in `GameGrid`
         /// </summary>
-        private int Cols => gridData.Cols;
+        public int Cols => gridData.Cols;
 
         /// <summary>
         /// Number of Rows in `GameGrid`
         /// </summary>
-        private int Rows => gridData.Rows;
+        public int Rows => gridData.Rows;
+
+        /// <summary>
+        /// Set Data for `GameGrid`
+        /// </summary>
+        /// <param name="gridData">the actual grid data</param>
+        public void GenerateGameGrid(GridData gridData)
+        {
+            ResetGrid();
+            this.gridData = gridData;
+        }
 
         /// <summary>
         /// Generate `GameGrid` based on data and a prefab Grid Tile Object
         /// </summary>
-        /// <param name="data">grid data </param>
-        /// <param name="gridTileObjectPrefab">prefab object</param>
-        public void GenerateGameGrid(GridData data,GridTileObject gridTileObjectPrefab)
+        /// <param name="gridData">grid data </param>
+        /// <param name="gridConfig">grid config</param>
+        public void GenerateGameGrid(GridData gridData, GridTileObject tileObjectPrefab)
         {
-            ResetGrid();
-            this.gridData = data;
-
-            foreach (int tileNumber in gridData.GridTilesDataDictionary.Keys)
-            {
-                GridTileObject gridTileObject = Instantiate(gridTileObjectPrefab, transform);
-                gridTileObject.SetUpTile(gridData.GridTilesDataDictionary[tileNumber]);
-                
-                tileObjectDictionary.Add(tileNumber, gridTileObject);
-            }
-
-
+            GenerateGameGrid(gridData);
+            InitializeTileObjectDictionary(gridData, tileObjectPrefab);
         }
-       
 
         /// <summary>
         /// Updated data of a given tile data.
@@ -68,16 +58,10 @@ namespace com.eyerunnman.gridsystem
         /// Will only update if `data.TileId` is present in `GameGrid`
         /// </summary>
         /// <param name="data">data of tile to be updated</param>
-        public void SetupTile(GridTileData data)
+        public void UpdateTileData(IGridTileData data)
         {
-            GridTileObject tileObject = GetTileObjectFromId(data.TileId);
-
-            if (tileObject)
-            {
-                tileObject.SetUpTile(data);
-            }
+            UpdateTileObjectDictionary(data);
         }
-
 
         /// <summary>
         /// Returns a data of the tile in given direction from current tile
@@ -85,14 +69,43 @@ namespace com.eyerunnman.gridsystem
         /// <param name="tileId">index of the refrence tile</param>
         /// <param name="direction">direction of tile to look into</param>
         /// <returns>data of tile based on input params</returns>
-        public GridTileData GetTileDataInDirection(int tileId , Direction direction)
+        public IGridTileData GetTileDataInDirection(int tileId , Direction direction)
         {
             return gridData.GetTileDataInDirection(tileId,direction);
         }
 
+        /// <summary>
+        /// Get GridTileData From Coordinates
+        /// </summary>
+        /// <param name="coordinates"></param>
+        /// <returns></returns>
+        public IGridTileData GetGridTileDataFromCoordinates(Vector2Int coordinates)
+        {
+            return gridData.GetTileDataFromCoordinates(coordinates);
+        }
 
+        /// <summary>
+        /// Get GridTileData From Coordinates
+        /// </summary>
+        /// <param name="tileNumber"></param>
+        /// <returns></returns>
+        public IGridTileData GetGridTileDataFromNumber(int tileNumber)
+        {
+            return gridData.GetTileFromNumber(tileNumber);
+        }
 
-        private GridTileObject GetTileObjectFromId(int tileId)
+        /// <summary>
+        /// Get TileIndex In a given direction 
+        /// </summary>
+        /// <param name="tileNumber">refrence tile index</param>
+        /// <param name="direction">direction</param>
+        /// <returns></returns>
+        public int GetTileNumberInDirection(int tileNumber,Direction direction)
+        {
+            return gridData.GetTileNumberInDirection(tileNumber, direction);
+        }
+
+        private GridTileObject GetTileObjectFromDictionary(int tileId)
         {
             if (tileObjectDictionary.ContainsKey(tileId))
             {
@@ -104,6 +117,30 @@ namespace com.eyerunnman.gridsystem
             }
         }
 
+        private void InitializeTileObjectDictionary( GridData gridData, GridTileObject tileObjectPrefab)
+        {
+            foreach (int tileNumber in Enumerable.Range(0, gridData.NumberOfTiles))
+            {
+
+                IGridTileData gridTileData = gridData.GetTileFromNumber(tileNumber);
+                GridTileObject gridTileObject = Instantiate(tileObjectPrefab, transform);
+
+                gridTileObject.Initialize(this, gridTileData);
+
+                tileObjectDictionary[tileNumber] = gridTileObject;
+            }
+        }
+        private void UpdateTileObjectDictionary(IGridTileData gridTileData)
+        {
+            gridData.SetTileData(gridTileData);
+            IGridTileData tileData = gridData.GetTileFromNumber(gridTileData.TileNumber);
+            GridTileObject gridTileObject = GetTileObjectFromDictionary(tileData.TileNumber);
+
+            if (gridTileObject)
+            {
+                gridTileObject.UpdateTile();
+            }
+        }
         private void ResetGrid()
         {
             foreach (GridTileObject tile in tileObjectDictionary.Values)

@@ -8,10 +8,10 @@ namespace com.eyerunnman.gridsystem
     /// Grid Tile Data contains data about the tile such as tile id , coordinates in grid , height at which the tile is and so on 
     /// </summary>
     [Serializable]
-    public struct GridTileData : IEquatable<GridTileData>
+    public struct GridTileData : IGridTileData, IEquatable<GridTileData>
     {
         [SerializeField]
-        private int tileId;
+        private int tileNumber;
         [SerializeField]
         private Vector2Int coordinates;
         [SerializeField]
@@ -26,26 +26,26 @@ namespace com.eyerunnman.gridsystem
         /// <summary>
         /// The default Grid Tile Data
         /// </summary>
-        public static GridTileData Default => new(-1,new Vector2Int(-1,-1));
+        public static GridTileData Undefined => new(-1,new Vector2Int(-1,-1));
 
         /// <summary>
         /// Check weather a tile is Default or not
         /// </summary>
-        public bool IsDefault => this == Default;
+        public bool IsUndefined => TileNumber == Undefined.TileNumber && Coordinates == Undefined.Coordinates;
 
         #region Constructors
         /// <summary>
         /// constructer for generating grid tile data with the corresponding values
         /// </summary>
-        /// <param name="tileId">tile id</param>
+        /// <param name="tileNumber">tile id</param>
         /// <param name="coordinates">coordinate position in grid</param>
         /// <param name="height">height</param>
         /// <param name="slantDirection">slant direction of tile</param>
         /// <param name="slantAngle">slant angle , this follows the slant direction</param>
         /// <param name="type">type of tile</param>
-        public GridTileData(int tileId, Vector2Int coordinates, float height = 0, Direction slantDirection = Direction.North, float slantAngle = 0, TileType type = TileType.Undefined)
+        public GridTileData(int tileNumber, Vector2Int coordinates, float height = 0, Direction slantDirection = Direction.North, float slantAngle = 0, TileType type = TileType.Undefined)
         {
-            this.tileId = tileId;
+            this.tileNumber = tileNumber;
             this.coordinates = coordinates;
             this.height = height;
             this.slantDirection = slantDirection;
@@ -56,17 +56,18 @@ namespace com.eyerunnman.gridsystem
         /// <summary>
         /// Constructor to Generate a new tile data based on refrence tile data
         /// </summary>
-        /// <param name="refrenceData">refrence tile data</param>
-        public GridTileData(GridTileData refrenceData)
-        {
-            this.tileId = refrenceData.tileId;
-            this.coordinates = refrenceData.coordinates;
-            this.height = refrenceData.height;
-            this.slantDirection = refrenceData.SlantDirection;
-            this.slantAngle = refrenceData.slantAngle;
-            this.type = refrenceData.type;
-        }
+        /// <param name="data">refrence tile data</param>
+        public GridTileData(IGridTileData data) {
 
+            if (data == (IGridTileData)Undefined)
+            {
+                this = Undefined;
+                return;
+            }
+
+            this = new(data.TileNumber, data.Coordinates, data.Height, data.SlantDirection, data.SlantAngle, data.Type);
+
+        }
         #endregion
 
         #region Properties
@@ -74,7 +75,7 @@ namespace com.eyerunnman.gridsystem
         /// <summary>
         /// TileId for tile data
         /// </summary>
-        public int TileId => tileId;
+        public int TileNumber => tileNumber;
 
         /// <summary>
         /// Coordinates of tile data
@@ -84,22 +85,37 @@ namespace com.eyerunnman.gridsystem
         /// <summary>
         /// slant direction of tile data
         /// </summary>
-        public Direction SlantDirection => slantDirection;
+        public Direction SlantDirection
+        {
+            get => slantDirection;
+            set => slantDirection = value;
+        }
 
         /// <summary>
         /// vertical height of tile
         /// </summary>
-        public float Height=> height;
+        public float Height {
+            get => height;
+            set => height = value;
+        }
 
         /// <summary>
         /// slant angle of tile data
         /// </summary>
-        public float SlantAngle => slantAngle;
+        public float SlantAngle
+        {
+            get => slantAngle;
+            set => slantAngle = value;
+        }
 
         /// <summary>
         /// type of tile data
         /// </summary>
-        public TileType Type => type;
+        public TileType Type
+        {
+            get => type;
+            set => type = value;
+        }
 
         /// <summary>
         /// The resultant up vector of tile based on slant angle and direction
@@ -363,6 +379,23 @@ namespace com.eyerunnman.gridsystem
 
                 return sinvalue * hypotenuse;
             }
+            set
+            {
+                slantAngle = Vector2.Angle(Vector2.up * value + Vector2.right, Vector2.right);
+                if (value < 0)
+                {
+                    this.height = height - Mathf.Abs(value);
+                    this.slantDirection = slantDirection switch
+
+                    {
+                        Direction.North => Direction.South,
+                        Direction.South => Direction.North,
+                        Direction.East => Direction.West,
+                        Direction.West => Direction.East,
+                        _ => slantDirection,
+                    };
+                }
+            }
         }
 
         private Vector3 TileCenter => new(Coordinates.x, Height, Coordinates.y);
@@ -378,6 +411,7 @@ namespace com.eyerunnman.gridsystem
 
                 return cosVal * hypotenuseLenght/2;
             }
+            
         }
 
         private float SlantGap
@@ -395,31 +429,21 @@ namespace com.eyerunnman.gridsystem
 
         #region Public Methods
         /// <summary>
-        /// Set the leading edge height in given slant direction
+        /// To Update tile orientation except tile id and coordinates
         /// </summary>
-        /// <param name="leadingEdgeHeight">height of leading edge</param>
-        /// <param name="slantDirection">slant direction</param>
-        public void SetLeadingEdgeHeight(float leadingEdgeHeight, Direction slantDirection)
+        /// <param name="data">refrence Data</param>
+        public void CloneData(GridTileData refrenceData)
         {
-
-            slantAngle = Vector2.Angle(Vector2.up * leadingEdgeHeight + Vector2.right, Vector2.right);
-            this.slantDirection = slantDirection;
-
-            if (leadingEdgeHeight < 0)
-            {
-                this.height = height - Mathf.Abs(leadingEdgeHeight);
-                this.slantDirection = slantDirection switch
-
-                {
-                    Direction.North => Direction.South,
-                    Direction.South => Direction.North,
-                    Direction.East => Direction.West,
-                    Direction.West => Direction.East,
-                    _ => slantDirection,
-                };
-            }
+            this.height = refrenceData.height;
+            this.slantDirection = refrenceData.slantDirection;
+            this.slantAngle = refrenceData.slantAngle;
+            this.type = refrenceData.type;
         }
 
+        public void CloneData(IGridTileData data)
+        {
+            this = new(data);
+        }
 
         #endregion
 
@@ -434,7 +458,7 @@ namespace com.eyerunnman.gridsystem
                 return false;
             }
 
-            return tileId == other.tileId &&
+            return tileNumber == other.tileNumber &&
                    coordinates.Equals(other.coordinates) &&
                    height == other.height &&
                    slantDirection == other.slantDirection &&
@@ -453,7 +477,7 @@ namespace com.eyerunnman.gridsystem
         public override int GetHashCode()
         {
             HashCode hash = new();
-            hash.Add(tileId);
+            hash.Add(tileNumber);
             hash.Add(coordinates);
             hash.Add(height);
             hash.Add(slantDirection);
@@ -470,6 +494,7 @@ namespace com.eyerunnman.gridsystem
             hash.Add(SlantGap);
             return hash.ToHashCode();
         }
+
         public static bool operator ==(GridTileData left, GridTileData right)
         {
             return left.Equals(right);
@@ -479,7 +504,5 @@ namespace com.eyerunnman.gridsystem
             return !(left == right);
         }
     }
-
-
 }
 

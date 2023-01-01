@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿/*using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEditor.SceneManagement;
@@ -49,7 +49,7 @@ namespace com.eyerunnman.gridsystem.Editor
 
                 lastClickedEditorGridTile = Selection.activeGameObject.GetComponent<EditorGridTile>();
                 debugGridTileData = new();
-                debugGridTileData = SourceGridDataSO.EditorGetTileData(tileNumber:lastClickedDebugTile.Data.TileId);
+                debugGridTileData = SourceGridDataSO.EditorGetTileData(tileNumber:lastClickedDebugTile.Data.TileNumber);
                 lastClickedEditorGridTile.UpdateDebugData();
             }
 
@@ -144,7 +144,7 @@ namespace com.eyerunnman.gridsystem.Editor
                 {
                     foreach (Direction direction in Enum.GetValues(typeof(Direction)))
                     {
-                        GridTileData adjecentTileData = debugGrid.GetTileDataInDirection(tileObjectData.TileId, direction);
+                        GridTileData adjecentTileData = debugGrid.GetTileDataInDirection(tileObjectData.TileNumber, direction);
 
                         float heightAmount = debugGridTileData.Height - adjecentTileData.Height;
 
@@ -180,7 +180,7 @@ namespace com.eyerunnman.gridsystem.Editor
                     }
                     if (resetTile)
                     {
-                        debugGridTileData = new(debugGridTileData.TileId, debugGridTileData.Coordinates);
+                        debugGridTileData = new(debugGridTileData.TileNumber, debugGridTileData.Coordinates);
                     }
                 }
 
@@ -270,7 +270,7 @@ namespace com.eyerunnman.gridsystem.Editor
             GridTileData inTileData = tileData;
             GridTileData outTileData = tileData;
 
-            int tileNumber=tileData.TileId;
+            int tileNumber=tileData.TileNumber;
             Vector2Int coordinates = tileData.Coordinates;
             float height = tileData.Height;
             Direction slantDirection=tileData.SlantDirection;
@@ -285,7 +285,7 @@ namespace com.eyerunnman.gridsystem.Editor
 
             SetupHorizontalLayout(GUIElementCallback: () =>
             {
-                tileNumber = EditorGUILayout.IntField("Tile Number", inTileData.TileId);
+                tileNumber = EditorGUILayout.IntField("Tile Number", inTileData.TileNumber);
             });
 
             EditorGUILayout.Separator();
@@ -355,7 +355,7 @@ namespace com.eyerunnman.gridsystem.Editor
             GridTileObject debugTileObject = gridTileObjectPrefab.GetComponent<GridTileObject>();
 
 
-            debugGrid.GenerateGameGrid(SourceGridDataSO.GridData, debugTileObject);
+            //debugGrid.GenerateGameGrid(SourceGridDataSO.GridData, debugTileObject);
             DestroyImmediate(gridTileObjectPrefab);
         }
 
@@ -375,4 +375,4 @@ namespace com.eyerunnman.gridsystem.Editor
             EditorGUILayout.EndHorizontal();
         }
     }
-}
+}*/

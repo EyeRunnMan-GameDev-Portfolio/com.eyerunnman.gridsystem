@@ -34,9 +34,9 @@ namespace com.eyerunnman.gridsystem.Editor
             {
                 return;
             }
-            GridTileData tileData = tile.Data;
+            GridTileData tileData = new GridTileData(tile.Data);
 
-            tileNumber.text = tileData.TileId.ToString();
+            tileNumber.text = tileData.TileNumber.ToString();
             coordinates.text = tileData.Coordinates.ToString();
             height.text = tileData.Height.ToString();
             slantDirection.text = tileData.SlantDirection.ToString();
