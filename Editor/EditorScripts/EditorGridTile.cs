@@ -1,15 +1,10 @@
 using TMPro;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 namespace com.eyerunnman.gridsystem.Editor
 {
-    [ExecuteInEditMode]
-    public class EditorGridTile : MonoBehaviour
+    public class EditorGridTile : GameGrid.GridTileObject
     {
-        GridTileObject tile;
 
         [SerializeField] TMP_Text tileNumber;
         [SerializeField] TMP_Text coordinates;
@@ -20,51 +15,27 @@ namespace com.eyerunnman.gridsystem.Editor
 
         private void Update()
         {
-            UpdateDebugData();
+            tileNumber.text = TileData.TileNumber.ToString();
+            coordinates.text = TileData.Coordinates.ToString();
+            height.text = TileData.Height.ToString();
+            slantDirection.text = TileData.SlantDirection.ToString();
+            slantAngle.text = TileData.SlantAngle.ToString();
+            tileType.text = TileData.Type.ToString();
         }
-
-        public void UpdateDebugData()
-        {
-            if (tile == null)
-            {
-                tile = GetComponent<GridTileObject>();
-            }
-
-            if (tile == null)
-            {
-                return;
-            }
-            GridTileData tileData = new GridTileData(tile.Data);
-
-            tileNumber.text = tileData.TileNumber.ToString();
-            coordinates.text = tileData.Coordinates.ToString();
-            height.text = tileData.Height.ToString();
-            slantDirection.text = tileData.SlantDirection.ToString();
-            slantAngle.text = tileData.SlantAngle.ToString();
-            tileType.text = tileData.Type.ToString();
-
-        }
-
 
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.cyan;
 
-            Vector3 firstVertex = tile.Data.TopLeftVertex;
-            Vector3 secondVertex = tile.Data.TopRightVertex;
-            Vector3 thirdVertex = tile.Data.BottomRightVertex;
-            Vector3 fourthVertex = tile.Data.BottomLeftVertex;
+            Vector3 firstVertex = TileData.TopLeftVertex;
+            Vector3 secondVertex = TileData.TopRightVertex;
+            Vector3 thirdVertex = TileData.BottomRightVertex;
+            Vector3 fourthVertex = TileData.BottomLeftVertex;
 
             Gizmos.DrawLine(firstVertex, secondVertex);
             Gizmos.DrawLine(secondVertex, thirdVertex);
             Gizmos.DrawLine(thirdVertex, fourthVertex);
             Gizmos.DrawLine(fourthVertex, firstVertex);
-
-            /*Gizmos.color = Color.red;
-            Gizmos.DrawRay(firstVertex, Vector3.down * firstVertex.y);
-            Gizmos.DrawRay(secondVertex, Vector3.down * secondVertex.y);
-            Gizmos.DrawRay(thirdVertex, Vector3.down * thirdVertex.y);
-            Gizmos.DrawRay(fourthVertex, Vector3.down * fourthVertex.y);*/
 
             Gizmos.color = Color.gray;
             Gizmos.DrawSphere(firstVertex, 0.01f);
@@ -72,10 +43,11 @@ namespace com.eyerunnman.gridsystem.Editor
             Gizmos.DrawSphere(thirdVertex, 0.01f);
             Gizmos.DrawSphere(fourthVertex, 0.01f);
 
-
-
         }
 
+        public override void Reset()
+        {
+        }
     }
 }
 

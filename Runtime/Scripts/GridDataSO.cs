@@ -16,7 +16,8 @@ namespace com.eyerunnman.gridsystem
         /// <summary>
         /// Grid Data stored by `GridDataSO`
         /// </summary>
-        public GridData GridData;
+        public GameGrid.GridData GridData;
+
     }
 }
 
