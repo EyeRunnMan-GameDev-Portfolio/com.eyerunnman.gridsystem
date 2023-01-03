@@ -109,6 +109,12 @@ namespace com.eyerunnman.gridsystem
             /// </summary>
             public static IGridTileData Undefined => GridTileData.Undefined;
 
+            /// <summary>
+            /// create a clone of refrence data without cloning tile number and coordinates
+            /// </summary>
+            /// <param name="refrenceData">refrence data</param>
+            public void CloneData(IGridTileData refrenceData);
+
         }
 
     }

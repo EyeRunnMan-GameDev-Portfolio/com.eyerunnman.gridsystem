@@ -4,6 +4,7 @@ using UnityEngine;
 using com.eyerunnman.gridsystem;
 using System;
 using UnityEditor;
+using System.Linq;
 
 namespace com.eyerunnman.gridsystem
 {
@@ -13,10 +14,19 @@ namespace com.eyerunnman.gridsystem
     [CreateAssetMenu(fileName = "GridData", menuName = "EyeRunnMan/GridSystem/GridData", order = 100)]
     public class GridDataSO : ScriptableObject
     {
-        /// <summary>
-        /// Grid Data stored by `GridDataSO`
-        /// </summary>
-        public GameGrid.GridData GridData;
+        [SerializeField]
+        private Vector2Int GridDimension;
+
+        [SerializeField]
+        private List<GameGrid.GridTileData> TilesInfo;
+
+
+        public GameGrid.GridData GridData => new(GridDimension, TilesInfo);
+
+        public void SetTilesInfo(List<GameGrid.IGridTileData> tilesInfo)
+        {
+            TilesInfo = new(Enumerable.Range(0,tilesInfo.Count).Select(idx=>new GameGrid.GridTileData(tilesInfo[idx])));
+        }
 
     }
 }

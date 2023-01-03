@@ -436,18 +436,14 @@ namespace com.eyerunnman.gridsystem
             /// To Update tile orientation except tile id and coordinates
             /// </summary>
             /// <param name="data">refrence Data</param>
-            public void CloneData(GridTileData refrenceData)
+            public void CloneData(IGridTileData refrenceData)
             {
-                this.height = refrenceData.height;
-                this.slantDirection = refrenceData.slantDirection;
-                this.slantAngle = refrenceData.slantAngle;
-                this.type = refrenceData.type;
+                this.height = refrenceData.Height;
+                this.slantDirection = refrenceData.SlantDirection;
+                this.slantAngle = refrenceData.SlantAngle;
+                this.type = refrenceData.Type;
             }
 
-            public void CloneData(IGridTileData data)
-            {
-                this = new(data);
-            }
 
             #endregion
         }

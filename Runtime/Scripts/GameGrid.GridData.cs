@@ -17,44 +17,28 @@ namespace com.eyerunnman.gridsystem
             [SerializeField]
             private Vector2Int gridDimension;
 
-            [SerializeField]
-            private List<GridTileData> GridTileDataList=new();
 
-            private Dictionary<int, CachedGridTileData> gridTileDataDictionary = new();
+            private Dictionary<int, CachedGridTileData> gridTileDataDictionary=new();
+            
+            public List<IGridTileData> GridTileDataList
+            {
+                get
+                {
+                    if (gridTileDataDictionary!=null)
+                    {
+                        return new(gridTileDataDictionary.Select(pair => (IGridTileData)(pair.Value)));
+                    }
+                    else
+                    {
+                        return new();
+                    }
+                }
+            }
 
             /// <summary>
             /// Grid dimension for `GridData`
             /// </summary>
             public Vector2Int GridDimension { get => gridDimension; }
-
-            /// <summary>
-            /// Dictionary from tile id to its respective Grid Tile Data 
-            /// </summary>
-            private Dictionary<int, CachedGridTileData> GridTileDataDictionary
-            {
-                get
-                {
-                    if (gridTileDataDictionary.Count == NumberOfTiles)
-                    {
-                        return gridTileDataDictionary;
-                    }
-
-                    gridTileDataDictionary = new(NumberOfTiles);
-
-                    foreach (int tileNumber in Enumerable.Range(0, NumberOfTiles))
-                    {
-                        IGridTileData tileData = GetTileFromNumber(tileNumber);
-                        UpdateDataInDictionary(tileData);
-                    }
-
-                    foreach (IGridTileData gridTileData in GridTileDataList)
-                    {
-                        UpdateDataInDictionary(gridTileData);
-                    }
-
-                    return gridTileDataDictionary;
-                }
-            }
 
             /// <summary>
             /// Number of Columns in `GridData`
@@ -79,13 +63,21 @@ namespace com.eyerunnman.gridsystem
             public GridData(Vector2Int dimension, List<GridTileData> gridTilesData)
             {
                 gridDimension = dimension;
-                GridTileDataList = gridTilesData;
+                gridTileDataDictionary = new();
+
+                foreach (IGridTileData gridTileData in gridTilesData)
+                {
+                    UpdateDataInDictionary(gridTileData);
+                }
             }
 
             public GridData(GridData gridData)
             {
-                gridDimension = gridData.gridDimension;
-                GridTileDataList = gridData.GridTileDataDictionary.Select((pair) => new GridTileData(pair.Value)).ToList();
+                this.gridDimension = gridData.gridDimension;
+
+                if (gridData.gridTileDataDictionary != null)
+                this.gridTileDataDictionary = new(gridData.gridTileDataDictionary);
+
             }
 
             /// <summary>
@@ -95,7 +87,7 @@ namespace com.eyerunnman.gridsystem
             public GridData(Vector2Int dimension)
             {
                 gridDimension = dimension;
-                GridTileDataList = new();
+                gridTileDataDictionary = new();
             }
 
             /// <summary>
@@ -196,9 +188,7 @@ namespace com.eyerunnman.gridsystem
             /// <param name="data">data to setup</param>
             public void SetTileData(IGridTileData data)
             {
-                if (data.IsUndefined || !IsTileDataValid(data))
-                    return;
-                gridTileDataDictionary[data.TileNumber] = new(data);
+                UpdateDataInDictionary(data);
             }
 
             /// <summary>
@@ -225,9 +215,9 @@ namespace com.eyerunnman.gridsystem
                     return IGridTileData.Undefined;
                 }
 
-                if (GridTileDataDictionary.ContainsKey(tileNumber))
+                if (gridTileDataDictionary.ContainsKey(tileNumber))
                 {
-                    return GridTileDataDictionary[tileNumber];
+                    return gridTileDataDictionary[tileNumber];
                 }
                 else
                 {
@@ -256,12 +246,12 @@ namespace com.eyerunnman.gridsystem
 
             private bool IsTileCoordinateValid(Vector2Int coordinate)
             {
-                return coordinate.x > 0 && coordinate.y > 0 && coordinate.x < gridDimension.x && coordinate.y < gridDimension.y;
+                return coordinate.x >= 0 && coordinate.y >= 0 && coordinate.x < gridDimension.x && coordinate.y < gridDimension.y;
             }
 
             private bool IsTileNumberValid(int tileNumber)
             {
-                return (tileNumber > 0 && tileNumber < NumberOfTiles);
+                return (tileNumber >= 0 && tileNumber < NumberOfTiles);
             }
 
             private void UpdateDataInDictionary(IGridTileData gridTileData)
@@ -279,7 +269,17 @@ namespace com.eyerunnman.gridsystem
 
             private bool IsTileDataValid(IGridTileData gridTileData)
             {
-                return IsTileCoordinateValid(gridTileData.Coordinates) && IsTileNumberValid(gridTileData.TileNumber);
+                if (IsTileCoordinateValid(gridTileData.Coordinates) && IsTileNumberValid(gridTileData.TileNumber))
+                {
+                    Vector2Int validCoordinates = GetCoordinatesFromNumber(gridTileData.TileNumber);
+                    if (validCoordinates == gridTileData.Coordinates)
+                    {
+                        return true;
+                    }
+
+                }
+
+                return false;
             }
         }
     }

@@ -1,4 +1,5 @@
 using com.eyerunnman.enums;
+using System;
 using UnityEngine;
 
 namespace com.eyerunnman.gridsystem
@@ -48,8 +49,6 @@ namespace com.eyerunnman.gridsystem
                 this.parentGrid = parentGrid;
                 data = new(tileData);
             }
-
-            public abstract void Reset();
 
             /// <summary>
             /// Function to set up Grid Tile Object with from the grid

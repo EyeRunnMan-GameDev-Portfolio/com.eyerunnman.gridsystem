@@ -39,6 +39,15 @@ namespace com.eyerunnman.gridsystem
 
         #region Public Getters
 
+        public List<IGridTileData> GetGridTileDataList {
+            get{
+                if (gridData!=null)
+                    return gridData.GridTileDataList;
+                return new();
+            }
+        }
+
+
         /// <summary>
         /// Returns a data of the tile in given direction from current tile
         /// </summary>
@@ -96,15 +105,15 @@ namespace com.eyerunnman.gridsystem
 
         #region Private Methods
 
-        private void GenerateGameGrid(GridData gridData)
+        private void UpdateGameGridData(GridData gridData)
         {
-            ResetGrid();
             this.gridData = new(gridData);
+            RefreshGrid();
         }
         private void GenerateGameGrid(GridData gridData, GridTileObject tileObjectPrefab)
         {
-            GenerateGameGrid(gridData);
-            InitializeTileObjectDictionary(gridData, tileObjectPrefab);
+            UpdateGameGridData(gridData);
+            InitializeTileObjectDictionary(this.gridData, tileObjectPrefab);
         }
         private void UpdateGridTileData(IGridTileData data)
         {
@@ -145,11 +154,11 @@ namespace com.eyerunnman.gridsystem
                 gridTileObject.UpdateTile();
             }
         }
-        private void ResetGrid()
+        private void RefreshGrid()
         {
-            foreach (GridTileObject tile in tileObjectDictionary.Values)
+            foreach (int tileNuber in tileObjectDictionary.Keys)
             {
-                tile.Reset();
+                UpdateTileObjectDictionary(GetGridTileDataFromNumber(tileNuber));
             }
         }
 

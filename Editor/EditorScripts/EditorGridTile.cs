@@ -1,31 +1,57 @@
 using TMPro;
 using UnityEngine;
-
+using UnityEditor;
 namespace com.eyerunnman.gridsystem.Editor
 {
+    [ExecuteInEditMode]
     public class EditorGridTile : GameGrid.GridTileObject
     {
+        private Rect screenRect;
 
-        [SerializeField] TMP_Text tileNumber;
-        [SerializeField] TMP_Text coordinates;
-        [SerializeField] TMP_Text height;
-        [SerializeField] TMP_Text slantDirection;
-        [SerializeField] TMP_Text slantAngle;
-        [SerializeField] TMP_Text tileType;
-
-        private void Update()
+        public override void Initialize(GameGrid parentGrid, GameGrid.IGridTileData tileData)
         {
-            tileNumber.text = TileData.TileNumber.ToString();
-            coordinates.text = TileData.Coordinates.ToString();
-            height.text = TileData.Height.ToString();
-            slantDirection.text = TileData.SlantDirection.ToString();
-            slantAngle.text = TileData.SlantAngle.ToString();
-            tileType.text = TileData.Type.ToString();
+            base.Initialize(parentGrid, tileData);
+            SetPostition(tileData);
+        }
+
+        private void SetPostition(GameGrid.IGridTileData tileData)
+        {
+            transform.localPosition = tileData.Center;
+            gameObject.name = "Tile : " + tileData.Coordinates;
+            transform.up = tileData.UpVector;
+        }
+
+        public override void UpdateTile()
+        {
+            base.UpdateTile();
+            SetPostition(TileData);
+        }
+
+            
+        private void OnDrawGizmosSelected()
+        {
+
+            GUIContent tileName = new GUIContent
+            {
+                text = gameObject.name
+            };
+
+            GUIStyle style = new GUIStyle
+            {
+                fontStyle = FontStyle.BoldAndItalic,
+                fontSize = 16
+            };
+            style.normal.textColor = Color.cyan;
+            Handles.Label(transform.position + Vector3.up/2, tileName, style);
+
         }
 
         private void OnDrawGizmos()
         {
+            GUI.Label(new Rect(10, 10, 100, 20), "Hello World!");
+
             Gizmos.color = Color.cyan;
+
 
             Vector3 firstVertex = TileData.TopLeftVertex;
             Vector3 secondVertex = TileData.TopRightVertex;
@@ -43,10 +69,7 @@ namespace com.eyerunnman.gridsystem.Editor
             Gizmos.DrawSphere(thirdVertex, 0.01f);
             Gizmos.DrawSphere(fourthVertex, 0.01f);
 
-        }
 
-        public override void Reset()
-        {
         }
     }
 }

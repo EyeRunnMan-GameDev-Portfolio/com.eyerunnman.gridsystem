@@ -73,6 +73,27 @@ namespace com.eyerunnman.gridsystem
             public float LeadingEdgeHeight { get; private set; }
 
             public bool IsUndefined { get; private set; }
+
+            public void CloneData(IGridTileData refrenceData)
+            {
+                this.SlantDirection = refrenceData.SlantDirection;
+                this.Height = refrenceData.Height;
+                this.SlantAngle = refrenceData.SlantAngle;
+                this.Type = refrenceData.Type;
+                this.UpVector = refrenceData.UpVector;
+                this.ForwardVector = refrenceData.ForwardVector;
+                this.RightVector = refrenceData.RightVector;
+                this.DownVector = refrenceData.DownVector;
+                this.BackVector = refrenceData.BackVector;
+                this.LeftVector = refrenceData.LeftVector;
+                this.TopLeftVertex = refrenceData.TopLeftVertex;
+                this.TopRightVertex = refrenceData.TopRightVertex;
+                this.BottomRightVertex = refrenceData.BottomRightVertex;
+                this.BottomLeftVertex = refrenceData.BottomLeftVertex;
+                this.Center = refrenceData.Center;
+                this.LeadingEdgeHeight = refrenceData.LeadingEdgeHeight;
+                this.IsUndefined = refrenceData.IsUndefined;
+            }
         }
 
     }
