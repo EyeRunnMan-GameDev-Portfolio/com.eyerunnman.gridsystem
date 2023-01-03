@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct CachedGridTileData
+    <title>Struct GameGrid.GridTileData
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct CachedGridTileData
+    <meta name="title" content="Struct GameGrid.GridTileData
    ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,17 +68,17 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="com.eyerunnman.gridsystem.CachedGridTileData">
+            <article class="content wrap" id="_content" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData">
   
   
-  <h1 id="com_eyerunnman_gridsystem_CachedGridTileData" data-uid="com.eyerunnman.gridsystem.CachedGridTileData" class="text-break">Struct CachedGridTileData
+  <h1 id="com_eyerunnman_gridsystem_GameGrid_GridTileData" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData" class="text-break">Struct GameGrid.GridTileData
   </h1>
-  <div class="markdown level0 summary"><p>Cached Grid Tile Data which stores the computed vale so new values is not needed to be computed every time a value is accessed from the grid Tile Data</p>
+  <div class="markdown level0 summary"><p>Grid Tile Data contains data about the tile such as tile id , coordinates in grid , height at which the tile is and so on</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></div>
+    <div><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -103,21 +103,23 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="com.eyerunnman.gridsystem.html">com.eyerunnman.gridsystem</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="com_eyerunnman_gridsystem_CachedGridTileData_syntax">Syntax</h5>
+  <h5 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct CachedGridTileData : IGridTileData</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public struct GridTileData : GameGrid.IGridTileData</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData__ctor_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.#ctor*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData__ctor_com_eyerunnman_gridsystem_IGridTileData_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.#ctor(com.eyerunnman.gridsystem.IGridTileData)">CachedGridTileData(IGridTileData)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData__ctor_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.#ctor*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData__ctor_com_eyerunnman_gridsystem_GameGrid_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.#ctor(com.eyerunnman.gridsystem.GameGrid.IGridTileData)">GridTileData(GameGrid.IGridTileData)</h4>
+  <div class="markdown level1 summary"><p>Constructor to Generate a new tile data based on refrence tile data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CachedGridTileData(IGridTileData data)</code></pre>
+    <pre><code class="lang-csharp hljs">public GridTileData(GameGrid.IGridTileData data)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,9 +132,69 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>refrence tile data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData__ctor_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.#ctor*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData__ctor_System_Int32_Vector2Int_System_Single_Direction_System_Single_com_eyerunnman_gridsystem_GameGrid_TileType_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.#ctor(System.Int32,Vector2Int,System.Single,Direction,System.Single,com.eyerunnman.gridsystem.GameGrid.TileType)">GridTileData(Int32, Vector2Int, Single, Direction, Single, GameGrid.TileType)</h4>
+  <div class="markdown level1 summary"><p>constructer for generating grid tile data with the corresponding values</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridTileData(int tileNumber, Vector2Int coordinates, float height = 0F, Direction slantDirection = null, float slantAngle = 0F, GameGrid.TileType type = GameGrid.TileType.Undefined)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">tileNumber</span></td>
+        <td><p>tile id</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2Int</span></td>
+        <td><span class="parametername">coordinates</span></td>
+        <td><p>coordinate position in grid</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>height</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Direction</span></td>
+        <td><span class="parametername">slantDirection</span></td>
+        <td><p>slant direction of tile</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">slantAngle</span></td>
+        <td><p>slant angle , this follows the slant direction</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.TileType.html">GameGrid.TileType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>type of tile</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -140,9 +202,10 @@
   </h3>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_BackVector_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.BackVector*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_BackVector" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.BackVector">BackVector</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_BackVector_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.BackVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_BackVector" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.BackVector">BackVector</h4>
+  <div class="markdown level1 summary"><p>Negative vector of Forward vector</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -165,9 +228,11 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_BottomLeftVertex_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.BottomLeftVertex*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_BottomLeftVertex" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.BottomLeftVertex">BottomLeftVertex</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_BottomLeftVertex_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.BottomLeftVertex*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_BottomLeftVertex" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.BottomLeftVertex">BottomLeftVertex</h4>
+  <div class="markdown level1 summary"><p>The Vector3 position of the top left Corner based on slang angle and direction
+<em>NOTE:</em> this is calculated considering the tile is at 0,0,0 and only angle and direction are considered</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -190,9 +255,11 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_BottomRightVertex_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.BottomRightVertex*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_BottomRightVertex" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.BottomRightVertex">BottomRightVertex</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_BottomRightVertex_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.BottomRightVertex*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_BottomRightVertex" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.BottomRightVertex">BottomRightVertex</h4>
+  <div class="markdown level1 summary"><p>The Vector3 position of the top left Corner based on slang angle and direction
+<em>NOTE:</em> this is calculated considering the tile is at 0,0,0 and only angle and direction are considered</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -215,9 +282,10 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_Center_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.Center*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_Center" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.Center">Center</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Center_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Center*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Center" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Center">Center</h4>
+  <div class="markdown level1 summary"><p>The Center of Tile Data based on slant angle</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -240,9 +308,10 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_Coordinates_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.Coordinates*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_Coordinates" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.Coordinates">Coordinates</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Coordinates_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Coordinates*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Coordinates" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Coordinates">Coordinates</h4>
+  <div class="markdown level1 summary"><p>Coordinates of tile data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -265,9 +334,10 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_DownVector_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.DownVector*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_DownVector" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.DownVector">DownVector</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_DownVector_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.DownVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_DownVector" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.DownVector">DownVector</h4>
+  <div class="markdown level1 summary"><p>Negative vector of up vector</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -290,9 +360,11 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_ForwardVector_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.ForwardVector*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_ForwardVector" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.ForwardVector">ForwardVector</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_ForwardVector_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.ForwardVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_ForwardVector" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.ForwardVector">ForwardVector</h4>
+  <div class="markdown level1 summary"><p>The forward vector of tile based on slant angle and direction
+<em>Note:</em> this will always have a foraward component and will not change based on direction</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -315,13 +387,14 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_Height_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.Height*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_Height" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.Height">Height</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Height_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Height*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Height" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Height">Height</h4>
+  <div class="markdown level1 summary"><p>vertical height of tile</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Height { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float Height { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,9 +413,10 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_IsUndefined_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.IsUndefined*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_IsUndefined" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.IsUndefined">IsUndefined</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_IsUndefined_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.IsUndefined*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_IsUndefined" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.IsUndefined">IsUndefined</h4>
+  <div class="markdown level1 summary"><p>Check weather a tile is Default or not</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -365,13 +439,14 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_LeadingEdgeHeight_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.LeadingEdgeHeight*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_LeadingEdgeHeight" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.LeadingEdgeHeight">LeadingEdgeHeight</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_LeadingEdgeHeight_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.LeadingEdgeHeight*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_LeadingEdgeHeight" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.LeadingEdgeHeight">LeadingEdgeHeight</h4>
+  <div class="markdown level1 summary"><p>The Height of Leading Edge</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float LeadingEdgeHeight { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float LeadingEdgeHeight { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -390,9 +465,10 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_LeftVector_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.LeftVector*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_LeftVector" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.LeftVector">LeftVector</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_LeftVector_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.LeftVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_LeftVector" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.LeftVector">LeftVector</h4>
+  <div class="markdown level1 summary"><p>Negative vector of Right vector</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -415,9 +491,11 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_RightVector_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.RightVector*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_RightVector" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.RightVector">RightVector</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_RightVector_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.RightVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_RightVector" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.RightVector">RightVector</h4>
+  <div class="markdown level1 summary"><p>The right vector of tile based on slant angle and direction
+<em>Note:</em> this will always have a right component and will not change based on direction</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -440,13 +518,14 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_SlantAngle_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.SlantAngle*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_SlantAngle" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.SlantAngle">SlantAngle</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_SlantAngle_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.SlantAngle*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_SlantAngle" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.SlantAngle">SlantAngle</h4>
+  <div class="markdown level1 summary"><p>slant angle of tile data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float SlantAngle { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float SlantAngle { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -465,13 +544,14 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_SlantDirection_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.SlantDirection*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_SlantDirection" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.SlantDirection">SlantDirection</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_SlantDirection_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.SlantDirection*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_SlantDirection" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.SlantDirection">SlantDirection</h4>
+  <div class="markdown level1 summary"><p>slant direction of tile data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Direction SlantDirection { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Direction SlantDirection { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -490,9 +570,10 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_TileNumber_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.TileNumber*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_TileNumber" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.TileNumber">TileNumber</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_TileNumber_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.TileNumber*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_TileNumber" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.TileNumber">TileNumber</h4>
+  <div class="markdown level1 summary"><p>TileId for tile data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -515,9 +596,11 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_TopLeftVertex_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.TopLeftVertex*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_TopLeftVertex" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.TopLeftVertex">TopLeftVertex</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_TopLeftVertex_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.TopLeftVertex*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_TopLeftVertex" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.TopLeftVertex">TopLeftVertex</h4>
+  <div class="markdown level1 summary"><p>The Vector3 position of the top left Corner based on slant angle and direction
+<em>NOTE:</em> this is calculated considering the tile is at 0,0,0 and only angle and direction are considered</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -540,9 +623,11 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_TopRightVertex_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.TopRightVertex*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_TopRightVertex" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.TopRightVertex">TopRightVertex</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_TopRightVertex_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.TopRightVertex*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_TopRightVertex" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.TopRightVertex">TopRightVertex</h4>
+  <div class="markdown level1 summary"><p>The Vector3 position of the top right Corner based on slant angle and direction
+<em>NOTE:</em> this is calculated considering the tile is at 0,0,0 and only angle and direction are considered</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -565,13 +650,14 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_Type_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.Type*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_Type" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Type_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Type*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Type" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Type">Type</h4>
+  <div class="markdown level1 summary"><p>type of tile data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TileType Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GameGrid.TileType Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -583,16 +669,43 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.TileType.html">TileType</a></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.TileType.html">GameGrid.TileType</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_CachedGridTileData_UpVector_" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.UpVector*"></a>
-  <h4 id="com_eyerunnman_gridsystem_CachedGridTileData_UpVector" data-uid="com.eyerunnman.gridsystem.CachedGridTileData.UpVector">UpVector</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Undefined_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Undefined*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_Undefined" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.Undefined">Undefined</h4>
+  <div class="markdown level1 summary"><p>The default Grid Tile Data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameGrid.GridTileData Undefined { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.GridTileData.html">GameGrid.GridTileData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_UpVector_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.UpVector*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_UpVector" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.UpVector">UpVector</h4>
+  <div class="markdown level1 summary"><p>The resultant up vector of tile based on slant angle and direction</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -613,9 +726,39 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileData_CloneData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.CloneData*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileData_CloneData_com_eyerunnman_gridsystem_GameGrid_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileData.CloneData(com.eyerunnman.gridsystem.GameGrid.IGridTileData)">CloneData(GameGrid.IGridTileData)</h4>
+  <div class="markdown level1 summary"><p>To Update tile orientation except tile id and coordinates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CloneData(GameGrid.IGridTileData refrenceData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a></td>
+        <td><span class="parametername">refrenceData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a>
+      <a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a>
   </div>
 </article>
           </div>

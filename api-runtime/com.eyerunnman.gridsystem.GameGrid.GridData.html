@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GridData
+    <title>Class GameGrid.GridData
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GridData
+    <meta name="title" content="Class GameGrid.GridData
    ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,10 +68,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="com.eyerunnman.gridsystem.GridData">
+            <article class="content wrap" id="_content" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData">
   
   
-  <h1 id="com_eyerunnman_gridsystem_GridData" data-uid="com.eyerunnman.gridsystem.GridData" class="text-break">Class GridData
+  <h1 id="com_eyerunnman_gridsystem_GameGrid_GridData" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData" class="text-break">Class GameGrid.GridData
   </h1>
   <div class="markdown level0 summary"><p>Grid Data which contatins dimension and stores data for each tile</p>
 </div>
@@ -79,7 +79,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GridData</span></div>
+    <div class="level1"><span class="xref">GameGrid.GridData</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -107,23 +107,22 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="com.eyerunnman.gridsystem.html">com.eyerunnman.gridsystem</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="com_eyerunnman_gridsystem_GridData_syntax">Syntax</h5>
+  <h5 id="com_eyerunnman_gridsystem_GameGrid_GridData_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class GridData</code></pre>
+public sealed class GridData</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData__ctor_" data-uid="com.eyerunnman.gridsystem.GridData.#ctor*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData__ctor_UnityEngine_Vector2Int_" data-uid="com.eyerunnman.gridsystem.GridData.#ctor(UnityEngine.Vector2Int)">GridData(UnityEngine.Vector2Int)</h4>
-  <div class="markdown level1 summary"><p>Constructor takes in dimension of grid and resets the tile data for all tiles to default</p>
-</div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData__ctor_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.#ctor*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData__ctor_com_eyerunnman_gridsystem_GameGrid_GridData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.#ctor(com.eyerunnman.gridsystem.GameGrid.GridData)">GridData(GameGrid.GridData)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GridData(UnityEngine.Vector2Int dimension)</code></pre>
+    <pre><code class="lang-csharp hljs">public GridData(GameGrid.GridData gridData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,7 +135,35 @@ public class GridData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEngine.Vector2Int</span></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.GridData.html">GameGrid.GridData</a></td>
+        <td><span class="parametername">gridData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData__ctor_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.#ctor*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData__ctor_Vector2Int_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.#ctor(Vector2Int)">GridData(Vector2Int)</h4>
+  <div class="markdown level1 summary"><p>Constructor takes in dimension of grid and resets the tile data for all tiles to default</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridData(Vector2Int dimension)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2Int</span></td>
         <td><span class="parametername">dimension</span></td>
         <td><p>dimension of grid</p>
 </td>
@@ -145,14 +172,14 @@ public class GridData</code></pre>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData__ctor_" data-uid="com.eyerunnman.gridsystem.GridData.#ctor*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData__ctor_UnityEngine_Vector2Int_List_com_eyerunnman_gridsystem_GridTileData__" data-uid="com.eyerunnman.gridsystem.GridData.#ctor(UnityEngine.Vector2Int,List{com.eyerunnman.gridsystem.GridTileData})">GridData(UnityEngine.Vector2Int, List&lt;GridTileData&gt;)</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData__ctor_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.#ctor*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData__ctor_Vector2Int_List_com_eyerunnman_gridsystem_GameGrid_GridTileData__" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.#ctor(Vector2Int,List{com.eyerunnman.gridsystem.GameGrid.GridTileData})">GridData(Vector2Int, List&lt;GameGrid.GridTileData&gt;)</h4>
   <div class="markdown level1 summary"><p>Constructor takes in dimenstions and data of all tiles</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GridData(UnityEngine.Vector2Int dimension, List&lt;GridTileData&gt; gridTilesData)</code></pre>
+    <pre><code class="lang-csharp hljs">public GridData(Vector2Int dimension, List&lt;GameGrid.GridTileData&gt; gridTilesData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,13 +192,13 @@ public class GridData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEngine.Vector2Int</span></td>
+        <td><span class="xref">Vector2Int</span></td>
         <td><span class="parametername">dimension</span></td>
         <td><p>dimension of grid</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="com.eyerunnman.gridsystem.GridTileData.html">GridTileData</a>&gt;</td>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="com.eyerunnman.gridsystem.GameGrid.GridTileData.html">GameGrid.GridTileData</a>&gt;</td>
         <td><span class="parametername">gridTilesData</span></td>
         <td><p>data for all tiles</p>
 </td>
@@ -182,8 +209,8 @@ public class GridData</code></pre>
   </h3>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_Cols_" data-uid="com.eyerunnman.gridsystem.GridData.Cols*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_Cols" data-uid="com.eyerunnman.gridsystem.GridData.Cols">Cols</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_Cols_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.Cols*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_Cols" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.Cols">Cols</h4>
   <div class="markdown level1 summary"><p>Number of Columns in <code>GridData</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -208,8 +235,8 @@ public class GridData</code></pre>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_GridDimension_" data-uid="com.eyerunnman.gridsystem.GridData.GridDimension*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_GridDimension" data-uid="com.eyerunnman.gridsystem.GridData.GridDimension">GridDimension</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_GridDimension_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GridDimension*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_GridDimension" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GridDimension">GridDimension</h4>
   <div class="markdown level1 summary"><p>Grid dimension for <code>GridData</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -234,8 +261,33 @@ public class GridData</code></pre>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_NumberOfTiles_" data-uid="com.eyerunnman.gridsystem.GridData.NumberOfTiles*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_NumberOfTiles" data-uid="com.eyerunnman.gridsystem.GridData.NumberOfTiles">NumberOfTiles</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_GridTileDataList_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GridTileDataList*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_GridTileDataList" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GridTileDataList">GridTileDataList</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;GameGrid.IGridTileData&gt; GridTileDataList { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_NumberOfTiles_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.NumberOfTiles*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_NumberOfTiles" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.NumberOfTiles">NumberOfTiles</h4>
   <div class="markdown level1 summary"><p>Total Number of tiles in GridData;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -260,8 +312,8 @@ public class GridData</code></pre>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_Rows_" data-uid="com.eyerunnman.gridsystem.GridData.Rows*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_Rows" data-uid="com.eyerunnman.gridsystem.GridData.Rows">Rows</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_Rows_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.Rows*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_Rows" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.Rows">Rows</h4>
   <div class="markdown level1 summary"><p>Number of Rows in <code>GridData</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -288,9 +340,10 @@ public class GridData</code></pre>
   </h3>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_GetCoordinateInDirection_" data-uid="com.eyerunnman.gridsystem.GridData.GetCoordinateInDirection*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_GetCoordinateInDirection_Vector2Int_Direction_" data-uid="com.eyerunnman.gridsystem.GridData.GetCoordinateInDirection(Vector2Int,Direction)">GetCoordinateInDirection(Vector2Int, Direction)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_GetCoordinateInDirection_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetCoordinateInDirection*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_GetCoordinateInDirection_Vector2Int_Direction_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetCoordinateInDirection(Vector2Int,Direction)">GetCoordinateInDirection(Vector2Int, Direction)</h4>
+  <div class="markdown level1 summary"><p>Get coordinates in directionm from refrence coordinates</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -309,12 +362,14 @@ public class GridData</code></pre>
       <tr>
         <td><span class="xref">Vector2Int</span></td>
         <td><span class="parametername">refrenceCoordinates</span></td>
-        <td></td>
+        <td><p>refrence coordinates</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Direction</span></td>
         <td><span class="parametername">direction</span></td>
-        <td></td>
+        <td><p>direction</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -329,20 +384,21 @@ public class GridData</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">Vector2Int</span></td>
-        <td></td>
+        <td><p>coordinates of tile in direction</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_GetTileDataFromCoordinates_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileDataFromCoordinates*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_GetTileDataFromCoordinates_Vector2Int_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileDataFromCoordinates(Vector2Int)">GetTileDataFromCoordinates(Vector2Int)</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_GetTileDataFromCoordinates_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataFromCoordinates*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_GetTileDataFromCoordinates_Vector2Int_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataFromCoordinates(Vector2Int)">GetTileDataFromCoordinates(Vector2Int)</h4>
   <div class="markdown level1 summary"><p>GetTileData from coordinates</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IGridTileData GetTileDataFromCoordinates(Vector2Int coordinates)</code></pre>
+    <pre><code class="lang-csharp hljs">public GameGrid.IGridTileData GetTileDataFromCoordinates(Vector2Int coordinates)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -372,21 +428,21 @@ public class GridData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_GetTileDataInDirection_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileDataInDirection*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_GetTileDataInDirection_System_Int32_Direction_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileDataInDirection(System.Int32,Direction)">GetTileDataInDirection(Int32, Direction)</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_GetTileDataInDirection_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataInDirection*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_GetTileDataInDirection_System_Int32_Direction_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataInDirection(System.Int32,Direction)">GetTileDataInDirection(Int32, Direction)</h4>
   <div class="markdown level1 summary"><p>Get tile in given direction from a refrence tile</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IGridTileData GetTileDataInDirection(int tileNumber, Direction direction)</code></pre>
+    <pre><code class="lang-csharp hljs">public GameGrid.IGridTileData GetTileDataInDirection(int tileNumber, Direction direction)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -422,21 +478,22 @@ public class GridData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
-        <td></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a></td>
+        <td><p>grid data in given direction</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_GetTileFromNumber_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileFromNumber*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_GetTileFromNumber_System_Int32_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileFromNumber(System.Int32)">GetTileFromNumber(Int32)</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_GetTileFromNumber_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetTileFromNumber*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_GetTileFromNumber_System_Int32_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetTileFromNumber(System.Int32)">GetTileFromNumber(Int32)</h4>
   <div class="markdown level1 summary"><p>Get Tild Data for a given index if the number is invalid will return undefined tile</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IGridTileData GetTileFromNumber(int tileNumber)</code></pre>
+    <pre><code class="lang-csharp hljs">public GameGrid.IGridTileData GetTileFromNumber(int tileNumber)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -466,16 +523,17 @@ public class GridData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_GetTileNumberInDirection_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileNumberInDirection*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_GetTileNumberInDirection_System_Int32_Direction_" data-uid="com.eyerunnman.gridsystem.GridData.GetTileNumberInDirection(System.Int32,Direction)">GetTileNumberInDirection(Int32, Direction)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_GetTileNumberInDirection_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetTileNumberInDirection*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_GetTileNumberInDirection_System_Int32_Direction_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.GetTileNumberInDirection(System.Int32,Direction)">GetTileNumberInDirection(Int32, Direction)</h4>
+  <div class="markdown level1 summary"><p>Get tile number in given direction of refrence tile number</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -494,12 +552,14 @@ public class GridData</code></pre>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">tileNumber</span></td>
-        <td></td>
+        <td><p>ref tile number</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Direction</span></td>
         <td><span class="parametername">direction</span></td>
-        <td></td>
+        <td><p>direction</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -514,20 +574,21 @@ public class GridData</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>tile number of tile in number</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GridData_SetTileData_" data-uid="com.eyerunnman.gridsystem.GridData.SetTileData*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GridData_SetTileData_com_eyerunnman_gridsystem_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GridData.SetTileData(com.eyerunnman.gridsystem.IGridTileData)">SetTileData(IGridTileData)</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridData_SetTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.SetTileData*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridData_SetTileData_com_eyerunnman_gridsystem_GameGrid_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridData.SetTileData(com.eyerunnman.gridsystem.GameGrid.IGridTileData)">SetTileData(GameGrid.IGridTileData)</h4>
   <div class="markdown level1 summary"><p>To Set data for a given grid tile data</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetTileData(IGridTileData data)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetTileData(GameGrid.IGridTileData data)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -540,7 +601,7 @@ public class GridData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="com.eyerunnman.gridsystem.IGridTileData.html">IGridTileData</a></td>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a></td>
         <td><span class="parametername">data</span></td>
         <td><p>data to setup</p>
 </td>
