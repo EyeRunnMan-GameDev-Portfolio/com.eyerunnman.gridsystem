@@ -3,6 +3,7 @@
 A grid system unity package to be used for various grid based unity projects
 
 Package can be accessed at https://www.npmjs.com/package/com.eyerunnman.gridsystem
+Docs cane be accessed at https://eyerunnman-gamedev-portfolio.github.io/com.eyerunnman.gridsystem/
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
