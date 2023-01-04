@@ -1,4 +1,5 @@
 using com.eyerunnman.enums;
+using com.eyerunnman.interfaces;
 using System;
 using UnityEngine;
 
@@ -24,7 +25,9 @@ namespace com.eyerunnman.gridsystem
                     {
                         if (parentGrid)
                         {
-                            //parentGrid.UpdateTileData(value);
+                            ICommand<GameGrid> updateGridCommand = new Commands.UpdateGridTileData(value);
+
+                            parentGrid.ExecuteCommand(updateGridCommand);
                         }
                     }
                 }
@@ -48,19 +51,20 @@ namespace com.eyerunnman.gridsystem
             {
                 this.parentGrid = parentGrid;
                 data = new(tileData);
+                UpdateTile();
             }
 
-            /// <summary>
-            /// Function to set up Grid Tile Object with from the grid
-            /// </summary>
-            public virtual void UpdateTile()
+            public void UpdateTile()
             {
                 if (parentGrid)
                 {
                     data = new(parentGrid.GetGridTileDataFromNumber(data.TileNumber));
+                    OnTileDataUpdate(data);
                 }
-                // use this data to do dany updates
             }
+
+            public abstract void OnTileDataUpdate(IGridTileData tileData);
+
 
             /// <summary>
             /// Get tile Data in Direction

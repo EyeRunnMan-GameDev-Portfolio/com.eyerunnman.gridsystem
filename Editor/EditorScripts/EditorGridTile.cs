@@ -1,12 +1,20 @@
 using TMPro;
 using UnityEngine;
 using UnityEditor;
+using System.Collections.Generic;
+
 namespace com.eyerunnman.gridsystem.Editor
 {
     [ExecuteInEditMode]
     public class EditorGridTile : GameGrid.GridTileObject
     {
-        private Rect screenRect;
+        [SerializeField]
+        private Color defaultColor;
+
+        [SerializeField]
+        private List<TileTypeDebug> TileTypeDebugColors;
+
+        private Color currentColor;
 
         public override void Initialize(GameGrid parentGrid, GameGrid.IGridTileData tileData)
         {
@@ -21,10 +29,24 @@ namespace com.eyerunnman.gridsystem.Editor
             transform.up = tileData.UpVector;
         }
 
-        public override void UpdateTile()
+        private void UpdateGizmoColors(GameGrid.TileType tileType)
         {
-            base.UpdateTile();
-            SetPostition(TileData);
+            currentColor = defaultColor;
+
+            foreach (TileTypeDebug tileTypeDebug in TileTypeDebugColors)
+            {
+                if (tileTypeDebug.TileType == tileType)
+                {
+                    currentColor = tileTypeDebug.color;
+                    break;
+                }
+            }
+        }
+
+        public override void OnTileDataUpdate(GameGrid.IGridTileData updatedData)
+        {
+            SetPostition(updatedData);
+            UpdateGizmoColors(updatedData.Type);
         }
 
             
@@ -42,11 +64,10 @@ namespace com.eyerunnman.gridsystem.Editor
                 fontSize = 16
             };
             style.normal.textColor = Color.cyan;
+            
             Handles.Label(transform.position + Vector3.up/2, tileName, style);
 
-            GUI.Label(new Rect(10, 10, 100, 20), "Hello World!");
-
-            Gizmos.color = Color.cyan;
+            Gizmos.color = currentColor;
 
             Vector3 firstVertex = TileData.TopLeftVertex;
             Vector3 secondVertex = TileData.TopRightVertex;
@@ -58,14 +79,19 @@ namespace com.eyerunnman.gridsystem.Editor
             Gizmos.DrawLine(thirdVertex, fourthVertex);
             Gizmos.DrawLine(fourthVertex, firstVertex);
 
-            Gizmos.color = Color.gray;
-            Gizmos.DrawSphere(firstVertex, 0.01f);
-            Gizmos.DrawSphere(secondVertex, 0.01f);
-            Gizmos.DrawSphere(thirdVertex, 0.01f);
-            Gizmos.DrawSphere(fourthVertex, 0.01f);
+            Gizmos.DrawLine(firstVertex, thirdVertex);
+            Gizmos.DrawLine(secondVertex, fourthVertex);
 
         }
 
+
+    }
+
+    [System.Serializable]
+    public struct TileTypeDebug
+    {
+        public GameGrid.TileType TileType;
+        public Color color;
     }
 }
 
