@@ -44,14 +44,9 @@ namespace com.eyerunnman.gridsystem.Editor
             style.normal.textColor = Color.cyan;
             Handles.Label(transform.position + Vector3.up/2, tileName, style);
 
-        }
-
-        private void OnDrawGizmos()
-        {
             GUI.Label(new Rect(10, 10, 100, 20), "Hello World!");
 
             Gizmos.color = Color.cyan;
-
 
             Vector3 firstVertex = TileData.TopLeftVertex;
             Vector3 secondVertex = TileData.TopRightVertex;
@@ -69,8 +64,8 @@ namespace com.eyerunnman.gridsystem.Editor
             Gizmos.DrawSphere(thirdVertex, 0.01f);
             Gizmos.DrawSphere(fourthVertex, 0.01f);
 
-
         }
+
     }
 }
 
