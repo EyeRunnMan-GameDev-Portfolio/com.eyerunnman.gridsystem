@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "CHANGELOG.html",
-          "hash": "CQJ50UCQY+xkQ364ODazdA=="
+          "hash": "teK+ciSNIKhCUIC6+QnpGg=="
         }
       },
       "is_incremental": false,
@@ -221,6 +221,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/GridEditorUsage.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/GridEditorUsage.html",
+          "hash": "x7HgZv3Arrjl3bPJsIBdzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "changelog.md",
       "output": {
         ".html": {
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "fusion/toc.html",
-          "hash": "ZpaMX5sZIG9IMiNolA1eFg=="
+          "hash": "mGIRcvpNS9PBoKIfiRaN6A=="
         }
       },
       "is_incremental": false,
@@ -260,6 +272,28 @@
       "output": {
         "resource": {
           "relative_path": "images/GettingStarted.png.meta"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Grid Editor.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Grid Editor.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Grid Editor.png.meta",
+      "output": {
+        "resource": {
+          "relative_path": "images/Grid Editor.png.meta"
         }
       },
       "is_incremental": false,
@@ -315,7 +349,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "S98/Om/I2GD3lwBpMXXwtw=="
+          "hash": "8zn88E105I3zlW+/ZHBMFQ=="
         }
       },
       "is_incremental": false,
@@ -348,7 +382,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 6,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
