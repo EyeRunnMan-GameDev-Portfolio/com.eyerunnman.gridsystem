@@ -1,2 +1,4 @@
 - name: Getting Started
   href: GettingStarted.md
+- name: Grid Editor Usage
+  href: GridEditorUsage.md

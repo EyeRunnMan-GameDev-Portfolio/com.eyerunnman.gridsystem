@@ -6,7 +6,6 @@ items:
   children:
   - com.eyerunnman.gridsystem.Editor.EditorGridTile
   - com.eyerunnman.gridsystem.Editor.GridEditor
-  - com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO
   langs:
   - csharp
   - vb
@@ -19,7 +18,6 @@ items:
 references:
 - uid: com.eyerunnman.gridsystem.Editor.EditorGridTile
   commentId: T:com.eyerunnman.gridsystem.Editor.EditorGridTile
-  parent: com.eyerunnman.gridsystem.Editor
   name: EditorGridTile
   nameWithType: EditorGridTile
   fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile
@@ -28,13 +26,3 @@ references:
   name: GridEditor
   nameWithType: GridEditor
   fullName: com.eyerunnman.gridsystem.Editor.GridEditor
-- uid: com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO
-  commentId: T:com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO
-  name: GridEditorConfigDataSO
-  nameWithType: GridEditorConfigDataSO
-  fullName: com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO
-- uid: com.eyerunnman.gridsystem.Editor
-  commentId: N:com.eyerunnman.gridsystem.Editor
-  name: com.eyerunnman.gridsystem.Editor
-  nameWithType: com.eyerunnman.gridsystem.Editor
-  fullName: com.eyerunnman.gridsystem.Editor

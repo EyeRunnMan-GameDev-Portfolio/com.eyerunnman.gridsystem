@@ -5,7 +5,8 @@ items:
   id: EditorGridTile
   parent: com.eyerunnman.gridsystem.Editor
   children:
-  - com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData
+  - com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize(GameGrid,GameGrid.IGridTileData)
+  - com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile
   langs:
   - csharp
   - vb
@@ -16,15 +17,15 @@ items:
   source:
     id: EditorGridTile
     path: ''
-    startLine: 8
+    startLine: 5
   assemblies:
   - cs.temp.dll
   namespace: com.eyerunnman.gridsystem.Editor
   syntax:
-    content: 'public class EditorGridTile : MonoBehaviour'
+    content: 'public class EditorGridTile : GameGrid.GridTileObject'
     content.vb: >-
       Public Class EditorGridTile
-          Inherits MonoBehaviour
+          Inherits GameGrid.GridTileObject
   inheritance:
   - System.Object
   modifiers.csharp:
@@ -33,40 +34,92 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData
-  commentId: M:com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData
-  id: UpdateDebugData
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize(GameGrid,GameGrid.IGridTileData)
+  commentId: M:com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize(GameGrid,GameGrid.IGridTileData)
+  id: Initialize(GameGrid,GameGrid.IGridTileData)
   parent: com.eyerunnman.gridsystem.Editor.EditorGridTile
   langs:
   - csharp
   - vb
-  name: UpdateDebugData()
-  nameWithType: EditorGridTile.UpdateDebugData()
-  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData()
+  name: Initialize(GameGrid, GameGrid.IGridTileData)
+  nameWithType: EditorGridTile.Initialize(GameGrid, GameGrid.IGridTileData)
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize(GameGrid, GameGrid.IGridTileData)
   type: Method
   source:
-    id: UpdateDebugData
+    id: Initialize
     path: ''
-    startLine: 25
+    startLine: 10
   assemblies:
   - cs.temp.dll
   namespace: com.eyerunnman.gridsystem.Editor
   syntax:
-    content: public void UpdateDebugData()
-    content.vb: Public Sub UpdateDebugData
-  overload: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData*
+    content: public override void Initialize(GameGrid parentGrid, GameGrid.IGridTileData tileData)
+    parameters:
+    - id: parentGrid
+      type: GameGrid
+    - id: tileData
+      type: GameGrid.IGridTileData
+    content.vb: Public Overrides Sub Initialize(parentGrid As GameGrid, tileData As GameGrid.IGridTileData)
+  overload: com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize*
   modifiers.csharp:
   - public
+  - override
   modifiers.vb:
   - Public
+  - Overrides
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile
+  commentId: M:com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile
+  id: UpdateTile
+  parent: com.eyerunnman.gridsystem.Editor.EditorGridTile
+  langs:
+  - csharp
+  - vb
+  name: UpdateTile()
+  nameWithType: EditorGridTile.UpdateTile()
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile()
+  type: Method
+  source:
+    id: UpdateTile
+    path: ''
+    startLine: 23
+  assemblies:
+  - cs.temp.dll
+  namespace: com.eyerunnman.gridsystem.Editor
+  syntax:
+    content: public override void UpdateTile()
+    content.vb: Public Overrides Sub UpdateTile
+  overload: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: com.eyerunnman.gridsystem.Editor
   commentId: N:com.eyerunnman.gridsystem.Editor
   name: com.eyerunnman.gridsystem.Editor
   nameWithType: com.eyerunnman.gridsystem.Editor
   fullName: com.eyerunnman.gridsystem.Editor
-- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData*
-  commentId: Overload:com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData
-  name: UpdateDebugData
-  nameWithType: EditorGridTile.UpdateDebugData
-  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize*
+  commentId: Overload:com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize
+  name: Initialize
+  nameWithType: EditorGridTile.Initialize
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize
+- uid: GameGrid
+  commentId: '!:GameGrid'
+  isExternal: true
+  name: GameGrid
+  nameWithType: GameGrid
+  fullName: GameGrid
+- uid: GameGrid.IGridTileData
+  commentId: '!:GameGrid.IGridTileData'
+  isExternal: true
+  name: GameGrid.IGridTileData
+  nameWithType: GameGrid.IGridTileData
+  fullName: GameGrid.IGridTileData
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile*
+  commentId: Overload:com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile
+  name: UpdateTile
+  nameWithType: EditorGridTile.UpdateTile
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile

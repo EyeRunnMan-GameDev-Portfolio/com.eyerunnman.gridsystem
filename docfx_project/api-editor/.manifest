@@ -1,9 +1,7 @@
 {
   "com.eyerunnman.gridsystem.Editor": "com.eyerunnman.gridsystem.Editor.yml",
   "com.eyerunnman.gridsystem.Editor.EditorGridTile": "com.eyerunnman.gridsystem.Editor.EditorGridTile.yml",
-  "com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateDebugData": "com.eyerunnman.gridsystem.Editor.EditorGridTile.yml",
-  "com.eyerunnman.gridsystem.Editor.GridEditor": "com.eyerunnman.gridsystem.Editor.GridEditor.yml",
-  "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO": "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.yml",
-  "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.DebugTileObject": "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.yml",
-  "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.TileHeightSnap": "com.eyerunnman.gridsystem.Editor.GridEditorConfigDataSO.yml"
+  "com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize(GameGrid,GameGrid.IGridTileData)": "com.eyerunnman.gridsystem.Editor.EditorGridTile.yml",
+  "com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile": "com.eyerunnman.gridsystem.Editor.EditorGridTile.yml",
+  "com.eyerunnman.gridsystem.Editor.GridEditor": "com.eyerunnman.gridsystem.Editor.GridEditor.yml"
 }
