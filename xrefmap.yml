@@ -19,32 +19,50 @@ references:
   commentId: T:com.eyerunnman.gridsystem.Editor.EditorGridTile
   fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile
   nameWithType: EditorGridTile
-- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize(GameGrid,GameGrid.IGridTileData)
-  name: Initialize(GameGrid, GameGrid.IGridTileData)
-  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_Initialize_GameGrid_GameGrid_IGridTileData_
-  commentId: M:com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize(GameGrid,GameGrid.IGridTileData)
-  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize(GameGrid, GameGrid.IGridTileData)
-  nameWithType: EditorGridTile.Initialize(GameGrid, GameGrid.IGridTileData)
-- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize*
-  name: Initialize
-  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_Initialize_
-  commentId: Overload:com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataInitialize
+  name: OnTileDataInitialize()
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_OnTileDataInitialize
+  commentId: M:com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataInitialize
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataInitialize()
+  nameWithType: EditorGridTile.OnTileDataInitialize()
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataInitialize*
+  name: OnTileDataInitialize
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_OnTileDataInitialize_
+  commentId: Overload:com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataInitialize
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.Initialize
-  nameWithType: EditorGridTile.Initialize
-- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile
-  name: UpdateTile()
-  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_UpdateTile
-  commentId: M:com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile
-  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile()
-  nameWithType: EditorGridTile.UpdateTile()
-- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile*
-  name: UpdateTile
-  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_UpdateTile_
-  commentId: Overload:com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataInitialize
+  nameWithType: EditorGridTile.OnTileDataInitialize
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataUpdate
+  name: OnTileDataUpdate()
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_OnTileDataUpdate
+  commentId: M:com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataUpdate
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataUpdate()
+  nameWithType: EditorGridTile.OnTileDataUpdate()
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataUpdate*
+  name: OnTileDataUpdate
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_OnTileDataUpdate_
+  commentId: Overload:com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataUpdate
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.UpdateTile
-  nameWithType: EditorGridTile.UpdateTile
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.OnTileDataUpdate
+  nameWithType: EditorGridTile.OnTileDataUpdate
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug
+  name: EditorGridTile.TileTypeDebug
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.html
+  commentId: T:com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug
+  nameWithType: EditorGridTile.TileTypeDebug
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.color
+  name: color
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_TileTypeDebug_color
+  commentId: F:com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.color
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.color
+  nameWithType: EditorGridTile.TileTypeDebug.color
+- uid: com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.TileType
+  name: TileType
+  href: api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.html#com_eyerunnman_gridsystem_Editor_EditorGridTile_TileTypeDebug_TileType
+  commentId: F:com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.TileType
+  fullName: com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.TileType
+  nameWithType: EditorGridTile.TileTypeDebug.TileType
 - uid: com.eyerunnman.gridsystem.Editor.GridEditor
   name: GridEditor
   href: api-editor/com.eyerunnman.gridsystem.Editor.GridEditor.html
@@ -82,24 +100,30 @@ references:
   commentId: T:com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid
   fullName: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid
   nameWithType: GameGrid.Commands.GenerateGameGrid
-- uid: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(com.eyerunnman.gridsystem.GameGrid.GridData)
-  name: GenerateGameGrid(GameGrid.GridData)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.html#com_eyerunnman_gridsystem_GameGrid_Commands_GenerateGameGrid__ctor_com_eyerunnman_gridsystem_GameGrid_GridData_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(com.eyerunnman.gridsystem.GameGrid.GridData)
-  fullName: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(com.eyerunnman.gridsystem.GameGrid.GridData)
-  nameWithType: GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(GameGrid.GridData)
-- uid: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(com.eyerunnman.gridsystem.GameGrid.GridData,com.eyerunnman.gridsystem.GameGrid.GridTileObject)
-  name: GenerateGameGrid(GameGrid.GridData, GameGrid.GridTileObject)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.html#com_eyerunnman_gridsystem_GameGrid_Commands_GenerateGameGrid__ctor_com_eyerunnman_gridsystem_GameGrid_GridData_com_eyerunnman_gridsystem_GameGrid_GridTileObject_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(com.eyerunnman.gridsystem.GameGrid.GridData,com.eyerunnman.gridsystem.GameGrid.GridTileObject)
-  fullName: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(com.eyerunnman.gridsystem.GameGrid.GridData, com.eyerunnman.gridsystem.GameGrid.GridTileObject)
-  nameWithType: GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(GameGrid.GridData, GameGrid.GridTileObject)
 - uid: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(Vector2Int)
   name: GenerateGameGrid(Vector2Int)
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.html#com_eyerunnman_gridsystem_GameGrid_Commands_GenerateGameGrid__ctor_Vector2Int_
   commentId: M:com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(Vector2Int)
   fullName: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int)
   nameWithType: GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int)
+- uid: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(Vector2Int,List{com.eyerunnman.gridsystem.GameGrid.GridTileData})
+  name: GenerateGameGrid(Vector2Int, List<GameGrid.GridTileData>)
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.html#com_eyerunnman_gridsystem_GameGrid_Commands_GenerateGameGrid__ctor_Vector2Int_List_com_eyerunnman_gridsystem_GameGrid_GridTileData__
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(Vector2Int,List{com.eyerunnman.gridsystem.GameGrid.GridTileData})
+  name.vb: GenerateGameGrid(Vector2Int, List(Of GameGrid.GridTileData))
+  fullName: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int, List<com.eyerunnman.gridsystem.GameGrid.GridTileData>)
+  fullName.vb: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int, List(Of com.eyerunnman.gridsystem.GameGrid.GridTileData))
+  nameWithType: GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int, List<GameGrid.GridTileData>)
+  nameWithType.vb: GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int, List(Of GameGrid.GridTileData))
+- uid: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(Vector2Int,List{com.eyerunnman.gridsystem.GameGrid.GridTileData},com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal)
+  name: GenerateGameGrid(Vector2Int, List<GameGrid.GridTileData>, GameGrid.GridTileObjectInternal)
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.html#com_eyerunnman_gridsystem_GameGrid_Commands_GenerateGameGrid__ctor_Vector2Int_List_com_eyerunnman_gridsystem_GameGrid_GridTileData__com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor(Vector2Int,List{com.eyerunnman.gridsystem.GameGrid.GridTileData},com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal)
+  name.vb: GenerateGameGrid(Vector2Int, List(Of GameGrid.GridTileData), GameGrid.GridTileObjectInternal)
+  fullName: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int, List<com.eyerunnman.gridsystem.GameGrid.GridTileData>, com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal)
+  fullName.vb: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int, List(Of com.eyerunnman.gridsystem.GameGrid.GridTileData), com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal)
+  nameWithType: GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int, List<GameGrid.GridTileData>, GameGrid.GridTileObjectInternal)
+  nameWithType.vb: GameGrid.Commands.GenerateGameGrid.GenerateGameGrid(Vector2Int, List(Of GameGrid.GridTileData), GameGrid.GridTileObjectInternal)
 - uid: com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.#ctor*
   name: GenerateGameGrid
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.html#com_eyerunnman_gridsystem_GameGrid_Commands_GenerateGameGrid__ctor_
@@ -126,12 +150,15 @@ references:
   commentId: T:com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData
   fullName: com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData
   nameWithType: GameGrid.Commands.UpdateGridData
-- uid: com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.#ctor(com.eyerunnman.gridsystem.GameGrid.GridData)
-  name: UpdateGridData(GameGrid.GridData)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.html#com_eyerunnman_gridsystem_GameGrid_Commands_UpdateGridData__ctor_com_eyerunnman_gridsystem_GameGrid_GridData_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.#ctor(com.eyerunnman.gridsystem.GameGrid.GridData)
-  fullName: com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.UpdateGridData(com.eyerunnman.gridsystem.GameGrid.GridData)
-  nameWithType: GameGrid.Commands.UpdateGridData.UpdateGridData(GameGrid.GridData)
+- uid: com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.#ctor(Vector2Int,List{com.eyerunnman.gridsystem.GameGrid.GridTileData})
+  name: UpdateGridData(Vector2Int, List<GameGrid.GridTileData>)
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.html#com_eyerunnman_gridsystem_GameGrid_Commands_UpdateGridData__ctor_Vector2Int_List_com_eyerunnman_gridsystem_GameGrid_GridTileData__
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.#ctor(Vector2Int,List{com.eyerunnman.gridsystem.GameGrid.GridTileData})
+  name.vb: UpdateGridData(Vector2Int, List(Of GameGrid.GridTileData))
+  fullName: com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.UpdateGridData(Vector2Int, List<com.eyerunnman.gridsystem.GameGrid.GridTileData>)
+  fullName.vb: com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.UpdateGridData(Vector2Int, List(Of com.eyerunnman.gridsystem.GameGrid.GridTileData))
+  nameWithType: GameGrid.Commands.UpdateGridData.UpdateGridData(Vector2Int, List<GameGrid.GridTileData>)
+  nameWithType.vb: GameGrid.Commands.UpdateGridData.UpdateGridData(Vector2Int, List(Of GameGrid.GridTileData))
 - uid: com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.#ctor*
   name: UpdateGridData
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.html#com_eyerunnman_gridsystem_GameGrid_Commands_UpdateGridData__ctor_
@@ -248,19 +275,6 @@ references:
   isSpec: "True"
   fullName: com.eyerunnman.gridsystem.GameGrid.GetGridTileDataFromNumber
   nameWithType: GameGrid.GetGridTileDataFromNumber
-- uid: com.eyerunnman.gridsystem.GameGrid.GetGridTileDataList
-  name: GetGridTileDataList
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GetGridTileDataList
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GetGridTileDataList
-  fullName: com.eyerunnman.gridsystem.GameGrid.GetGridTileDataList
-  nameWithType: GameGrid.GetGridTileDataList
-- uid: com.eyerunnman.gridsystem.GameGrid.GetGridTileDataList*
-  name: GetGridTileDataList
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GetGridTileDataList_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GetGridTileDataList
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GetGridTileDataList
-  nameWithType: GameGrid.GetGridTileDataList
 - uid: com.eyerunnman.gridsystem.GameGrid.GetTileDataInDirection(System.Int32,Direction)
   name: GetTileDataInDirection(Int32, Direction)
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GetTileDataInDirection_System_Int32_Direction_
@@ -287,196 +301,6 @@ references:
   isSpec: "True"
   fullName: com.eyerunnman.gridsystem.GameGrid.GetTileNumberInDirection
   nameWithType: GameGrid.GetTileNumberInDirection
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData
-  name: GameGrid.GridData
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html
-  commentId: T:com.eyerunnman.gridsystem.GameGrid.GridData
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData
-  nameWithType: GameGrid.GridData
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.#ctor(com.eyerunnman.gridsystem.GameGrid.GridData)
-  name: GridData(GameGrid.GridData)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData__ctor_com_eyerunnman_gridsystem_GameGrid_GridData_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridData.#ctor(com.eyerunnman.gridsystem.GameGrid.GridData)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GridData(com.eyerunnman.gridsystem.GameGrid.GridData)
-  nameWithType: GameGrid.GridData.GridData(GameGrid.GridData)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.#ctor(Vector2Int)
-  name: GridData(Vector2Int)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData__ctor_Vector2Int_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridData.#ctor(Vector2Int)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GridData(Vector2Int)
-  nameWithType: GameGrid.GridData.GridData(Vector2Int)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.#ctor(Vector2Int,List{com.eyerunnman.gridsystem.GameGrid.GridTileData})
-  name: GridData(Vector2Int, List<GameGrid.GridTileData>)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData__ctor_Vector2Int_List_com_eyerunnman_gridsystem_GameGrid_GridTileData__
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridData.#ctor(Vector2Int,List{com.eyerunnman.gridsystem.GameGrid.GridTileData})
-  name.vb: GridData(Vector2Int, List(Of GameGrid.GridTileData))
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GridData(Vector2Int, List<com.eyerunnman.gridsystem.GameGrid.GridTileData>)
-  fullName.vb: com.eyerunnman.gridsystem.GameGrid.GridData.GridData(Vector2Int, List(Of com.eyerunnman.gridsystem.GameGrid.GridTileData))
-  nameWithType: GameGrid.GridData.GridData(Vector2Int, List<GameGrid.GridTileData>)
-  nameWithType.vb: GameGrid.GridData.GridData(Vector2Int, List(Of GameGrid.GridTileData))
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.#ctor*
-  name: GridData
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData__ctor_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.#ctor
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GridData
-  nameWithType: GameGrid.GridData.GridData
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.Cols
-  name: Cols
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_Cols
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridData.Cols
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.Cols
-  nameWithType: GameGrid.GridData.Cols
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.Cols*
-  name: Cols
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_Cols_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.Cols
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.Cols
-  nameWithType: GameGrid.GridData.Cols
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetCoordinateInDirection(Vector2Int,Direction)
-  name: GetCoordinateInDirection(Vector2Int, Direction)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetCoordinateInDirection_Vector2Int_Direction_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridData.GetCoordinateInDirection(Vector2Int,Direction)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetCoordinateInDirection(Vector2Int, Direction)
-  nameWithType: GameGrid.GridData.GetCoordinateInDirection(Vector2Int, Direction)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetCoordinateInDirection*
-  name: GetCoordinateInDirection
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetCoordinateInDirection_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.GetCoordinateInDirection
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetCoordinateInDirection
-  nameWithType: GameGrid.GridData.GetCoordinateInDirection
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataFromCoordinates(Vector2Int)
-  name: GetTileDataFromCoordinates(Vector2Int)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetTileDataFromCoordinates_Vector2Int_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataFromCoordinates(Vector2Int)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataFromCoordinates(Vector2Int)
-  nameWithType: GameGrid.GridData.GetTileDataFromCoordinates(Vector2Int)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataFromCoordinates*
-  name: GetTileDataFromCoordinates
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetTileDataFromCoordinates_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataFromCoordinates
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataFromCoordinates
-  nameWithType: GameGrid.GridData.GetTileDataFromCoordinates
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataInDirection(System.Int32,Direction)
-  name: GetTileDataInDirection(Int32, Direction)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetTileDataInDirection_System_Int32_Direction_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataInDirection(System.Int32,Direction)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataInDirection(System.Int32, Direction)
-  nameWithType: GameGrid.GridData.GetTileDataInDirection(Int32, Direction)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataInDirection*
-  name: GetTileDataInDirection
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetTileDataInDirection_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataInDirection
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileDataInDirection
-  nameWithType: GameGrid.GridData.GetTileDataInDirection
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileFromNumber(System.Int32)
-  name: GetTileFromNumber(Int32)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetTileFromNumber_System_Int32_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridData.GetTileFromNumber(System.Int32)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileFromNumber(System.Int32)
-  nameWithType: GameGrid.GridData.GetTileFromNumber(Int32)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileFromNumber*
-  name: GetTileFromNumber
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetTileFromNumber_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.GetTileFromNumber
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileFromNumber
-  nameWithType: GameGrid.GridData.GetTileFromNumber
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileNumberInDirection(System.Int32,Direction)
-  name: GetTileNumberInDirection(Int32, Direction)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetTileNumberInDirection_System_Int32_Direction_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridData.GetTileNumberInDirection(System.Int32,Direction)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileNumberInDirection(System.Int32, Direction)
-  nameWithType: GameGrid.GridData.GetTileNumberInDirection(Int32, Direction)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileNumberInDirection*
-  name: GetTileNumberInDirection
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GetTileNumberInDirection_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.GetTileNumberInDirection
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GetTileNumberInDirection
-  nameWithType: GameGrid.GridData.GetTileNumberInDirection
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GridDimension
-  name: GridDimension
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GridDimension
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridData.GridDimension
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GridDimension
-  nameWithType: GameGrid.GridData.GridDimension
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GridDimension*
-  name: GridDimension
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GridDimension_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.GridDimension
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GridDimension
-  nameWithType: GameGrid.GridData.GridDimension
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GridTileDataList
-  name: GridTileDataList
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GridTileDataList
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridData.GridTileDataList
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GridTileDataList
-  nameWithType: GameGrid.GridData.GridTileDataList
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.GridTileDataList*
-  name: GridTileDataList
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_GridTileDataList_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.GridTileDataList
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.GridTileDataList
-  nameWithType: GameGrid.GridData.GridTileDataList
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.NumberOfTiles
-  name: NumberOfTiles
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_NumberOfTiles
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridData.NumberOfTiles
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.NumberOfTiles
-  nameWithType: GameGrid.GridData.NumberOfTiles
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.NumberOfTiles*
-  name: NumberOfTiles
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_NumberOfTiles_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.NumberOfTiles
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.NumberOfTiles
-  nameWithType: GameGrid.GridData.NumberOfTiles
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.Rows
-  name: Rows
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_Rows
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridData.Rows
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.Rows
-  nameWithType: GameGrid.GridData.Rows
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.Rows*
-  name: Rows
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_Rows_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.Rows
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.Rows
-  nameWithType: GameGrid.GridData.Rows
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.SetTileData(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
-  name: SetTileData(GameGrid.IGridTileData)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_SetTileData_com_eyerunnman_gridsystem_GameGrid_IGridTileData_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridData.SetTileData(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.SetTileData(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
-  nameWithType: GameGrid.GridData.SetTileData(GameGrid.IGridTileData)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridData.SetTileData*
-  name: SetTileData
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridData.html#com_eyerunnman_gridsystem_GameGrid_GridData_SetTileData_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridData.SetTileData
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridData.SetTileData
-  nameWithType: GameGrid.GridData.SetTileData
-- uid: com.eyerunnman.gridsystem.GameGrid.GridDataCopy
-  name: GridDataCopy
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GridDataCopy
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridDataCopy
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridDataCopy
-  nameWithType: GameGrid.GridDataCopy
-- uid: com.eyerunnman.gridsystem.GameGrid.GridDataCopy*
-  name: GridDataCopy
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GridDataCopy_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridDataCopy
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridDataCopy
-  nameWithType: GameGrid.GridDataCopy
 - uid: com.eyerunnman.gridsystem.GameGrid.GridDimension
   name: GridDimension
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_GridDimension
@@ -794,84 +618,116 @@ references:
   commentId: T:com.eyerunnman.gridsystem.GameGrid.GridTileObject
   fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject
   nameWithType: GameGrid.GridTileObject
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.GetTileObjectInDirectionFromParent(Direction)
-  name: GetTileObjectInDirectionFromParent(Direction)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_GetTileObjectInDirectionFromParent_Direction_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObject.GetTileObjectInDirectionFromParent(Direction)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.GetTileObjectInDirectionFromParent(Direction)
-  nameWithType: GameGrid.GridTileObject.GetTileObjectInDirectionFromParent(Direction)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.GetTileObjectInDirectionFromParent*
-  name: GetTileObjectInDirectionFromParent
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_GetTileObjectInDirectionFromParent_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObject.GetTileObjectInDirectionFromParent
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.InitializeTileObject(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  name: InitializeTileObject(GameGrid, GameGrid.IGridTileData)
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_InitializeTileObject_com_eyerunnman_gridsystem_GameGrid_com_eyerunnman_gridsystem_GameGrid_IGridTileData_
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObject.InitializeTileObject(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.InitializeTileObject(com.eyerunnman.gridsystem.GameGrid, com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  nameWithType: GameGrid.GridTileObject.InitializeTileObject(GameGrid, GameGrid.IGridTileData)
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.InitializeTileObject*
+  name: InitializeTileObject
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_InitializeTileObject_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObject.InitializeTileObject
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.GetTileObjectInDirectionFromParent
-  nameWithType: GameGrid.GridTileObject.GetTileObjectInDirectionFromParent
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.Initialize(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GameGrid.IGridTileData)
-  name: Initialize(GameGrid, GameGrid.IGridTileData)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_Initialize_com_eyerunnman_gridsystem_GameGrid_com_eyerunnman_gridsystem_GameGrid_IGridTileData_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObject.Initialize(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GameGrid.IGridTileData)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.Initialize(com.eyerunnman.gridsystem.GameGrid, com.eyerunnman.gridsystem.GameGrid.IGridTileData)
-  nameWithType: GameGrid.GridTileObject.Initialize(GameGrid, GameGrid.IGridTileData)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.Initialize*
-  name: Initialize
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_Initialize_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObject.Initialize
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.InitializeTileObject
+  nameWithType: GameGrid.GridTileObject.InitializeTileObject
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTileObject(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  name: UpdateTileObject(GameGrid.IGridTileData)
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_UpdateTileObject_com_eyerunnman_gridsystem_GameGrid_IGridTileData_
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTileObject(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTileObject(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  nameWithType: GameGrid.GridTileObject.UpdateTileObject(GameGrid.IGridTileData)
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTileObject*
+  name: UpdateTileObject
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_UpdateTileObject_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTileObject
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.Initialize
-  nameWithType: GameGrid.GridTileObject.Initialize
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.ParentGrid
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTileObject
+  nameWithType: GameGrid.GridTileObject.UpdateTileObject
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal
+  name: GameGrid.GridTileObjectInternal
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html
+  commentId: T:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal
+  nameWithType: GameGrid.GridTileObjectInternal
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.InitializeTileObject(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  name: InitializeTileObject(GameGrid, GameGrid.IGridTileData)
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_InitializeTileObject_com_eyerunnman_gridsystem_GameGrid_com_eyerunnman_gridsystem_GameGrid_IGridTileData_
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.InitializeTileObject(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.InitializeTileObject(com.eyerunnman.gridsystem.GameGrid, com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  nameWithType: GameGrid.GridTileObjectInternal.InitializeTileObject(GameGrid, GameGrid.IGridTileData)
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.InitializeTileObject*
+  name: InitializeTileObject
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_InitializeTileObject_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.InitializeTileObject
+  isSpec: "True"
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.InitializeTileObject
+  nameWithType: GameGrid.GridTileObjectInternal.InitializeTileObject
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataInitialize
+  name: OnTileDataInitialize()
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataInitialize
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataInitialize
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataInitialize()
+  nameWithType: GameGrid.GridTileObjectInternal.OnTileDataInitialize()
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataInitialize*
+  name: OnTileDataInitialize
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataInitialize_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataInitialize
+  isSpec: "True"
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataInitialize
+  nameWithType: GameGrid.GridTileObjectInternal.OnTileDataInitialize
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataUpdate
+  name: OnTileDataUpdate()
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataUpdate
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataUpdate
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataUpdate()
+  nameWithType: GameGrid.GridTileObjectInternal.OnTileDataUpdate()
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataUpdate*
+  name: OnTileDataUpdate
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataUpdate_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataUpdate
+  isSpec: "True"
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataUpdate
+  nameWithType: GameGrid.GridTileObjectInternal.OnTileDataUpdate
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.ParentGrid
   name: ParentGrid
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_ParentGrid
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridTileObject.ParentGrid
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.ParentGrid
-  nameWithType: GameGrid.GridTileObject.ParentGrid
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.ParentGrid*
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_ParentGrid
+  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.ParentGrid
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.ParentGrid
+  nameWithType: GameGrid.GridTileObjectInternal.ParentGrid
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.ParentGrid*
   name: ParentGrid
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_ParentGrid_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObject.ParentGrid
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_ParentGrid_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.ParentGrid
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.ParentGrid
-  nameWithType: GameGrid.GridTileObject.ParentGrid
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.TileData
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.ParentGrid
+  nameWithType: GameGrid.GridTileObjectInternal.ParentGrid
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.TileData
   name: TileData
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_TileData
-  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridTileObject.TileData
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.TileData
-  nameWithType: GameGrid.GridTileObject.TileData
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.TileData*
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_TileData
+  commentId: P:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.TileData
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.TileData
+  nameWithType: GameGrid.GridTileObjectInternal.TileData
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.TileData*
   name: TileData
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_TileData_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObject.TileData
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_TileData_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.TileData
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.TileData
-  nameWithType: GameGrid.GridTileObject.TileData
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateGridTileObjectInParent(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
-  name: UpdateGridTileObjectInParent(GameGrid.IGridTileData)
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_UpdateGridTileObjectInParent_com_eyerunnman_gridsystem_GameGrid_IGridTileData_
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateGridTileObjectInParent(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateGridTileObjectInParent(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
-  nameWithType: GameGrid.GridTileObject.UpdateGridTileObjectInParent(GameGrid.IGridTileData)
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateGridTileObjectInParent*
-  name: UpdateGridTileObjectInParent
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_UpdateGridTileObjectInParent_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateGridTileObjectInParent
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.TileData
+  nameWithType: GameGrid.GridTileObjectInternal.TileData
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.UpdateTileObject(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  name: UpdateTileObject(GameGrid.IGridTileData)
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_UpdateTileObject_com_eyerunnman_gridsystem_GameGrid_IGridTileData_
+  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.UpdateTileObject(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.UpdateTileObject(com.eyerunnman.gridsystem.GameGrid.IGridTileData)
+  nameWithType: GameGrid.GridTileObjectInternal.UpdateTileObject(GameGrid.IGridTileData)
+- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.UpdateTileObject*
+  name: UpdateTileObject
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_UpdateTileObject_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.UpdateTileObject
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateGridTileObjectInParent
-  nameWithType: GameGrid.GridTileObject.UpdateGridTileObjectInParent
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTile
-  name: UpdateTile()
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_UpdateTile
-  commentId: M:com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTile
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTile()
-  nameWithType: GameGrid.GridTileObject.UpdateTile()
-- uid: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTile*
-  name: UpdateTile
-  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html#com_eyerunnman_gridsystem_GameGrid_GridTileObject_UpdateTile_
-  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTile
-  isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTile
-  nameWithType: GameGrid.GridTileObject.UpdateTile
+  fullName: com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.UpdateTileObject
+  nameWithType: GameGrid.GridTileObjectInternal.UpdateTileObject
 - uid: com.eyerunnman.gridsystem.GameGrid.IGridTileData
   name: GameGrid.IGridTileData
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.IGridTileData.html
@@ -1164,6 +1020,19 @@ references:
   isSpec: "True"
   fullName: com.eyerunnman.gridsystem.GameGrid.Rows
   nameWithType: GameGrid.Rows
+- uid: com.eyerunnman.gridsystem.GameGrid.TileDataList
+  name: TileDataList
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_TileDataList
+  commentId: P:com.eyerunnman.gridsystem.GameGrid.TileDataList
+  fullName: com.eyerunnman.gridsystem.GameGrid.TileDataList
+  nameWithType: GameGrid.TileDataList
+- uid: com.eyerunnman.gridsystem.GameGrid.TileDataList*
+  name: TileDataList
+  href: api-runtime/com.eyerunnman.gridsystem.GameGrid.html#com_eyerunnman_gridsystem_GameGrid_TileDataList_
+  commentId: Overload:com.eyerunnman.gridsystem.GameGrid.TileDataList
+  isSpec: "True"
+  fullName: com.eyerunnman.gridsystem.GameGrid.TileDataList
+  nameWithType: GameGrid.TileDataList
 - uid: com.eyerunnman.gridsystem.GameGrid.TileType
   name: GameGrid.TileType
   href: api-runtime/com.eyerunnman.gridsystem.GameGrid.TileType.html
@@ -1242,28 +1111,28 @@ references:
   commentId: T:com.eyerunnman.gridsystem.GridDataSO
   fullName: com.eyerunnman.gridsystem.GridDataSO
   nameWithType: GridDataSO
-- uid: com.eyerunnman.gridsystem.GridDataSO.GridData
-  name: GridData
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_GridData
-  commentId: P:com.eyerunnman.gridsystem.GridDataSO.GridData
-  fullName: com.eyerunnman.gridsystem.GridDataSO.GridData
-  nameWithType: GridDataSO.GridData
-- uid: com.eyerunnman.gridsystem.GridDataSO.GridData*
-  name: GridData
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_GridData_
-  commentId: Overload:com.eyerunnman.gridsystem.GridDataSO.GridData
+- uid: com.eyerunnman.gridsystem.GridDataSO.GridGenerationData
+  name: GridGenerationData
+  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_GridGenerationData
+  commentId: P:com.eyerunnman.gridsystem.GridDataSO.GridGenerationData
+  fullName: com.eyerunnman.gridsystem.GridDataSO.GridGenerationData
+  nameWithType: GridDataSO.GridGenerationData
+- uid: com.eyerunnman.gridsystem.GridDataSO.GridGenerationData*
+  name: GridGenerationData
+  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_GridGenerationData_
+  commentId: Overload:com.eyerunnman.gridsystem.GridDataSO.GridGenerationData
   isSpec: "True"
-  fullName: com.eyerunnman.gridsystem.GridDataSO.GridData
-  nameWithType: GridDataSO.GridData
-- uid: com.eyerunnman.gridsystem.GridDataSO.SetTilesInfo(List{com.eyerunnman.gridsystem.GameGrid.IGridTileData})
-  name: SetTilesInfo(List<GameGrid.IGridTileData>)
-  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_SetTilesInfo_List_com_eyerunnman_gridsystem_GameGrid_IGridTileData__
-  commentId: M:com.eyerunnman.gridsystem.GridDataSO.SetTilesInfo(List{com.eyerunnman.gridsystem.GameGrid.IGridTileData})
-  name.vb: SetTilesInfo(List(Of GameGrid.IGridTileData))
-  fullName: com.eyerunnman.gridsystem.GridDataSO.SetTilesInfo(List<com.eyerunnman.gridsystem.GameGrid.IGridTileData>)
-  fullName.vb: com.eyerunnman.gridsystem.GridDataSO.SetTilesInfo(List(Of com.eyerunnman.gridsystem.GameGrid.IGridTileData))
-  nameWithType: GridDataSO.SetTilesInfo(List<GameGrid.IGridTileData>)
-  nameWithType.vb: GridDataSO.SetTilesInfo(List(Of GameGrid.IGridTileData))
+  fullName: com.eyerunnman.gridsystem.GridDataSO.GridGenerationData
+  nameWithType: GridDataSO.GridGenerationData
+- uid: com.eyerunnman.gridsystem.GridDataSO.SetTilesInfo(List{com.eyerunnman.gridsystem.GameGrid.GridTileData})
+  name: SetTilesInfo(List<GameGrid.GridTileData>)
+  href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_SetTilesInfo_List_com_eyerunnman_gridsystem_GameGrid_GridTileData__
+  commentId: M:com.eyerunnman.gridsystem.GridDataSO.SetTilesInfo(List{com.eyerunnman.gridsystem.GameGrid.GridTileData})
+  name.vb: SetTilesInfo(List(Of GameGrid.GridTileData))
+  fullName: com.eyerunnman.gridsystem.GridDataSO.SetTilesInfo(List<com.eyerunnman.gridsystem.GameGrid.GridTileData>)
+  fullName.vb: com.eyerunnman.gridsystem.GridDataSO.SetTilesInfo(List(Of com.eyerunnman.gridsystem.GameGrid.GridTileData))
+  nameWithType: GridDataSO.SetTilesInfo(List<GameGrid.GridTileData>)
+  nameWithType.vb: GridDataSO.SetTilesInfo(List(Of GameGrid.GridTileData))
 - uid: com.eyerunnman.gridsystem.GridDataSO.SetTilesInfo*
   name: SetTilesInfo
   href: api-runtime/com.eyerunnman.gridsystem.GridDataSO.html#com_eyerunnman_gridsystem_GridDataSO_SetTilesInfo_

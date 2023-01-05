@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GameGrid.GridTileObject
+    <title>Class GameGrid.GridTileObjectInternal
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GameGrid.GridTileObject
+    <meta name="title" content="Class GameGrid.GridTileObjectInternal
    ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,46 +68,86 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObject">
+            <article class="content wrap" id="_content" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal">
   
   
-  <h1 id="com_eyerunnman_gridsystem_GameGrid_GridTileObject" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObject" class="text-break">Class GameGrid.GridTileObject
+  <h1 id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal" class="text-break">Class GameGrid.GridTileObjectInternal
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Abstract class for grid tile object</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html">GameGrid.GridTileObjectInternal</a></div>
-    <div class="level2"><span class="xref">GameGrid.GridTileObject</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_TileData">GameGrid.GridTileObjectInternal.TileData</a>
-    </div>
-    <div>
-      <a class="xref" href="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_ParentGrid">GameGrid.GridTileObjectInternal.ParentGrid</a>
-    </div>
-    <div>
-      <a class="xref" href="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataUpdate">GameGrid.GridTileObjectInternal.OnTileDataUpdate()</a>
-    </div>
-    <div>
-      <a class="xref" href="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html#com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataInitialize">GameGrid.GridTileObjectInternal.OnTileDataInitialize()</a>
-    </div>
+    <div class="level1"><span class="xref">GameGrid.GridTileObjectInternal</span></div>
+      <div class="level2"><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.GridTileObject.html">GameGrid.GridTileObject</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="com.eyerunnman.gridsystem.html">com.eyerunnman.gridsystem</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="com_eyerunnman_gridsystem_GameGrid_GridTileObject_syntax">Syntax</h5>
+  <h5 id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class GridTileObject : GameGrid.GridTileObjectInternal</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class GridTileObjectInternal : MonoBehaviour</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_ParentGrid_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.ParentGrid*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_ParentGrid" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.ParentGrid">ParentGrid</h4>
+  <div class="markdown level1 summary"><p>Getter for parentGrid Refrence</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameGrid ParentGrid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.html">GameGrid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_TileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.TileData*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_TileData" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.TileData">TileData</h4>
+  <div class="markdown level1 summary"><p>Current Tile Data for the grid TileObject</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameGrid.IGridTileData TileData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="com.eyerunnman.gridsystem.GameGrid.IGridTileData.html">GameGrid.IGridTileData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileObject_InitializeTileObject_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObject.InitializeTileObject*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileObject_InitializeTileObject_com_eyerunnman_gridsystem_GameGrid_com_eyerunnman_gridsystem_GameGrid_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObject.InitializeTileObject(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GameGrid.IGridTileData)">InitializeTileObject(GameGrid, GameGrid.IGridTileData)</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_InitializeTileObject_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.InitializeTileObject*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_InitializeTileObject_com_eyerunnman_gridsystem_GameGrid_com_eyerunnman_gridsystem_GameGrid_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.InitializeTileObject(com.eyerunnman.gridsystem.GameGrid,com.eyerunnman.gridsystem.GameGrid.IGridTileData)">InitializeTileObject(GameGrid, GameGrid.IGridTileData)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -138,8 +178,30 @@
   </table>
   
   
-  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileObject_UpdateTileObject_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTileObject*"></a>
-  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileObject_UpdateTileObject_com_eyerunnman_gridsystem_GameGrid_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObject.UpdateTileObject(com.eyerunnman.gridsystem.GameGrid.IGridTileData)">UpdateTileObject(GameGrid.IGridTileData)</h4>
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataInitialize_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataInitialize*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataInitialize" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataInitialize">OnTileDataInitialize()</h4>
+  <div class="markdown level1 summary"><p>Is called whenever tile data is initialized</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void OnTileDataInitialize()</code></pre>
+  </div>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataUpdate_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataUpdate*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_OnTileDataUpdate" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.OnTileDataUpdate">OnTileDataUpdate()</h4>
+  <div class="markdown level1 summary"><p>Is called whever tile data is updated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void OnTileDataUpdate()</code></pre>
+  </div>
+  
+  
+  <a id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_UpdateTileObject_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.UpdateTileObject*"></a>
+  <h4 id="com_eyerunnman_gridsystem_GameGrid_GridTileObjectInternal_UpdateTileObject_com_eyerunnman_gridsystem_GameGrid_IGridTileData_" data-uid="com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.UpdateTileObject(com.eyerunnman.gridsystem.GameGrid.IGridTileData)">UpdateTileObject(GameGrid.IGridTileData)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
