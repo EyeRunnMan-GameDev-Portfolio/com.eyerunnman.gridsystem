@@ -5,21 +5,41 @@ using System.Collections.Generic;
 
 namespace com.eyerunnman.gridsystem.Editor
 {
-    [ExecuteInEditMode]
+    [ExecuteAlways]
     public class EditorGridTile : GameGrid.GridTileObject
     {
         [SerializeField]
         private Color defaultColor;
+
+        private new Renderer renderer;
+        private MaterialPropertyBlock materialPropertyBlock;
 
         [SerializeField]
         private List<TileTypeDebug> TileTypeDebugColors;
 
         private Color currentColor;
 
-        public override void Initialize(GameGrid parentGrid, GameGrid.IGridTileData tileData)
+        private void Awake()
         {
-            base.Initialize(parentGrid, tileData);
-            SetPostition(tileData);
+            renderer = GetComponent<Renderer>();
+            materialPropertyBlock = new();
+        }
+        private void Reset()
+        {
+            renderer = GetComponent<Renderer>();
+            materialPropertyBlock = new();
+        }
+
+        public override void OnTileDataInitialize()
+        {
+            SetPostition(TileData);
+            OnUpdateTileType(TileData.Type);
+        }
+
+        public override void OnTileDataUpdate()
+        {
+            SetPostition(TileData);
+            OnUpdateTileType(TileData.Type);
         }
 
         private void SetPostition(GameGrid.IGridTileData tileData)
@@ -29,7 +49,7 @@ namespace com.eyerunnman.gridsystem.Editor
             transform.up = tileData.UpVector;
         }
 
-        private void UpdateGizmoColors(GameGrid.TileType tileType)
+        private void OnUpdateTileType(GameGrid.TileType tileType)
         {
             currentColor = defaultColor;
 
@@ -41,12 +61,12 @@ namespace com.eyerunnman.gridsystem.Editor
                     break;
                 }
             }
-        }
 
-        public override void OnTileDataUpdate(GameGrid.IGridTileData updatedData)
-        {
-            SetPostition(updatedData);
-            UpdateGizmoColors(updatedData.Type);
+            renderer.GetPropertyBlock(materialPropertyBlock);
+            
+            materialPropertyBlock.SetColor("_BaseColor", currentColor);
+            
+            renderer.SetPropertyBlock(materialPropertyBlock);
         }
 
             
@@ -85,14 +105,16 @@ namespace com.eyerunnman.gridsystem.Editor
         }
 
 
+        [System.Serializable]
+        public struct TileTypeDebug
+        {
+            public GameGrid.TileType TileType;
+            public Color color;
+        }
+
     }
 
-    [System.Serializable]
-    public struct TileTypeDebug
-    {
-        public GameGrid.TileType TileType;
-        public Color color;
-    }
+    
 }
 
 

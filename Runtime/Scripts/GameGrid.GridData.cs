@@ -12,11 +12,10 @@ namespace com.eyerunnman.gridsystem
         /// Grid Data which contatins dimension and stores data for each tile
         /// </summary>
         [Serializable]
-        public sealed class GridData
+        private sealed class GridData
         {
             [SerializeField]
             private Vector2Int gridDimension;
-
 
             private Dictionary<int, CachedGridTileData> gridTileDataDictionary=new();
             
@@ -71,13 +70,16 @@ namespace com.eyerunnman.gridsystem
                 }
             }
 
+            /// <summary>
+            /// Create GridData with refrence gridData;
+            /// </summary>
+            /// <param name="gridData"></param>
             public GridData(GridData gridData)
             {
                 this.gridDimension = gridData.gridDimension;
 
                 if (gridData.gridTileDataDictionary != null)
                 this.gridTileDataDictionary = new(gridData.gridTileDataDictionary);
-
             }
 
             /// <summary>

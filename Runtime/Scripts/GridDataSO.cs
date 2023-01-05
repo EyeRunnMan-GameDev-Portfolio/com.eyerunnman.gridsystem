@@ -18,16 +18,15 @@ namespace com.eyerunnman.gridsystem
         private Vector2Int GridDimension;
 
         [SerializeField]
-        private List<GameGrid.GridTileData> TilesInfo;
+        private List<GameGrid.GridTileData> TileDataList;
 
 
-        public GameGrid.GridData GridData => new(GridDimension, TilesInfo);
+        public (Vector2Int dimension,List<GameGrid.GridTileData> tileDatalist) GridGenerationData => new(GridDimension, TileDataList);
 
-        public void SetTilesInfo(List<GameGrid.IGridTileData> tilesInfo)
+        public void SetTilesInfo(List<GameGrid.GridTileData> tilesInfo)
         {
-            TilesInfo = new(Enumerable.Range(0,tilesInfo.Count).Select(idx=>new GameGrid.GridTileData(tilesInfo[idx])));
+            TileDataList = new(tilesInfo);
         }
-
     }
 }
 

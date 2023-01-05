@@ -1,4 +1,6 @@
 ﻿using com.eyerunnman.interfaces;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -13,17 +15,17 @@ namespace com.eyerunnman.gridsystem
             public class GenerateGameGrid : ICommand<GameGrid>
             {
                 GridData gridData;
-                GridTileObject tileObjectPrefab;
+                GridTileObjectInternal tileObjectPrefab;
 
-                public GenerateGameGrid(GridData gridData, GridTileObject tileObjectPrefab)
+                public GenerateGameGrid(Vector2Int dimension,List<GridTileData> gridTileDataList, GridTileObjectInternal tileObjectPrefab)
                 {
-                    this.gridData = gridData;
+                    this.gridData = new(dimension, gridTileDataList);
                     this.tileObjectPrefab = tileObjectPrefab;
                 }
 
-                public GenerateGameGrid(GridData gridData)
+                public GenerateGameGrid(Vector2Int dimension, List<GridTileData> gridTileDataList)
                 {
-                    this.gridData = gridData;
+                    this.gridData = new(dimension, gridTileDataList);
                     this.tileObjectPrefab = null;
                 }
 
@@ -36,23 +38,6 @@ namespace com.eyerunnman.gridsystem
                 public void Execute(GameGrid gameGrid)
                 {
                     gameGrid.GenerateGameGrid(gridData,tileObjectPrefab);
-                }
-
-
-            }
-
-            public class UpdateGridData : ICommand<GameGrid>
-            {
-                private GameGrid.GridData gridData;
-
-                public UpdateGridData(GameGrid.GridData gridData)
-                {
-                    this.gridData = new(gridData);
-                }
-
-                public void Execute(GameGrid context)
-                {
-                    context.UpdateGameGridData(gridData);
                 }
             }
         }

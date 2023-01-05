@@ -15,7 +15,7 @@ namespace com.eyerunnman.gridsystem
     public sealed partial class GameGrid : MonoBehaviour , IProxy<GameGrid>
     {
         private GridData gridData;
-        private Dictionary<int, GridTileObject> tileObjectDictionary = new();
+        private Dictionary<int, GridTileObjectController> tileObjectControllerDictionary = new();
 
         /// <summary>
         /// Dimension of the `GameGrid`
@@ -33,20 +33,11 @@ namespace com.eyerunnman.gridsystem
         public int Rows => gridData.Rows;
 
         /// <summary>
-        /// Get a copy of grid data 
+        /// Get the list of all tile data 
         /// </summary>
-        public GridData GridDataCopy => new(gridData);
+        public List<IGridTileData> TileDataList => new(gridData.GridTileDataList);
 
-        #region Public Getters
-
-        public List<IGridTileData> GetGridTileDataList {
-            get{
-                if (gridData!=null)
-                    return gridData.GridTileDataList;
-                return new();
-            }
-        }
-
+        #region Public Getters Functions
 
         /// <summary>
         /// Returns a data of the tile in given direction from current tile
@@ -110,55 +101,54 @@ namespace com.eyerunnman.gridsystem
             this.gridData = new(gridData);
             RefreshGrid();
         }
-        private void GenerateGameGrid(GridData gridData, GridTileObject tileObjectPrefab)
+        private void GenerateGameGrid(GridData gridData, GridTileObjectInternal tileObjectPrefab)
         {
             UpdateGameGridData(gridData);
-            InitializeTileObjectDictionary(this.gridData, tileObjectPrefab);
+            InitializeTileObjectControllerDictionary(this.gridData, tileObjectPrefab);
         }
         private void UpdateGridTileData(IGridTileData data)
         {
-            UpdateTileObjectDictionary(data);
+            UpdateTileObjectControllerDictionary(data);
         }
-        private GridTileObject GetTileObjectFromDictionary(int tileId)
+        private GridTileObjectController GetTileObjectControllerFromDictionary(int tileId)
         {
-            if (tileObjectDictionary.ContainsKey(tileId))
+            if (tileObjectControllerDictionary.ContainsKey(tileId))
             {
-                return tileObjectDictionary[tileId];
+                return tileObjectControllerDictionary[tileId];
             }
             else
             {
                 return null;
             }
         }
-        private void InitializeTileObjectDictionary(GridData gridData, GridTileObject tileObjectPrefab)
+        private void InitializeTileObjectControllerDictionary(GridData gridData, GridTileObjectInternal tileObjectPrefab)
         {
             foreach (int tileNumber in Enumerable.Range(0, gridData.NumberOfTiles))
             {
 
                 IGridTileData gridTileData = gridData.GetTileFromNumber(tileNumber);
-                GridTileObject gridTileObject = Instantiate(tileObjectPrefab, transform);
+                GridTileObjectInternal gridTileObject = Instantiate(tileObjectPrefab, transform);
 
-                gridTileObject.Initialize(this, gridTileData);
+                GridTileObjectController tileObjectController = new(gridTileObject);
+                tileObjectController.InitializeTileObject(this, gridTileData);
 
-                tileObjectDictionary[tileNumber] = gridTileObject;
+                tileObjectControllerDictionary[tileNumber] = tileObjectController;
             }
         }
-        private void UpdateTileObjectDictionary(IGridTileData gridTileData)
+        private void UpdateTileObjectControllerDictionary(IGridTileData gridTileData)
         {
             gridData.SetTileData(gridTileData);
             IGridTileData tileData = gridData.GetTileFromNumber(gridTileData.TileNumber);
-            GridTileObject gridTileObject = GetTileObjectFromDictionary(tileData.TileNumber);
+            GridTileObjectController gridTileObjectController = GetTileObjectControllerFromDictionary(tileData.TileNumber);
 
-            if (gridTileObject)
-            {
-                gridTileObject.UpdateTile();
-            }
+            if(gridTileObjectController!=null)
+            gridTileObjectController.UpdateTileObjectData();
         }
         private void RefreshGrid()
         {
-            foreach (int tileNuber in tileObjectDictionary.Keys)
+            foreach (int tileNuber in tileObjectControllerDictionary.Keys)
             {
-                UpdateTileObjectDictionary(GetGridTileDataFromNumber(tileNuber));
+                UpdateTileObjectControllerDictionary(GetGridTileDataFromNumber(tileNuber));
             }
         }
 

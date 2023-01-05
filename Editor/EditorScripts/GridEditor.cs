@@ -5,6 +5,7 @@ using UnityEditor.SceneManagement;
 using System;
 using com.eyerunnman.enums;
 using com.eyerunnman.interfaces;
+using System.Linq;
 
 namespace com.eyerunnman.gridsystem.Editor
 {
@@ -21,7 +22,7 @@ namespace com.eyerunnman.gridsystem.Editor
         private EditorGridTile SourceGridTileObject;
         private GameGrid EditorGameGrid;
 
-        private Stack<List<GameGrid.IGridTileData>> GridTileDataHistory = new();
+        private Stack<List<GameGrid.GridTileData>> GridTileDataHistory = new();
 
         GameGrid.IGridTileData editorTileData;
 
@@ -52,7 +53,7 @@ namespace com.eyerunnman.gridsystem.Editor
             {
                 if (GUILayout.Button("Generate Grid"))
                 {
-                    GenerateGrid(SourceGridDataSO.GridData,SourceGridTileObject);
+                    GenerateGrid(SourceGridDataSO.GridGenerationData.dimension,SourceGridDataSO.GridGenerationData.tileDatalist,SourceGridTileObject);
                 }
                 else
                 {
@@ -102,7 +103,7 @@ namespace com.eyerunnman.gridsystem.Editor
             editorTileData = new GameGrid.GridTileData(editorTileData.TileNumber, editorTileData.Coordinates, EditorTileData.Height, EditorTileData.SlantDirection, EditorTileData.SlantAngle, EditorTileData.Type);
 
             EditorGUILayout.Space();
-
+            
             EditorGUILayout.BeginHorizontal();
             if (GUILayout.Button("snap North"))
                 SnapTileInDirection(editorTileData, Direction.North);
@@ -125,11 +126,12 @@ namespace com.eyerunnman.gridsystem.Editor
 
         private GameGrid.IGridTileData GetCurrentSelectedTileData()
         {
+
             foreach (GameObject gameObjects in Selection.gameObjects)
             {
-                if (gameObjects.GetComponent<GameGrid.GridTileObject>())
+                if (gameObjects.GetComponent<GameGrid.GridTileObjectInternal>())
                 {
-                    GameGrid.GridTileObject tileOBject = gameObjects.GetComponent<GameGrid.GridTileObject>();
+                    GameGrid.GridTileObjectInternal tileOBject = gameObjects.GetComponent<GameGrid.GridTileObjectInternal>();
 
                     return new GameGrid.GridTileData(tileOBject.TileData);
                 }
@@ -145,9 +147,9 @@ namespace com.eyerunnman.gridsystem.Editor
 
             foreach (GameObject gameObjects in Selection.gameObjects)
             {
-                if (gameObjects.GetComponent<GameGrid.GridTileObject>())
+                if (gameObjects.GetComponent<GameGrid.GridTileObjectInternal>())
                 {
-                    GameGrid.GridTileObject tileOBject = gameObjects.GetComponent<GameGrid.GridTileObject>();
+                    GameGrid.GridTileObjectInternal tileOBject = gameObjects.GetComponent<GameGrid.GridTileObjectInternal>();
 
                     GameGrid.GridTileData tileData = new(tileOBject.TileData);
 
@@ -165,7 +167,7 @@ namespace com.eyerunnman.gridsystem.Editor
         {
             foreach (GameObject gameObjects in Selection.gameObjects)
             {
-                if (gameObjects.GetComponent<GameGrid.GridTileObject>())
+                if (gameObjects.GetComponent<GameGrid.GridTileObjectInternal>())
                     return true;
             }
             return false;
@@ -181,8 +183,8 @@ namespace com.eyerunnman.gridsystem.Editor
 
         private void SaveGrid()
         {
-            GridTileDataHistory.Push(new(SourceGridDataSO.GridData.GridTileDataList));
-            SourceGridDataSO.SetTilesInfo(EditorGameGrid.GetGridTileDataList);
+            GridTileDataHistory.Push(SourceGridDataSO.GridGenerationData.tileDatalist);
+            SourceGridDataSO.SetTilesInfo(EditorGameGrid.TileDataList.Select(tiledata=>new GameGrid.GridTileData(tiledata)).ToList());
         }
 
         private void UndoGrid()
@@ -191,31 +193,33 @@ namespace com.eyerunnman.gridsystem.Editor
             {
                 SourceGridDataSO.SetTilesInfo(new());
                 SourceGridDataSO.SetTilesInfo(GridTileDataHistory.Pop());
-                ResetGameGrid(SourceGridDataSO.GridData);
+                ResetGameGrid(SourceGridDataSO.GridGenerationData.dimension, SourceGridDataSO.GridGenerationData.tileDatalist);
             }
         }
 
         private void ResetGridSO()
         {
             SourceGridDataSO.SetTilesInfo(new());
-            ResetGameGrid(SourceGridDataSO.GridData);
+            ResetGameGrid(SourceGridDataSO.GridGenerationData.dimension,SourceGridDataSO.GridGenerationData.tileDatalist);
         }
 
-        private void GenerateGrid(GameGrid.GridData gridData,EditorGridTile editorGridTilePrefab)
+        private void GenerateGrid(Vector2Int dimension,List<GameGrid.GridTileData> tileDataList,EditorGridTile editorGridTilePrefab)
         {
+            GridTileDataHistory.Clear();
+
             GameObject gameObject = new("--Editor_GridTile--");
             gameObject.AddComponent(typeof(GameGrid));
             EditorGameGrid = gameObject.GetComponent<GameGrid>();
 
-            ICommand<GameGrid> generateGridCommand = new GameGrid.Commands.GenerateGameGrid(gridData,editorGridTilePrefab);
+            ICommand<GameGrid> generateGridCommand = new GameGrid.Commands.GenerateGameGrid(dimension,tileDataList,editorGridTilePrefab);
 
             EditorGameGrid.ExecuteCommand(generateGridCommand);
         }
 
 
-        private void ResetGameGrid(GameGrid.GridData gridData)
+        private void ResetGameGrid(Vector2Int dimension,List<GameGrid.GridTileData> tileDataList)
         {
-            ICommand<GameGrid> updateGridData = new GameGrid.Commands.UpdateGridData(gridData);
+            ICommand<GameGrid> updateGridData = new GameGrid.Commands.UpdateGridData(dimension,tileDataList);
 
             EditorGameGrid.ExecuteCommand(updateGridData);
         }
