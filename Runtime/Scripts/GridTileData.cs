@@ -91,7 +91,18 @@ namespace com.eyerunnman.gridsystem
         /// </summary>
         public Direction SlantDirection
         {
-            get => slantDirection;
+            get
+            {
+                if (slantDirection == Direction.Undefined)
+                {
+                    slantDirection = Direction.North;
+                    return Direction.North;
+                }
+                else
+                {
+                    return slantDirection;
+                }
+            }
             set => slantDirection = value;
         }
 
@@ -108,7 +119,11 @@ namespace com.eyerunnman.gridsystem
         /// </summary>
         public float SlantAngle
         {
-            get => slantAngle;
+            get {
+                if (SlantDirection == Direction.Undefined)
+                    return 0;
+                else return Mathf.Clamp(slantAngle, 0,90);
+            }
             set => slantAngle = value;
         }
 
@@ -130,32 +145,32 @@ namespace com.eyerunnman.gridsystem
             {
                 Vector3 slantDirectionVector = new();
 
-                switch (slantDirection)
+                switch (SlantDirection)
                 {
                     case Direction.North:
                         slantDirectionVector = Vector3.forward;
-                        if (slantAngle == 90)
+                        if (SlantAngle == 90)
                         {
                             return Vector3.back;
                         }
                         break;
                     case Direction.South:
                         slantDirectionVector = Vector3.back;
-                        if (slantAngle == 90)
+                        if (SlantAngle == 90)
                         {
                             return Vector3.forward;
                         }
                         break;
                     case Direction.East:
                         slantDirectionVector = Vector3.right;
-                        if (slantAngle == 90)
+                        if (SlantAngle == 90)
                         {
                             return Vector3.left;
                         }
                         break;
                     case Direction.West:
                         slantDirectionVector = Vector3.left;
-                        if (slantAngle == 90)
+                        if (SlantAngle == 90)
                         {
                             return Vector3.right;
                         }
@@ -166,7 +181,7 @@ namespace com.eyerunnman.gridsystem
 
                 Vector3 aboutAxis = Vector3.Cross(slantDirectionVector, Vector3.up);
 
-                Vector3 upwardVector = Quaternion.AngleAxis(slantAngle, aboutAxis) * Vector3.up;
+                Vector3 upwardVector = Quaternion.AngleAxis(SlantAngle, aboutAxis) * Vector3.up;
 
                 return upwardVector.normalized;
             }
@@ -181,28 +196,28 @@ namespace com.eyerunnman.gridsystem
             {
                 get
                 {
-                    switch (slantDirection)
+                    switch (SlantDirection)
                     {
                         case Direction.North:
-                            if (slantAngle == 90)
+                            if (SlantAngle == 90)
                             {
                                 return Vector3.up;
                             }
                             break;
                         case Direction.South:
-                            if (slantAngle == 90)
+                            if (SlantAngle == 90)
                             {
                                 return Vector3.down;
                             }
                             break;
                         case Direction.East:
-                            if (slantAngle == 90)
+                            if (SlantAngle == 90)
                             {
                                 return Vector3.forward;
                             }
                             break;
                         case Direction.West:
-                            if (slantAngle == 90)
+                            if (SlantAngle == 90)
                             {
                                 return Vector3.forward;
                             }
@@ -228,28 +243,28 @@ namespace com.eyerunnman.gridsystem
         {
             get
             {
-                switch (slantDirection)
+                switch (SlantDirection)
                 {
                     case Direction.North:
-                        if (slantAngle == 90)
+                        if (SlantAngle == 90)
                         {
                             return Vector3.right;
                         }
                         break;
                     case Direction.South:
-                        if (slantAngle == 90)
+                        if (SlantAngle == 90)
                         {
                             return Vector3.right;
                         }
                         break;
                     case Direction.East:
-                        if (slantAngle == 90)
+                        if (SlantAngle == 90)
                         {
                             return Vector3.up;
                         }
                         break;
                     case Direction.West:
-                        if (slantAngle == 90)
+                        if (SlantAngle == 90)
                         {
                             return Vector3.down;
                         }
@@ -299,7 +314,7 @@ namespace com.eyerunnman.gridsystem
         {
             get
             {
-                Vector3 Vertex = slantDirection switch
+                Vector3 Vertex = SlantDirection switch
                 {
                     Direction.North or Direction.South => (ForwardVector * (1 + SlantGap) + LeftVector) / 2,
                     Direction.East or Direction.West => (LeftVector * (1 + SlantGap) + ForwardVector) / 2,
@@ -317,7 +332,7 @@ namespace com.eyerunnman.gridsystem
         {
             get
             {
-                Vector3 Vertex = slantDirection switch
+                Vector3 Vertex = SlantDirection switch
                 {
                     Direction.North or Direction.South => (ForwardVector * (1 + SlantGap) + RightVector) / 2,
                     Direction.East or Direction.West => (RightVector * (1 + SlantGap) + ForwardVector) / 2,
@@ -335,7 +350,7 @@ namespace com.eyerunnman.gridsystem
         {
             get
             {
-                Vector3 Vertex = slantDirection switch
+                Vector3 Vertex = SlantDirection switch
                 {
                     Direction.North or Direction.South => (BackVector * (1 + SlantGap) + RightVector) / 2,
                     Direction.East or Direction.West => (RightVector * (1 + SlantGap) + BackVector) / 2,
@@ -353,7 +368,7 @@ namespace com.eyerunnman.gridsystem
         {
             get
             {
-                Vector3 Vertex =  slantDirection switch
+                Vector3 Vertex =  SlantDirection switch
                 {
                     Direction.North or Direction.South => (BackVector * (1 + SlantGap) + LeftVector) / 2,
                     Direction.East or Direction.West => (LeftVector * (1 + SlantGap) + BackVector) / 2,
@@ -376,7 +391,7 @@ namespace com.eyerunnman.gridsystem
         {
             get
             {
-                float angle = slantAngle;
+                float angle = SlantAngle;
                 float hypotenuse = 1 + SlantGap;
 
                 float sinvalue = Mathf.Sin(angle * Mathf.Deg2Rad);
@@ -385,18 +400,18 @@ namespace com.eyerunnman.gridsystem
             }
             set
             {
-                slantAngle = Vector2.Angle(Vector2.up * value + Vector2.right, Vector2.right);
+                SlantAngle = Vector2.Angle(Vector2.up * value + Vector2.right, Vector2.right);
                 if (value < 0)
                 {
-                    this.height = height - Mathf.Abs(value);
-                    this.slantDirection = slantDirection switch
+                    this.Height = Height - Mathf.Abs(value);
+                    this.SlantDirection = SlantDirection switch
 
                     {
                         Direction.North => Direction.South,
                         Direction.South => Direction.North,
                         Direction.East => Direction.West,
                         Direction.West => Direction.East,
-                        _ => slantDirection,
+                        _ => SlantDirection,
                     };
                 }
             }
@@ -408,7 +423,7 @@ namespace com.eyerunnman.gridsystem
         {
             get
             {
-                float angle = 90 - slantAngle;
+                float angle = 90 - SlantAngle;
                 float hypotenuseLenght = 1 + SlantGap;
 
                 float cosVal = Mathf.Cos(angle*Mathf.Deg2Rad);
@@ -422,7 +437,7 @@ namespace com.eyerunnman.gridsystem
         {
             get
             {
-                float hypotenuseLength = 1 / Mathf.Cos(slantAngle * Mathf.Deg2Rad);
+                float hypotenuseLength = 1 / Mathf.Cos(SlantAngle * Mathf.Deg2Rad);
 
                 return (hypotenuseLength-1);
             }
