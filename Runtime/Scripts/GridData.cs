@@ -4,15 +4,13 @@ using System;
 using com.eyerunnman.enums;
 using System.Linq;
 
-namespace com.eyerunnman.gridsystem
+namespace com.eyerunnman.gridsystem.Internal
 {
-    public partial class GameGrid
-    {
-        /// <summary>
-        /// Grid Data which contatins dimension and stores data for each tile
-        /// </summary>
-        [Serializable]
-        private sealed class GridData
+    /// <summary>
+    /// Grid Data which contatins dimension and stores data for each tile
+    /// </summary>
+    [Serializable]
+    internal sealed class GridData
         {
             [SerializeField]
             private Vector2Int gridDimension;
@@ -284,6 +282,5 @@ namespace com.eyerunnman.gridsystem
                 return false;
             }
         }
-    }
 }
 

@@ -1,4 +1,5 @@
-﻿using com.eyerunnman.interfaces;
+﻿using com.eyerunnman.gridsystem.Internal;
+using com.eyerunnman.interfaces;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ namespace com.eyerunnman.gridsystem
         {
             public class UpdateGridData : ICommand<GameGrid>
             {
-                private GameGrid.GridData gridData;
+                private GridData gridData;
 
                 public UpdateGridData(Vector2Int dimension, List<GridTileData> gridTileDataList)
                 {

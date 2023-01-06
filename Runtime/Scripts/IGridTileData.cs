@@ -3,9 +3,7 @@ using com.eyerunnman.enums;
 
 namespace com.eyerunnman.gridsystem
 {
-
-    public partial class GameGrid {
-        public interface IGridTileData
+    public interface IGridTileData
         {
             public int TileNumber { get; }
 
@@ -32,7 +30,7 @@ namespace com.eyerunnman.gridsystem
             /// <summary>
             /// type of tile data
             /// </summary>
-            public TileType Type { get; }
+            public GridTileType Type { get; }
 
             /// <summary>
             /// The resultant up vector of tile based on slant angle and direction
@@ -116,9 +114,6 @@ namespace com.eyerunnman.gridsystem
             public void CloneData(IGridTileData refrenceData);
 
         }
-
-    }
-
-
 }
+
 

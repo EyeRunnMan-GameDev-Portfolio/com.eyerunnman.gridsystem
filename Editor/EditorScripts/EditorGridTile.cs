@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace com.eyerunnman.gridsystem.Editor
 {
     [ExecuteAlways]
-    public class EditorGridTile : GameGrid.GridTileObject
+    public class EditorGridTile : GridTileObject
     {
         [SerializeField]
         private Color defaultColor;
@@ -42,14 +42,14 @@ namespace com.eyerunnman.gridsystem.Editor
             OnUpdateTileType(TileData.Type);
         }
 
-        private void SetPostition(GameGrid.IGridTileData tileData)
+        private void SetPostition(IGridTileData tileData)
         {
             transform.localPosition = tileData.Center;
             gameObject.name = "Tile : " + tileData.Coordinates;
             transform.up = tileData.UpVector;
         }
 
-        private void OnUpdateTileType(GameGrid.TileType tileType)
+        private void OnUpdateTileType(GridTileType tileType)
         {
             currentColor = defaultColor;
 
@@ -68,7 +68,6 @@ namespace com.eyerunnman.gridsystem.Editor
             
             renderer.SetPropertyBlock(materialPropertyBlock);
         }
-
             
         private void OnDrawGizmosSelected()
         {
@@ -104,17 +103,14 @@ namespace com.eyerunnman.gridsystem.Editor
 
         }
 
-
         [System.Serializable]
         public struct TileTypeDebug
         {
-            public GameGrid.TileType TileType;
+            public GridTileType TileType;
             public Color color;
         }
 
     }
-
-    
 }
 
 

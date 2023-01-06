@@ -1,5 +1,7 @@
-﻿using com.eyerunnman.interfaces;
+﻿using com.eyerunnman.gridsystem.Internal;
+using com.eyerunnman.interfaces;
 using System.Collections.Generic;
+using System.Linq;
 
 /// <summary>
 /// grid system package namespace
