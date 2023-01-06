@@ -1,20 +1,20 @@
 ﻿using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 using System;
 using com.eyerunnman.enums;
 using com.eyerunnman.interfaces;
 using System.Linq;
+using com.eyerunnman.gridsystem.Enums;
 
 namespace com.eyerunnman.gridsystem.Editor
 {
-    public class GridEditor : EditorWindow
+    public class GameGridEditor : EditorWindow
     {
-        [MenuItem("EyeRunnMan/GridSystem/GridEditor2")]
+        [MenuItem("EyeRunnMan/Grid System/Game Grid Editor")]
         static void OpenWindow()
         {
-            GridEditor window = (GridEditor)EditorWindow.GetWindow(typeof(GridEditor));
+            GameGridEditor window = (GameGridEditor)EditorWindow.GetWindow(typeof(GameGridEditor));
             window.Show();
         }
 
@@ -139,7 +139,6 @@ namespace com.eyerunnman.gridsystem.Editor
 
             return GridTileData.Undefined;
         }
-
         
         private void UpdateCurrentSelectedTilesData(GridTileData data)
         {
@@ -176,7 +175,6 @@ namespace com.eyerunnman.gridsystem.Editor
         private void UpdateGrid(List<GridTileData> updateData )
         {
             ICommand<GameGrid> updateGridCommand = new GameGrid.Commands.UpdateGridTileData(updateData.Cast<IGridTileData>().ToList());
-
             
             EditorGameGrid.ExecuteCommand(updateGridCommand);
         }
@@ -215,7 +213,6 @@ namespace com.eyerunnman.gridsystem.Editor
 
             EditorGameGrid.ExecuteCommand(generateGridCommand);
         }
-
 
         private void ResetGameGrid(Vector2Int dimension,List<GridTileData> tileDataList)
         {

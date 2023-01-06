@@ -2,6 +2,7 @@
 using System;
 using com.eyerunnman.enums;
 using com.eyerunnman.gridsystem.Internal;
+using com.eyerunnman.gridsystem.Enums;
 
 namespace com.eyerunnman.gridsystem
 {

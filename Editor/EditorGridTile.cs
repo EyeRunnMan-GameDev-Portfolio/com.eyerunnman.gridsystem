@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using com.eyerunnman.gridsystem.Enums;
 
 namespace com.eyerunnman.gridsystem.Editor
 {
@@ -109,7 +110,6 @@ namespace com.eyerunnman.gridsystem.Editor
             public GridTileType TileType;
             public Color color;
         }
-
     }
 }
 

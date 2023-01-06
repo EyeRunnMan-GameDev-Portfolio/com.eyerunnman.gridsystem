@@ -1,4 +1,5 @@
 using com.eyerunnman.gridsystem;
+using com.eyerunnman.gridsystem.Editor;
 using com.eyerunnman.interfaces;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using UnityEngine;
 public class EditorGridTest : GridTileObject
 {
     [SerializeField]
-    GridDataSO dataSO;
+    EditorGridDataSO dataSO;
     [SerializeField]
     GameGrid gameGrid;
     [SerializeField]
