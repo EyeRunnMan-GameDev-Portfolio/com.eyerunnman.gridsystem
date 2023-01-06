@@ -9,7 +9,19 @@
       "output": {
         ".html": {
           "relative_path": "CHANGELOG.html",
-          "hash": "teK+ciSNIKhCUIC6+QnpGg=="
+          "hash": "Vmj05+ImCuDNXlaO1H06Pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-editor/com.eyerunnman.gridsystem.Editor.EditorGridDataSO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-editor/com.eyerunnman.gridsystem.Editor.EditorGridDataSO.html",
+          "hash": "jO7T7BsNt6Oexn4vDqBXAw=="
         }
       },
       "is_incremental": false,
@@ -21,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.TileTypeDebug.html",
-          "hash": "6o3yxQcFVKSezj8Zl27/dQ=="
+          "hash": "nL2NAaR39/VXV+WwbUr9JQ=="
         }
       },
       "is_incremental": false,
@@ -33,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api-editor/com.eyerunnman.gridsystem.Editor.EditorGridTile.html",
-          "hash": "yVherSWjp0k0+/m+M5rAZA=="
+          "hash": "TTd6bGRwk+ruf+r8QpiluA=="
         }
       },
       "is_incremental": false,
@@ -41,11 +53,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api-editor/com.eyerunnman.gridsystem.Editor.GridEditor.yml",
+      "source_relative_path": "api-editor/com.eyerunnman.gridsystem.Editor.GameGridEditor.yml",
       "output": {
         ".html": {
-          "relative_path": "api-editor/com.eyerunnman.gridsystem.Editor.GridEditor.html",
-          "hash": "7n0WxjSuEzIJaBJU6blhOw=="
+          "relative_path": "api-editor/com.eyerunnman.gridsystem.Editor.GameGridEditor.html",
+          "hash": "a6WlHdjUdK5Mz3U4sjI3LQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +69,31 @@
       "output": {
         ".html": {
           "relative_path": "api-editor/com.eyerunnman.gridsystem.Editor.html",
-          "hash": "MKkn7oFG6KKxXPwN39ZQAA=="
+          "hash": "1Yb6VrzYPGRshjSZChNkMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.Enums.GridTileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.Enums.GridTileType.html",
+          "hash": "R7vV5gUB4fAsOCOsdo2wCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.Enums.html",
+          "hash": "fuCvxbNpq+UIf1Gdijmqvg=="
         }
       },
       "is_incremental": false,
@@ -69,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.GenerateGameGrid.html",
-          "hash": "+eH1omOJrnSpHE7DQPGCZg=="
+          "hash": "QpAX49rPgOSV0awJ4avvjw=="
         }
       },
       "is_incremental": false,
@@ -81,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridData.html",
-          "hash": "2VZ0ZnAn+5I6Q4kc1eTUpA=="
+          "hash": "vbV/jNcStDp3WxTPUCWjMg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.Commands.UpdateGridTileData.html",
-          "hash": "Po0LovDf6lmKRAxW4DSlGw=="
+          "hash": "ltFAn3TnYD7SqOQv+EMjig=="
         }
       },
       "is_incremental": false,
@@ -113,71 +149,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileData.html",
-          "hash": "s35eUfZlzKkABJVQonZoEg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObject.html",
-          "hash": "aUf3AIa6HkuHPFarI5zFoA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.GridTileObjectInternal.html",
-          "hash": "JOeJsaYCqmShi18sRDuK0g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.IGridTileData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.IGridTileData.html",
-          "hash": "VhMPnYiLaZ8noh2BjkYjAw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.TileType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.TileType.html",
-          "hash": "abRWgTPEWDPBwZ+4s2aIjQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.yml",
       "output": {
         ".html": {
           "relative_path": "api-runtime/com.eyerunnman.gridsystem.GameGrid.html",
-          "hash": "pTcr4YDH9udifiOfIver0A=="
+          "hash": "0t/T4ywT90rnxcDcOy18Tw=="
         }
       },
       "is_incremental": false,
@@ -189,7 +165,67 @@
       "output": {
         ".html": {
           "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridDataSO.html",
-          "hash": "GYzBE6RKONpYNYr2zbzO8g=="
+          "hash": "8r9SQe0/UjNZAlNmZmuOAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridTileData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridTileData.html",
+          "hash": "JJnyEAAhIxhyqGU2Va3cXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.GridTileObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.GridTileObject.html",
+          "hash": "DJ5RXpIUIOc7RQg5kR+OFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.IGridTileData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.IGridTileData.html",
+          "hash": "MSQQSp7vpmmWLhL6C278bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.Internal.GridTileObjectInternal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.Internal.GridTileObjectInternal.html",
+          "hash": "opx1XyJ4QJGBO/2hcRclKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-runtime/com.eyerunnman.gridsystem.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-runtime/com.eyerunnman.gridsystem.Internal.html",
+          "hash": "EHI5QNXj4aJhWkIGS8RInA=="
         }
       },
       "is_incremental": false,
@@ -201,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api-runtime/com.eyerunnman.gridsystem.html",
-          "hash": "4905MR203Ze2CQyrb9CUkA=="
+          "hash": "sCs+4NS1lRzPidNCDN7RdQ=="
         }
       },
       "is_incremental": false,
@@ -261,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "fusion/toc.html",
-          "hash": "LwxiBV4ycLlwoPweuDL2+Q=="
+          "hash": "DMY5RfnYi4UOm8Sv4jdHJg=="
         }
       },
       "is_incremental": false,
@@ -400,7 +436,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 16,
+          "total_file_count": 19,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
