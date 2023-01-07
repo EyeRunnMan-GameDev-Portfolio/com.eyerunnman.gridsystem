@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.0](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/compare/v1.1.0...v1.2.0) (2023-01-06)
+
+
+### Features
+
+* added different color gizmos for different editor tile types ([3a110d1](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/commit/3a110d1f11a6348f9175910ff587a151e92dd2fc))
+* shifted all info  debug info to on draw gizmos selected ([ecdb12f](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/commit/ecdb12f22ef12dc3e6117ceb001458364f0965dd))
+* updated api and hid internal types in the grid system using the internal keyword ([b5b06c2](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/commit/b5b06c264c345b628be5af9ca358138de06171d6))
+* updated the overall code structure and hid the internal grid tile object tile methods &  added colored tiles to debug tile type ([ebbfa77](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/commit/ebbfa773f2c7fa6ff4b8a5a82411a5dcb166b314))
+
+
+### Bug Fixes
+
+* refractored Projcet structure ([de68c10](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/commit/de68c10c4fe5d9e98f7140f3ac46230374fd1c74))
+* updated documentation added usage article ([eacbe15](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/commit/eacbe15fb53de409c43ea84bc7b52ee56985f035))
+* updated internals varialbes of grid tile data ([220bf3c](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/commit/220bf3ce927ee542aff814cee8d325f11253bbe5))
+
 ## [1.1.0](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/compare/v1.0.2...v1.1.0) (2023-01-03)
 
 
