@@ -14,12 +14,12 @@ namespace com.eyerunnman.gridsystem
         {
             private List<IGridTileData> gridTileDataList;
     
-            public UpdateGridTileData(List<IGridTileData> gridTileDataList)
+            public UpdateGridTileData(List<GridTileData> gridTileDataList)
             {
-                this.gridTileDataList = gridTileDataList;
+                this.gridTileDataList = gridTileDataList.Cast<IGridTileData>().ToList();
             }
     
-            public UpdateGridTileData(IGridTileData gridTileData)
+            public UpdateGridTileData(GridTileData gridTileData)
             {
                 this.gridTileDataList = new() { gridTileData };
             }

@@ -174,7 +174,7 @@ namespace com.eyerunnman.gridsystem.Editor
 
         private void UpdateGrid(List<GridTileData> updateData )
         {
-            ICommand<GameGrid> updateGridCommand = new GameGridCommands.UpdateGridTileData(updateData.Cast<IGridTileData>().ToList());
+            ICommand<GameGrid> updateGridCommand = new GameGridCommands.UpdateGridTileData(updateData);
             
             EditorGameGrid.ExecuteCommand(updateGridCommand);
         }
