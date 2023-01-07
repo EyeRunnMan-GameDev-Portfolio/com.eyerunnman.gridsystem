@@ -1,30 +1,53 @@
-using com.eyerunnman.enums;
-using com.eyerunnman.gridsystem.Internal;
-using com.eyerunnman.interfaces;
-using System;
+﻿using com.eyerunnman.gridsystem.Internal;
 using UnityEngine;
 
 namespace com.eyerunnman.gridsystem
 {
-    public class GridTileObject : GridTileObjectInternal
+    /// <summary>
+    /// Abstract class for grid tile object
+    /// </summary>
+    public class GridTileObject : MonoBehaviour
     {
-        public new void InitializeTileObject(GameGrid parentGrid, IGridTileData tileData)
-        {
-            throw new Exception("Cannot Initialize a Tile Object Manually Only Game Grid Can Update Grid Tile Object ");
-        }
+        private CachedGridTileData cachedTileData;
     
-        public new void UpdateTileObject(IGridTileData tileData)
-        {
-            if (tileData.TileNumber == TileData.TileNumber && tileData.Coordinates == TileData.Coordinates)
+        /// <summary>
+        /// Current Tile Data for the grid TileObject
+        /// </summary>
+        public IGridTileData TileData { get=> cachedTileData; }
+    
+        /// <summary>
+        /// Getter for parentGrid Refrence
+        /// </summary>
+        protected GameGrid ParentGrid { get; private set; }
+    
+        internal void InitializeTileObject(GameGrid parentGrid, IGridTileData tileData) {
+
+                ParentGrid = parentGrid;
+                cachedTileData = new CachedGridTileData(tileData);
+                OnTileDataInitialize();
+                OnTileDataInitialize(tileData);
+        }
+
+        internal void UpdateTileObject(IGridTileData tileData)
             {
-                if (ParentGrid)
-                {
-                    ICommand<GameGrid> updateGameGrid = new GameGrid.Commands.UpdateGridTileData(tileData);
-    
-                    ParentGrid.ExecuteCommand(updateGameGrid);
-                }
+                cachedTileData = new CachedGridTileData(tileData);
+                OnTileDataUpdate();
+                OnTileDataUpdate(tileData);
             }
-        }
+    
+        /// <summary>
+        /// Is called whever tile data is updated
+        /// </summary>
+        public virtual void OnTileDataUpdate() { }
+        public virtual void OnTileDataUpdate(IGridTileData tileData) { }
+
+
+        /// <summary>
+        /// Is called whenever tile data is initialized
+        /// </summary>
+        public virtual void OnTileDataInitialize() { }
+        public virtual void OnTileDataInitialize(IGridTileData tileData) { }
+
     }
 
 }

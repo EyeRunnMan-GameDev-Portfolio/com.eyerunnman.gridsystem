@@ -174,7 +174,7 @@ namespace com.eyerunnman.gridsystem.Editor
 
         private void UpdateGrid(List<GridTileData> updateData )
         {
-            ICommand<GameGrid> updateGridCommand = new GameGrid.Commands.UpdateGridTileData(updateData.Cast<IGridTileData>().ToList());
+            ICommand<GameGrid> updateGridCommand = new GameGridCommands.UpdateGridTileData(updateData.Cast<IGridTileData>().ToList());
             
             EditorGameGrid.ExecuteCommand(updateGridCommand);
         }
@@ -209,14 +209,14 @@ namespace com.eyerunnman.gridsystem.Editor
             gameObject.AddComponent(typeof(GameGrid));
             EditorGameGrid = gameObject.GetComponent<GameGrid>();
 
-            ICommand<GameGrid> generateGridCommand = new GameGrid.Commands.GenerateGameGrid(dimension,tileDataList,editorGridTilePrefab);
+            ICommand<GameGrid> generateGridCommand = new GameGridCommands.GenerateGameGrid(dimension,tileDataList,editorGridTilePrefab);
 
             EditorGameGrid.ExecuteCommand(generateGridCommand);
         }
 
         private void ResetGameGrid(Vector2Int dimension,List<GridTileData> tileDataList)
         {
-            ICommand<GameGrid> updateGridData = new GameGrid.Commands.UpdateGridData(dimension,tileDataList);
+            ICommand<GameGrid> updateGridData = new GameGridCommands.RefreshGridData(dimension,tileDataList);
 
             EditorGameGrid.ExecuteCommand(updateGridData);
         }

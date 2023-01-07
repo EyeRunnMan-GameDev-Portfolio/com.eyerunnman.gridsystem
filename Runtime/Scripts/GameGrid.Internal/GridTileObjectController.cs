@@ -2,11 +2,11 @@
 {
     internal class GridTileObjectController 
     {
-        GridTileObjectInternal gridTileObject;
+        GridTileObject gridTileObject;
         private GameGrid parentGrid ;
         private CachedGridTileData data;
     
-        public GridTileObjectController(GridTileObjectInternal gridTileObject)
+        public GridTileObjectController(GridTileObject gridTileObject)
         {
             this.gridTileObject = gridTileObject;
             data = new(IGridTileData.Undefined);

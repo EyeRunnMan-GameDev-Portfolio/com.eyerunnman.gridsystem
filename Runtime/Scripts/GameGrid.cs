@@ -97,17 +97,17 @@ namespace com.eyerunnman.gridsystem
 
         #region Private Methods
 
-        private void UpdateGameGridData(GridData gridData)
+        internal void RefreshGridData(GridData gridData)
         {
             this.gridData = new(gridData);
             RefreshGrid();
         }
-        private void GenerateGameGrid(GridData gridData, GridTileObjectInternal tileObjectPrefab)
+        internal void GenerateGameGrid(GridData gridData, GridTileObject tileObjectPrefab)
         {
-            UpdateGameGridData(gridData);
+            RefreshGridData(gridData);
             InitializeTileObjectControllerDictionary(this.gridData, tileObjectPrefab);
         }
-        private void UpdateGridTileData(IGridTileData data)
+        internal void UpdateGridTileData(IGridTileData data)
         {
             UpdateTileObjectControllerDictionary(data);
         }
@@ -122,13 +122,13 @@ namespace com.eyerunnman.gridsystem
                 return null;
             }
         }
-        private void InitializeTileObjectControllerDictionary(GridData gridData, GridTileObjectInternal tileObjectPrefab)
+        private void InitializeTileObjectControllerDictionary(GridData gridData, GridTileObject tileObjectPrefab)
         {
             foreach (int tileNumber in Enumerable.Range(0, gridData.NumberOfTiles))
             {
 
                 IGridTileData gridTileData = gridData.GetTileFromNumber(tileNumber);
-                GridTileObjectInternal gridTileObject = Instantiate(tileObjectPrefab, transform);
+                GridTileObject gridTileObject = Instantiate(tileObjectPrefab, transform);
 
                 GridTileObjectController tileObjectController = new(gridTileObject);
                 tileObjectController.InitializeTileObject(this, gridTileData);
