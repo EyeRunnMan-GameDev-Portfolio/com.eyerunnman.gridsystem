@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/compare/v1.2.0...v1.2.1) (2023-01-16)
+
+
+### Bug Fixes
+
+* updated grid update command ([29548e7](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/commit/29548e729cbfc3dc1914a4d6ef3187d98382a10a))
+* updated internal api and command system ([b429f7e](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/commit/b429f7e31516091f1362c654016739588d176214))
+
 ## [1.2.0](https://github.com/EyeRunnMan-GameDev-Portfolio/com.eyerunnman.gridsystem/compare/v1.1.0...v1.2.0) (2023-01-06)
 
 
