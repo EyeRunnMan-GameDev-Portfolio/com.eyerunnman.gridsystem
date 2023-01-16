@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using System;
 using com.eyerunnman.enums;
-using com.eyerunnman.interfaces;
+using com.eyerunnman.patterns;
 using System.Linq;
 using com.eyerunnman.gridsystem.Enums;
 

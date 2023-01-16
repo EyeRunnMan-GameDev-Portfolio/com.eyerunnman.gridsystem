@@ -1,5 +1,5 @@
 ﻿using com.eyerunnman.gridsystem.Internal;
-using com.eyerunnman.interfaces;
+using com.eyerunnman.patterns;
 using System.Collections.Generic;
 using UnityEngine;
 
